@@ -1,20 +1,21 @@
 import pandas as pd
 import numpy as np
-
+import tensorflow as tf
 import nltk, re, time
 from nltk.corpus import stopwords
+from string import punctuation
 from collections import defaultdict
 from tqdm import tqdm
 from sklearn.model_selection import train_test_split
-from collections import namedtuple
-
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
-import tensorflow as tf
+from collections import namedtuple
 
+# https://medium.com/@Currie32/predicting-movie-review-sentiment-with-tensorflow-and-tensorboard-53bf16af0acf
 
 
 def clean_text(text, remove_stopwords=True):
+	'''Clean the text, with the option to remove stopwords'''
 
 	# Convert words to lower case and split them
 	text = text.lower().split()
@@ -32,108 +33,13 @@ def clean_text(text, remove_stopwords=True):
 	text = re.sub(r"   ", " ", text)  # Remove any extra spaces
 	text = re.sub(r"  ", " ", text)
 
+	# Remove punctuation from text
+	text = ''.join([c for c in text if c not in punctuation])
+
 	# Return a list of words
 	return (text)
 
 
-
-if __name__ == "__main__":
-
-	train = pd.read_csv("./kaggle/train.tsv", delimiter="\t")
-	test = pd.read_csv("./kaggle/test.tsv", delimiter="\t")
-
-	train_clean = []
-
-	for review in train.review:
-		train_clean.append(clean_text(review))
-
-
-	test_clean = []
-	for review in test.review:
-		test_clean.append(clean_text(review))
-
-
-	# Tokenize the reviews
-	all_reviews = train_clean + test_clean
-	tokenizer = Tokenizer()
-
-	tokenizer.fit_on_texts(all_reviews)
-	print("Fitting is complete.")
-
-	train_seq = tokenizer.texts_to_sequences(train_clean)
-
-	test_seq = tokenizer.texts_to_sequences(test_clean)
-
-
-	# Find the number of unique tokens
-	word_index = tokenizer.word_index
-	print("Unique Words in index: %d" % len(word_index))
-
-	print(tokenizer)
-
-	print(type(tokenizer))
-
-
-	lengths = []
-	for review in train_seq:
-		lengths.append(len(review))
-
-	for review in test_seq:
-		lengths.append(len(review))
-
-	lengths = pd.DataFrame(lengths, columns=['counts'])
-
-
-	lengths.counts.describe()
-
-
-
-	stats = np.percentile(lengths.counts, 95)
-
-	print(" The 95th percentile of the number of words in a review is {}".format(stats))
-
-
-
-
-	# convert the list of token arrays to a single 2d input array that has been padded to have a fixed column size
-
-	max_review_length = 200
-
-	train_pad = pad_sequences(train_seq, maxlen = max_review_length)
-	print("train_pad is complete.")
-
-	test_pad = pad_sequences(test_seq, maxlen = max_review_length)
-	print("test_pad is complete.")
-
-
-
-	# Inspect the reviews after padding has been completed.
-	for i in range(3):
-		print(train_pad[i,:100])
-		print()
-
-
-	# Creating the training and validation sets
-	x_train, x_valid, y_train, y_valid = train_test_split(train_pad, train.sentiment, test_size=0.15, random_state=2)
-	x_test = test_pad
-
-
-	# Inspect the shape of the data
-	# print(x_train.shape)
-	# print(x_valid.shape)
-	# print(x_test.shape)
-
-	# The default parameters of the model
-	n_words = len(word_index)
-	embed_size = 300
-	batch_size = 250
-	lstm_size = 128
-	num_layers = 2
-	dropout = 0.5
-	learning_rate = 0.001
-	epochs = 100
-	multiple_fc = False
-	fc_units = 256
 
 
 def get_batches(x, y, batch_size):
@@ -144,7 +50,6 @@ def get_batches(x, y, batch_size):
 		yield x[ii:ii + batch_size], y[ii:ii + batch_size]
 
 
-# In[87]:
 
 def get_test_batches(x, batch_size):
 	'''Create the batches for the testing data'''
@@ -154,7 +59,6 @@ def get_test_batches(x, batch_size):
 		yield x[ii:ii + batch_size]
 
 
-# In[53]:
 
 def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 			  dropout, learning_rate, multiple_fc, fc_units):
@@ -188,8 +92,7 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 
 	# Run the data through the RNN layers
 	with tf.name_scope("RNN_forward"):
-		outputs, final_state = tf.nn.dynamic_rnn(cell, embed,
-												 initial_state=initial_state)
+		outputs, final_state = tf.nn.dynamic_rnn(cell, embed, initial_state=initial_state)
 
 	# Create the fully connected layers
 	with tf.name_scope("fully_connected"):
@@ -197,29 +100,17 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 		weights = tf.truncated_normal_initializer(stddev=0.1)
 		biases = tf.zeros_initializer()
 
-		dense = tf.contrib.layers.fully_connected(outputs[:, -1],
-												  num_outputs=fc_units,
-												  activation_fn=tf.sigmoid,
-												  weights_initializer=weights,
-												  biases_initializer=biases)
+		dense = tf.contrib.layers.fully_connected(outputs[:, -1],num_outputs=fc_units,activation_fn=tf.sigmoid,weights_initializer=weights,biases_initializer=biases)
 		dense = tf.contrib.layers.dropout(dense, keep_prob)
 
 		# Depending on the iteration, use a second fully connected layer
 		if multiple_fc == True:
-			dense = tf.contrib.layers.fully_connected(dense,
-													  num_outputs=fc_units,
-													  activation_fn=tf.sigmoid,
-													  weights_initializer=weights,
-													  biases_initializer=biases)
+			dense = tf.contrib.layers.fully_connected(dense,num_outputs=fc_units,activation_fn=tf.sigmoid,weights_initializer=weights,biases_initializer=biases)
 			dense = tf.contrib.layers.dropout(dense, keep_prob)
 
 	# Make the predictions
 	with tf.name_scope('predictions'):
-		predictions = tf.contrib.layers.fully_connected(dense,
-														num_outputs=1,
-														activation_fn=tf.sigmoid,
-														weights_initializer=weights,
-														biases_initializer=biases)
+		predictions = tf.contrib.layers.fully_connected(dense,num_outputs=1,activation_fn=tf.sigmoid,weights_initializer=weights,biases_initializer=biases)
 		tf.summary.histogram('predictions', predictions)
 
 	# Calculate the cost
@@ -250,9 +141,8 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 	return graph
 
 
-# In[92]:
 
-def train(model, epochs, log_string):
+def train_model(model, epochs, log_string):
 	'''Train the RNN'''
 
 	saver = tf.train.Saver()
@@ -315,9 +205,7 @@ def train(model, epochs, log_string):
 							model.labels: y[:, None],
 							model.keep_prob: 1,
 							model.initial_state: val_state}
-					summary, batch_loss, batch_acc, val_state = sess.run([model.merged,
-																		  model.cost,
-																		  model.accuracy,
+					summary, batch_loss, batch_acc, val_state = sess.run([model.merged, model.cost, model.accuracy,
 																		  model.final_state],
 																		 feed_dict=feed)
 
@@ -353,9 +241,192 @@ def train(model, epochs, log_string):
 			else:
 				print("New Record!")
 				stop_early = 0
-				checkpoint = "/Users/Dave/Desktop/Programming/Personal Projects/Movie_Reviews_Kaggle/sentiment_{}.ckpt".format(
+				checkpoint = "/Users/sharan/Desktop/results/sentiment_{}.ckpt".format(
 					log_string)
 				saver.save(sess, checkpoint)
+
+
+
+def make_predictions(lstm_size, multiple_fc, fc_units, checkpoint):
+	'''Predict the sentiment of the testing data'''
+
+	all_preds = []
+
+	model = build_rnn(n_words=n_words,
+					  embed_size=embed_size,
+					  batch_size=batch_size,
+					  lstm_size=lstm_size,
+					  num_layers=num_layers,
+					  dropout=dropout,
+					  learning_rate=learning_rate,
+					  multiple_fc=multiple_fc,
+					  fc_units=fc_units)
+
+	with tf.Session() as sess:
+		saver = tf.train.Saver()
+		# Load the model
+		saver.restore(sess, checkpoint)
+		test_state = sess.run(model.initial_state)
+		for _, x in enumerate(get_test_batches(x_test, batch_size), 1):
+			feed = {model.inputs: x,
+					model.keep_prob: 1,
+					model.initial_state: test_state}
+			predictions = sess.run(model.predictions, feed_dict=feed)
+			for pred in predictions:
+				all_preds.append(float(pred))
+
+	return all_preds
+
+
+
+def write_submission(predictions, string):
+	'''write the predictions to a csv file'''
+	submission = pd.DataFrame(data={"id": test["id"], "sentiment": predictions})
+	submission.to_csv("submission_{}.csv".format(string), index=False, quoting=3)
+
+
+
+if __name__ == '__main__':
+
+	# Load the data
+	train = pd.read_csv("./imdb/train.tsv", delimiter="\t")
+	test = pd.read_csv("./imdb/test.tsv", delimiter="\t")
+
+
+	print(train.shape)
+	print(test.shape)
+
+
+	# Check for any null values
+	print(train.isnull().sum())
+	print(test.isnull().sum())
+
+	train_clean = []
+	for review in train.review:
+		train_clean.append(clean_text(review))
+
+	test_clean = []
+	for review in test.review:
+		test_clean.append(clean_text(review))
+
+	# # Inspect the cleaned reviews
+	# for i in range(3):
+	# 	print(train_clean[i])
+	# 	print()
+
+	# Tokenize the reviews
+	all_reviews = train_clean + test_clean
+	tokenizer = Tokenizer()
+	tokenizer.fit_on_texts(all_reviews)
+	print("Fitting is complete.")
+
+	train_seq = tokenizer.texts_to_sequences(train_clean)
+	print("train_seq is complete.")
+
+	test_seq = tokenizer.texts_to_sequences(test_clean)
+	print("test_seq is complete")
+
+	# Find the number of unique tokens
+	word_index = tokenizer.word_index
+	print("Words in index: %d" % len(word_index))
+
+	# # Inspect the reviews after they have been tokenized
+	# for i in range(3):
+	# 	print(train_seq[i])
+	# 	print()
+
+	# Find the length of reviews
+	# lengths = []
+	# for review in train_seq:
+	# 	lengths.append(len(review))
+	#
+	# for review in test_seq:
+	# 	lengths.append(len(review))
+	#
+	# # Create a dataframe so that the values can be inspected
+	# lengths = pd.DataFrame(lengths, columns=['counts'])
+	#
+	# lengths.counts.describe()
+	#
+	# print(np.percentile(lengths.counts, 80))
+	# print(np.percentile(lengths.counts, 85))
+	# print(np.percentile(lengths.counts, 90))
+	# print(np.percentile(lengths.counts, 95))
+
+
+	# Pad and truncate the questions so that they all have the same length.
+	max_review_length = 200
+
+	train_pad = pad_sequences(train_seq, maxlen=max_review_length)
+	print("train_pad is complete.")
+
+	test_pad = pad_sequences(test_seq, maxlen=max_review_length)
+	print("test_pad is complete.")
+
+
+	# Inspect the reviews after padding has been completed.
+	for i in range(3):
+		print(train_pad[i, :100])
+		print()
+
+
+	x_train, x_valid, y_train, y_valid = train_test_split(train_pad, train.sentiment, test_size=0.15, random_state=2)
+	x_test = test_pad
+
+
+	# # Inspect the shape of the data
+	# print(x_train.shape)
+	# print(x_valid.shape)
+	# print(x_test.shape)
+
+
+	# The default parameters of the model
+	n_words = len(word_index)
+	embed_size = 300
+	batch_size = 250
+	lstm_size = 128
+	num_layers = 1
+	dropout = 0.5
+	learning_rate = 0.001
+	epochs = 100
+	multiple_fc = False
+	fc_units = 256
+
+
+	# Train the model with the desired tuning parameters
+	for lstm_size in [64, 128]:
+		for multiple_fc in [True, False]:
+			for fc_units in [128, 256]:
+
+				log_string = 'ru={},fcl={},fcu={}'.format(lstm_size, multiple_fc, fc_units)
+				model = build_rnn(n_words=n_words, embed_size=embed_size, batch_size=batch_size, lstm_size=lstm_size, num_layers=num_layers,
+								  dropout=dropout, learning_rate=learning_rate, multiple_fc=multiple_fc, fc_units=fc_units)
+
+				train_model(model, epochs, log_string)
+
+
+	checkpoint1 = "/Users/sharan/Desktop/results/sentiment_ru=128,fcl=False,fcu=256.ckpt"
+	checkpoint2 = "/Users/sharan/Desktop/results/sentiment_ru=128,fcl=False,fcu=128.ckpt"
+	checkpoint3 = "/Users/sharan/Desktop/results/sentiment_ru=64,fcl=True,fcu=256.ckpt"
+
+
+	# Make predictions using the best 3 models
+	predictions1 = make_predictions(128, False, 256, checkpoint1)
+	predictions2 = make_predictions(128, False, 128, checkpoint2)
+	predictions3 = make_predictions(64, True, 256, checkpoint3)
+
+
+	# Average the best three predictions
+	predictions_combined = (pd.DataFrame(predictions1) + pd.DataFrame(predictions2) + pd.DataFrame(predictions3)) / 3
+
+	write_submission(predictions1, "ru=128,fcl=False,fcu=256")
+	write_submission(predictions2, "ru=128,fcl=False,fcu=128")
+	write_submission(predictions3, "ru=64,fcl=True,fcu=256")
+	write_submission(predictions_combined.ix[:, 0], "combined")
+
+
+
+
 
 
 
