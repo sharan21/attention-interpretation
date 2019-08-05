@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import tensorflow as tf
+import inspect
 import nltk, re, time
 from nltk.corpus import stopwords
 from string import punctuation
@@ -11,7 +12,26 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from collections import namedtuple
 
-# https://medium.com/@Currie32/predicting-movie-review-sentiment-with-tensorflow-and-tensorboard-53bf16af0acf
+#GLOBAL VARIABLES
+
+embed_size = 300
+batch_size = 250
+lstm_size = 128
+num_layers = 1
+dropout = 0.5
+learning_rate = 0.001
+epochs = 100
+multiple_fc = False
+fc_units = 256
+
+def summarize_variable(var):
+
+	print("\n var is of type {} ".format(type(var)))
+	print(" var has leading length {} \n".format(len(var)))
+
+	if(type(var) == "<class 'numpy.ndarray'>"):
+		print("Shape of numpy array is {} \n".format(var, var.shape))
+
 
 
 def clean_text(text, remove_stopwords=True):
@@ -58,11 +78,45 @@ def get_test_batches(x, batch_size):
 	for ii in range(0, len(x), batch_size):
 		yield x[ii:ii + batch_size]
 
+def get_gradients(checkpoint, x_test):
+
+	# this function takes the model, sample input sentence as input, computes the ouput and finds the gradients of each input word
+
+	model = load_model(checkpoint, no_of_unique_words)
+
+	optimizer_here = model.gradients
+
+	cost_here = model.cost
+
+	gradients, variables = zip(*optimizer_here.compute_gradients(cost_here))
+
+	print("grads and vars: {} and {}".format(gradients, variables))
+
+	opt = optimizer_here.apply_gradients(list(zip(gradients, variables)))
+
+
+	print("opt is {}".format(opt))
+
+	init = tf.global_variables_initializer()
+	sess = tf.Session()
+	sess.run(init)
+	test_state = sess.run(model.initial_state)
+
+	predicted_y = predict(checkpoint, x_test)
+
+	feed = {model.inputs: x_test,
+			model.labels: predicted_y[:, None], #coverting 1d to 2d array
+			model.keep_prob: dropout,
+			model.initial_state: test_state}
+	sess.run(opt, feed_dict=feed)
 
 
 def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 			  dropout, learning_rate, multiple_fc, fc_units):
 	'''Build the Recurrent Neural Network'''
+
+
+	global opt
 
 	tf.reset_default_graph()
 
@@ -121,6 +175,11 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 	# Train the model
 	with tf.name_scope('train'):
 		optimizer = tf.train.AdamOptimizer(learning_rate).minimize(cost)
+		opt = tf.train.AdamOptimizer(learning_rate)
+
+	with tf.name_scope('gradients'):
+		gradients = tf.train.AdamOptimizer(learning_rate)
+
 
 	# Determine the accuracy
 	with tf.name_scope("accuracy"):
@@ -133,7 +192,7 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 
 	# Export the nodes
 	export_nodes = ['inputs', 'labels', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
-					'predictions', 'cost', 'optimizer', 'merged']
+					'predictions', 'cost', 'optimizer', 'gradients','merged']
 	Graph = namedtuple('Graph', export_nodes)
 	local_dict = locals()
 	graph = Graph(*[local_dict[each] for each in export_nodes])
@@ -177,12 +236,7 @@ def train_model(model, epochs, log_string):
 							model.labels: y[:, None],
 							model.keep_prob: dropout,
 							model.initial_state: state}
-					summary, loss, acc, state, _ = sess.run([model.merged,
-															 model.cost,
-															 model.accuracy,
-															 model.final_state,
-															 model.optimizer],
-															feed_dict=feed)
+					summary, loss, acc, state, _ = sess.run([model.merged,model.cost,model.accuracy,model.final_state,model.optimizer],feed_dict=feed)
 
 					# Record the loss and accuracy of each training batch
 					train_loss.append(loss)
@@ -247,12 +301,20 @@ def train_model(model, epochs, log_string):
 
 
 
-def make_predictions(lstm_size, multiple_fc, fc_units, checkpoint):
+
+
+
+def predict(checkpoint, x_test):
 	'''Predict the sentiment of the testing data'''
 
-	all_preds = []
 
-	model = build_rnn(n_words=n_words,
+	summarize_variable(x_test)
+
+	x_test_pruned = x_test[0:250]
+
+	predicted_y = []
+
+	model = build_rnn(n_words=no_of_unique_words,
 					  embed_size=embed_size,
 					  batch_size=batch_size,
 					  lstm_size=lstm_size,
@@ -267,39 +329,60 @@ def make_predictions(lstm_size, multiple_fc, fc_units, checkpoint):
 		# Load the model
 		saver.restore(sess, checkpoint)
 		test_state = sess.run(model.initial_state)
-		for _, x in enumerate(get_test_batches(x_test, batch_size), 1):
+		print("loaded model and test state")
+
+		for _, x in enumerate(get_test_batches(x_test_pruned, batch_size), 1):
+
+			print("predicting for input {}".format(x))
 			feed = {model.inputs: x,
 					model.keep_prob: 1,
 					model.initial_state: test_state}
 			predictions = sess.run(model.predictions, feed_dict=feed)
 			for pred in predictions:
-				all_preds.append(float(pred))
+				predicted_y.append(float(pred))
 
-	return all_preds
 
+	summarize_variable(predicted_y) #all_preds is of type list with same number of rows as x_test_pruned
+
+	for p in predicted_y:
+		print("prediction is :{}".format(p))
+
+
+	return np.array(predicted_y)
 
 
 def write_submission(predictions, string):
-	'''write the predictions to a csv file'''
+
+	global train, test
+
 	submission = pd.DataFrame(data={"id": test["id"], "sentiment": predictions})
 	submission.to_csv("submission_{}.csv".format(string), index=False, quoting=3)
 
 
 
-if __name__ == '__main__':
+def load_model(path, no_of_unique_words):
 
-	# Load the data
-	train = pd.read_csv("./imdb/train.tsv", delimiter="\t")
-	test = pd.read_csv("./imdb/test.tsv", delimiter="\t")
+	model = build_rnn(n_words=no_of_unique_words, embed_size=embed_size, batch_size=batch_size, lstm_size=lstm_size,
+					  num_layers=num_layers, dropout=dropout, learning_rate=learning_rate, multiple_fc=multiple_fc,
+					  fc_units=fc_units)
+
+	saver = tf.train.Saver()
+
+	with tf.Session() as sess:
+
+		print("Restoring model from path {}".format(path_to_restore))
+		saver.restore(sess, path)
+
+		print("Model restored and ready to use.")
+
+	return model
 
 
-	print(train.shape)
-	print(test.shape)
 
-
-	# Check for any null values
-	print(train.isnull().sum())
-	print(test.isnull().sum())
+def import_clean_tokenize_data(trainpath, testpath):
+	global train, test, number_of_unique_words
+	train = pd.read_csv(trainpath, delimiter="\t")
+	test = pd.read_csv(testpath, delimiter="\t")
 
 	train_clean = []
 	for review in train.review:
@@ -309,120 +392,110 @@ if __name__ == '__main__':
 	for review in test.review:
 		test_clean.append(clean_text(review))
 
-	# # Inspect the cleaned reviews
-	# for i in range(3):
-	# 	print(train_clean[i])
-	# 	print()
-
-	# Tokenize the reviews
 	all_reviews = train_clean + test_clean
 	tokenizer = Tokenizer()
 	tokenizer.fit_on_texts(all_reviews)
-	print("Fitting is complete.")
+	print("Fitting of local vocabulary into tokenizer is complete.")
 
 	train_seq = tokenizer.texts_to_sequences(train_clean)
-	print("train_seq is complete.")
+	print("Train data tokenization is complete.")
 
 	test_seq = tokenizer.texts_to_sequences(test_clean)
-	print("test_seq is complete")
+	print("Test data tokenization is complete")
 
-	# Find the number of unique tokens
 	word_index = tokenizer.word_index
-	print("Words in index: %d" % len(word_index))
+	print("Number of unique words in index: %d" % len(word_index))
 
-	# # Inspect the reviews after they have been tokenized
-	# for i in range(3):
-	# 	print(train_seq[i])
-	# 	print()
+	no_of_unique_words = len(word_index) # we need this explicit parameter to build the model
 
-	# Find the length of reviews
-	# lengths = []
-	# for review in train_seq:
-	# 	lengths.append(len(review))
-	#
-	# for review in test_seq:
-	# 	lengths.append(len(review))
-	#
-	# # Create a dataframe so that the values can be inspected
-	# lengths = pd.DataFrame(lengths, columns=['counts'])
-	#
-	# lengths.counts.describe()
-	#
-	# print(np.percentile(lengths.counts, 80))
-	# print(np.percentile(lengths.counts, 85))
-	# print(np.percentile(lengths.counts, 90))
-	# print(np.percentile(lengths.counts, 95))
+	return  train_seq, test_seq, no_of_unique_words
 
 
-	# Pad and truncate the questions so that they all have the same length.
+
+def pad_split_data(train_tokenized, test_tokenized):
+
+	global train, test
+
 	max_review_length = 200
 
-	train_pad = pad_sequences(train_seq, maxlen=max_review_length)
+	train_pad = pad_sequences(train_tokenized, maxlen=max_review_length)
 	print("train_pad is complete.")
 
-	test_pad = pad_sequences(test_seq, maxlen=max_review_length)
+	test_pad = pad_sequences(test_tokenized, maxlen=max_review_length)
 	print("test_pad is complete.")
-
-
-	# Inspect the reviews after padding has been completed.
-	for i in range(3):
-		print(train_pad[i, :100])
-		print()
-
 
 	x_train, x_valid, y_train, y_valid = train_test_split(train_pad, train.sentiment, test_size=0.15, random_state=2)
 	x_test = test_pad
 
-
-	# # Inspect the shape of the data
-	# print(x_train.shape)
-	# print(x_valid.shape)
-	# print(x_test.shape)
+	return  x_train, x_valid, y_train, y_valid, x_test
 
 
-	# The default parameters of the model
-	n_words = len(word_index)
-	embed_size = 300
-	batch_size = 250
-	lstm_size = 128
-	num_layers = 1
-	dropout = 0.5
-	learning_rate = 0.001
-	epochs = 100
-	multiple_fc = False
-	fc_units = 256
+def train_and_checkpoint():
+
+	choice = input("Are you sure you want to train models again and overwrite cptk files and checkpoint? 1 for yes, 0 for no")
+
+	if(choice == 1):
+
+		for lstm_size in [64, 128]:
+			for multiple_fc in [True, False]:
+				for fc_units in [128, 256]:
+
+					log_string = 'ru={},fcl={},fcu={}'.format(lstm_size, multiple_fc, fc_units)
+					model = build_rnn(n_words=no_of_unique_words, embed_size=embed_size, batch_size=batch_size, lstm_size=lstm_size, num_layers=num_layers,
+									  dropout=dropout, learning_rate=learning_rate, multiple_fc=multiple_fc, fc_units=fc_units)
+
+					train_model(model, epochs, log_string)
+
+		# these are the best models
+		checkpoint1 = "/Users/sharan/Desktop/results/sentiment_ru=128,fcl=False,fcu=256.ckpt"
+		checkpoint2 = "/Users/sharan/Desktop/results/sentiment_ru=128,fcl=False,fcu=128.ckpt"
+		checkpoint3 = "/Users/sharan/Desktop/results/sentiment_ru=64,fcl=True,fcu=256.ckpt"
+
+		# make predictions with these 3 models
+		predictions1 = make_predictions(128, False, 256, checkpoint1)
+		predictions2 = make_predictions(128, False, 128, checkpoint2)
+		predictions3 = make_predictions(64, True, 256, checkpoint3)
+
+		#
+		predictions_combined = (pd.DataFrame(predictions1) + pd.DataFrame(predictions2) + pd.DataFrame(predictions3)) / 3
+
+		write_submission(predictions1, "ru=128,fcl=False,fcu=256")
+		write_submission(predictions2, "ru=128,fcl=False,fcu=128")
+		write_submission(predictions3, "ru=64,fcl=True,fcu=256")
+		write_submission(predictions_combined.ix[:, 0], "combined")
+
+	else:
+		print("Exitting from Train and checkpoint func.")
 
 
-	# Train the model with the desired tuning parameters
-	for lstm_size in [64, 128]:
-		for multiple_fc in [True, False]:
-			for fc_units in [128, 256]:
-
-				log_string = 'ru={},fcl={},fcu={}'.format(lstm_size, multiple_fc, fc_units)
-				model = build_rnn(n_words=n_words, embed_size=embed_size, batch_size=batch_size, lstm_size=lstm_size, num_layers=num_layers,
-								  dropout=dropout, learning_rate=learning_rate, multiple_fc=multiple_fc, fc_units=fc_units)
-
-				train_model(model, epochs, log_string)
 
 
-	checkpoint1 = "/Users/sharan/Desktop/results/sentiment_ru=128,fcl=False,fcu=256.ckpt"
-	checkpoint2 = "/Users/sharan/Desktop/results/sentiment_ru=128,fcl=False,fcu=128.ckpt"
-	checkpoint3 = "/Users/sharan/Desktop/results/sentiment_ru=64,fcl=True,fcu=256.ckpt"
+if __name__ == '__main__':
+
+	path_to_restore = "/Users/sharan/Desktop/results/sentiment_ru=128,fcl=False,fcu=256.ckpt"
+
+	imdb_train_path = "./imdb/train.tsv"
+	imdb_test_path = "./imdb/test.tsv"
+
+	train_tokenized, test_tokenized, no_of_unique_words = import_clean_tokenize_data(imdb_train_path, imdb_test_path)
+
+	x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
+
+	model = load_model(path_to_restore, no_of_unique_words)
+
+	#plzz work
+	# get_gradients(model)
+
+	#Uncomment below line to train the models and predict, compare best models and see scores
+	# train_and_checkpoint()
+
+	checkpoint = "/Users/sharan/Desktop/results/sentiment_ru=128,fcl=False,fcu=256.ckpt"
+
+	get_gradients(checkpoint, x_test[0:250])
+
+	# predict(x_test, model)
 
 
-	# Make predictions using the best 3 models
-	predictions1 = make_predictions(128, False, 256, checkpoint1)
-	predictions2 = make_predictions(128, False, 128, checkpoint2)
-	predictions3 = make_predictions(64, True, 256, checkpoint3)
-
-
-	# Average the best three predictions
-	predictions_combined = (pd.DataFrame(predictions1) + pd.DataFrame(predictions2) + pd.DataFrame(predictions3)) / 3
-
-	write_submission(predictions1, "ru=128,fcl=False,fcu=256")
-	write_submission(predictions2, "ru=128,fcl=False,fcu=128")
-	write_submission(predictions3, "ru=64,fcl=True,fcu=256")
-	write_submission(predictions_combined.ix[:, 0], "combined")
 
 
 
