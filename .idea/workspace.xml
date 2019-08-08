@@ -47,14 +47,18 @@
     <session id="918213074">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
-          <entry key="py" value="9" />
+          <entry key="py" value="15" />
           <entry key="rough" value="1" />
         </counts>
       </usages-collector>
@@ -62,50 +66,30 @@
         <counts>
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="7" />
+          <entry key="Python" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4643" />
+          <entry key="py" value="7486" />
           <entry key="rough" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="23" />
-          <entry key="Python" value="4632" />
+          <entry key="Python" value="7475" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="135">
-                <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ltsm_baseline.py">
+        <entry file="file://$PROJECT_DIR$/curie32.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="502" lean-forward="true" selection-start-line="502" selection-end-line="502" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-                <marker date="1564994670977" expanded="true" signature="611:833" ph="..." />
-                <marker date="1564994670977" expanded="true" signature="2057:2240" ph="..." />
-                <marker date="1564994670977" expanded="true" signature="2240:2908" ph="..." />
-                <marker date="1564994670977" expanded="true" signature="9298:9301" ph="..." />
-                <marker date="1564994670977" expanded="true" signature="12848:14272" ph="..." />
-              </folding>
+            <state relative-caret-position="664">
+              <caret line="504" column="44" selection-start-line="504" selection-start-column="38" selection-end-line="504" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -125,6 +109,8 @@
       <find>log_s</find>
       <find>dave</find>
       <find>build_rnn</find>
+      <find>resultss</find>
+      <find>results2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,12 +126,12 @@
         <option value="$PROJECT_DIR$/rough" />
         <option value="$PROJECT_DIR$/hello.py" />
         <option value="$PROJECT_DIR$/build_baseline.py" />
+        <option value="$PROJECT_DIR$/curie32.py" />
         <option value="$PROJECT_DIR$/ltsm_baseline.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-5" />
     <option name="y" value="23" />
     <option name="width" value="1400" />
     <option name="height" value="833" />
@@ -158,6 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,13 +154,17 @@
             </path>
             <path>
               <item name="attention-inter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="attention-inter" type="462c0819:PsiDirectoryNode" />
+              <item name="imdb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="attention-inter" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -310,15 +301,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="23" width="1400" height="833" extended-state="0" />
+    <frame x="0" y="23" width="1400" height="833" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49910554" visible="true" weight="0.12980421" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.5008944" side_tool="true" visible="true" weight="0.12980421" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48852903" visible="true" weight="0.1595359" />
+      <window_info id="Structure" order="1" sideWeight="0.511471" side_tool="true" visible="true" weight="0.1595359" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24561404" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24561404" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994602" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -326,7 +317,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32928476" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32928476" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -367,77 +358,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/3/train/ru=64,fcl=False,fcu=128/events.out.tfevents.1564728585.Sharans-MacBook-Pro.local">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/3/train/ru=64,fcl=False,fcu=128/events.out.tfevents.1564728585.Sharans-MacBook-Pro.local" />
     <entry file="file://$PROJECT_DIR$/test2.py" />
     <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/kaggle/train.tsv" />
-    <entry file="file://$PROJECT_DIR$/baseline-ltsm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="342" lean-forward="true" selection-start-line="342" selection-end-line="342" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="263" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/load_baseline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hello.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/baseline-ltsm.py" />
+    <entry file="file://$PROJECT_DIR$/baseline.py" />
+    <entry file="file://$PROJECT_DIR$/load_baseline.py" />
+    <entry file="file://$PROJECT_DIR$/hello.py" />
     <entry file="file://$PROJECT_DIR$/rough">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/build_baseline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="72" column="67" lean-forward="true" selection-start-line="72" selection-start-column="67" selection-end-line="72" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/build_baseline.py" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="135">
-            <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/checkpointable/tracking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saving/saveable_object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="27" column="67" lean-forward="true" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ltsm_baseline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="502" lean-forward="true" selection-start-line="502" selection-end-line="502" />
+        <state relative-caret-position="340">
+          <caret line="343" column="51" lean-forward="true" selection-start-line="343" selection-start-column="51" selection-end-line="343" selection-end-column="51" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1564994670977" expanded="true" signature="611:833" ph="..." />
-            <marker date="1564994670977" expanded="true" signature="2057:2240" ph="..." />
-            <marker date="1564994670977" expanded="true" signature="2240:2908" ph="..." />
-            <marker date="1564994670977" expanded="true" signature="9298:9301" ph="..." />
-            <marker date="1564994670977" expanded="true" signature="12848:14272" ph="..." />
+            <marker date="1565183770859" expanded="true" signature="561:783" ph="..." />
+            <marker date="1565183770859" expanded="true" signature="2007:2069" ph="..." />
+            <marker date="1565183770859" expanded="true" signature="2965:2971" ph="..." />
+            <marker date="1565183770859" expanded="true" signature="13274:13278" ph="..." />
+            <marker date="1565183770859" expanded="true" signature="13330:13332" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curie32.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="504" column="44" selection-start-line="504" selection-start-column="38" selection-end-line="504" selection-end-column="44" />
         </state>
       </provider>
     </entry>
