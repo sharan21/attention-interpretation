@@ -11,7 +11,6 @@ from keras.preprocessing.sequence import pad_sequences
 from collections import namedtuple
 
 #GLOBAL VARIABLES
-
 embed_size = 300
 batch_size = 250
 
@@ -22,7 +21,8 @@ epochs = 100
 
 lstm_size = 64
 multiple_fc = False
-fc_units = 256
+fc_units = 128
+
 
 def summarize_variable(var):
 
@@ -78,10 +78,8 @@ def get_test_batches(x, batch_size):
 	for ii in range(0, len(x), batch_size):
 		yield x[ii:ii + batch_size]
 
-def get_gradients(checkpoint, x_test):
+def get_gradients(model, predicted_y):
 
-
-	model, predicted_y = load_and_predict(checkpoint, x_test)
 
 	optimizer_here = model.gradients
 
@@ -92,7 +90,7 @@ def get_gradients(checkpoint, x_test):
 	cost_here = model.cost
 
 
-	gradients, variables = zip(*optimizer_here.compute_gradients(cost_here, embedding_here))
+	gradients, variables = zip(*optimizer_here.compute_gradients(cost_here))
 
 	opt = optimizer_here.apply_gradients(list(zip(gradients, variables)))
 
@@ -110,9 +108,9 @@ def get_gradients(checkpoint, x_test):
 				model.initial_state: test_state}
 
 		# test = sess.run(opt, feed_dict=feed)
-		# print(test)
-		# print(type(test))
+
 		gradients_fed = sess.run(gradients, feed_dict=feed)
+
 		inputs_here_fed = sess.run(inputs_here, feed_dict=feed)
 		variables_fed = sess.run(variables, feed_dict=feed)
 
@@ -124,53 +122,7 @@ def get_gradients(checkpoint, x_test):
 
 
 
-		# for i in range(len(gradients)):
-		# 	if(i == 0): # first object of gradients tuple is always Indexed Slices"
-		# 		continue
-		# 	print(sess.run(gradients[i].eval()))
 
-
-	# print("grads are {}".format(gradients))
-
-def get_gradients2(checkpoint, x_test):
-
-
-	model, predicted_y = load_and_predict(checkpoint, x_test)
-
-	# optimizer_here = model.gradients
-
-	cost_here = model.cost
-	embeddings_here = model.embeddings
-
-	grad_opt = tf.gradients(cost_here, embeddings_here)
-
-	print(grad_opt)
-	print(type(grad_opt))
-
-
-
-	# gradients, variables = zip(*optimizer_here.compute_gradients(cost_here))
-	#
-	# print(x_test.shape)
-	#
-	# opt = optimizer_here.apply_gradients(list(zip(gradients, variables)))
-
-	# with tf.Session() as sess:
-	#
-	# 	init = tf.global_variables_initializer()
-	#
-	# 	sess.run(init)
-	# 	test_state = sess.run(model.initial_state)
-	#
-	#
-	# 	feed = {model.inputs: x_test,
-	# 			model.labels: predicted_y[:, None], #converting 1d to 2d array
-	# 			model.keep_prob: dropout,
-	# 			model.initial_state: test_state}
-	#
-	# 	test = sess.run(grad_opt, feed_dict=feed)
-	# 	print(test)
-	# 	print(type(test))
 
 def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 			  dropout, learning_rate, multiple_fc, fc_units):
@@ -253,11 +205,11 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 
 	# Export the nodes
 
-	# export_nodes = ['inputs', 'labels','embedding', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
-	# 				'predictions', 'cost', 'optimizer', 'gradients','merged']
+	export_nodes = ['inputs', 'labels','embedding', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
+					'predictions', 'cost', 'optimizer', 'gradients','merged']
 
-	export_nodes = ['inputs', 'labels', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
-					'predictions', 'cost', 'optimizer', 'gradients', 'merged']
+	# export_nodes = ['inputs', 'labels', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
+	# 				'predictions', 'cost', 'optimizer', 'gradients', 'merged']
 
 
 	Graph = namedtuple('Graph', export_nodes)
@@ -355,7 +307,7 @@ def train_model(model, epochs, log_string):
 			if avg_valid_loss > min(valid_loss_summary):
 				print("No Improvement.")
 				stop_early += 1
-				if stop_early == 3:
+				if stop_early == 1:
 					break
 
 				# Reset stop_early if the validation loss finds a new low
@@ -363,28 +315,18 @@ def train_model(model, epochs, log_string):
 			else:
 				print("New Record!")
 				stop_early = 0
-				checkpoint = "/Users/sharan/Desktop/abc/plzdontruinme.ckpt".format(
+				checkpoint = "/Users/sharan/Desktop/RNN_with_embd/{}.cptk".format(
 					log_string)
 				saver.save(sess, checkpoint)
 
-
-
-
-
-
-def load_and_predict(checkpoint, x_test):
+def load_and_make_predictions(lstm_size, multiple_fc, fc_units, n_words, checkpoint):
 	'''Predict the sentiment of the testing data'''
-
-
-	summarize_variable(x_test)
 
 	x_test_pruned = x_test[0:250]
 
-	predicted_y = []
+	all_preds = []
 
-
-
-	model = build_rnn(n_words=no_of_unique_words,
+	model = build_rnn(n_words=n_words,
 					  embed_size=embed_size,
 					  batch_size=batch_size,
 					  lstm_size=lstm_size,
@@ -395,39 +337,26 @@ def load_and_predict(checkpoint, x_test):
 					  fc_units=fc_units)
 
 	with tf.Session() as sess:
-
-		tf.get_default_graph()
-
-
-
-
-		# saver = tf.train.Saver(restore_sequentially=False)
-
-		saver = tf.train.import_meta_graph(checkpoint, clear_devices=True)
-
+		saver = tf.train.Saver()
 		# Load the model
 		saver.restore(sess, checkpoint)
 		test_state = sess.run(model.initial_state)
-		print("loaded model and test state")
-
 		for _, x in enumerate(get_test_batches(x_test_pruned, batch_size), 1):
-
-			print("predicting for input {}".format(x))
 			feed = {model.inputs: x,
 					model.keep_prob: 1,
 					model.initial_state: test_state}
 			predictions = sess.run(model.predictions, feed_dict=feed)
-			for pred in predictions:
-				predicted_y.append(float(pred))
+			for p in predictions:
+				all_preds.append(float(p))
+				print("prediction is :{}".format(p))
 
 
-	summarize_variable(predicted_y) #all_preds is of type list with same number of rows as x_test_pruned
-
-	for p in predicted_y:
-		print("prediction is :{}".format(p))
 
 
-	return model, np.array(predicted_y)
+	return model, np.array(all_preds)
+
+
+
 
 
 def write_submission(predictions, string):
@@ -460,24 +389,6 @@ def load_model(path, no_of_unique_words):
 		print("Model restored and ready to use.")
 
 	return model
-
-def load_objectcheckpoint(path, no_of_unique_words):
-	tf.reset_default_graph()
-
-	model = build_rnn(n_words=no_of_unique_words, embed_size=embed_size, batch_size=batch_size, lstm_size=lstm_size,
-					  num_layers=num_layers, dropout=dropout, learning_rate=learning_rate, multiple_fc=multiple_fc,
-					  fc_units=fc_units)
-
-	checkpoint = tf.train.Checkpoint()
-	opt2 = checkpoint.restore(path)
-
-	with tf.Session() as sess:
-		opt2.run_restore_opts(sess)
-
-
-
-
-
 
 
 
@@ -538,13 +449,13 @@ def train_and_checkpoint():
 
 
 	for lstm_size in [64, 128]:
-		if(lstm_size == 64):
+		if(lstm_size == 128):
 			continue
 		for multiple_fc in [True, False]:
-			if(multiple_fc == False):
+			if(multiple_fc == True):
 				continue
 			for fc_units in [128, 256]:
-				if(fc_units==128):
+				if(fc_units==256):
 					continue
 
 				log_string = 'ru={},fcl={},fcu={}'.format(lstm_size, multiple_fc, fc_units)
@@ -553,33 +464,15 @@ def train_and_checkpoint():
 
 				train_model(model, epochs, log_string)
 
-	# these are the best models
-
-
-	# checkpoint1 = "/Users/sharan/Desktop/results/sentiment_ru=128,fcl=False,fcu=256.ckpt"
-	# checkpoint2 = "/Users/sharan/Desktop/results/sentiment_ru=128,fcl=False,fcu=128.ckpt"
-	# checkpoint3 = "/Users/sharan/Desktop/results/sentiment_ru=64,fcl=True,fcu=256.ckpt"
-	#
-	# # make predictions with these 3 models
-	# predictions1 = make_predictions(128, False, 256, checkpoint1)
-	# predictions2 = make_predictions(128, False, 128, checkpoint2)
-	# predictions3 = make_predictions(64, True, 256, checkpoint3)
-	#
-	# #
-	# predictions_combined = (pd.DataFrame(predictions1) + pd.DataFrame(predictions2) + pd.DataFrame(predictions3)) / 3
-	#
-	# write_submission(predictions1, "ru=128,fcl=False,fcu=256")
-	# write_submission(predictions2, "ru=128,fcl=False,fcu=128")
-	# write_submission(predictions3, "ru=64,fcl=True,fcu=256")
-	# write_submission(predictions_combined.ix[:, 0], "combined")
-
-
-
 
 
 if __name__ == '__main__':
 
-	path_to_restore = "/Users/sharan/Desktop/results/sentiment_ru=64,fcl=False,fcu=256.ckpt"
+
+
+
+	checkpoint= "/Users/sharan/Desktop/RNN_with_embd/ru=64,fcl=False,fcu=128.cptk"
+
 
 	imdb_train_path = "./imdb/train.tsv"
 	imdb_test_path = "./imdb/test.tsv"
@@ -590,25 +483,38 @@ if __name__ == '__main__':
 
 	x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
 
-	model = load_model(path_to_restore, no_of_unique_words)
+	predicted_labels = []
+
+
+	# model = load_model(checkpoint2, no_of_unique_words)
+
+	# print("The embedding tensor is {}".format(model.embedding))
+
+	model, all_preds = load_and_make_predictions(lstm_size, multiple_fc, fc_units, no_of_unique_words, checkpoint)
+
+	print(all_preds)
+	print(type(all_preds))
+	print(type(all_preds[0]))
+
+	print(model.embedding)
+
+	print(model)
+
+
+	# predicted_labels = predict_from_model(model, x_test)
+
+	# model, predicted_labels = load_and_predict(checkpoint, no_of_unique_words)
 
 
 
-
-
-
-	#plzz work
-	# get_gradients(model)
-
-	#Uncomment below line to train the models and predict, compare best models and see scores
-	# train_and_checkpoint()
-
-	# checkpoint = "/Users/sharan/Desktop/results2/sentiment_ru=128,fcl=True,fcu=256.ckpt"
+	# vars, grads, inputs = get_gradients(model, all_preds)
 	#
-	# vars, grads, inputs = get_gradients(checkpoint, x_test[0:250])
 	#
 	# print(grads)
-	#
+
+
+
+
 
 
 	# train_and_checkpoint()
