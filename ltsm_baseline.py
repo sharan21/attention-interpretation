@@ -10,18 +10,6 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from collections import namedtuple
 
-#GLOBAL VARIABLES
-embed_size = 300
-batch_size = 250
-
-num_layers = 1
-dropout = 0.5
-learning_rate = 0.001
-epochs = 100
-
-lstm_size = 64
-multiple_fc = False
-fc_units = 128
 
 
 def summarize_variable(var):
@@ -82,34 +70,47 @@ def get_gradients(model, predicted_y):
 
 
 	optimizer_here = model.gradients
+	print("here")
 
 	inputs_here = model.inputs
+	print("here")
 
 	embedding_here = model.embedding
 
 	cost_here = model.cost
+	print("here")
 
 
-	gradients, variables = zip(*optimizer_here.compute_gradients(cost_here))
+	gradients, variables = zip(*optimizer_here.compute_gradients(cost_here, embedding_here))
+	print("here")
+
+
+	print(gradients)
 
 	opt = optimizer_here.apply_gradients(list(zip(gradients, variables)))
+	print("here")
 
 	with tf.Session() as sess:
 
 		init = tf.global_variables_initializer()
+		print("here")
 
 		sess.run(init)
+		print("here")
 		test_state = sess.run(model.initial_state)
+		print("here")
 
 
-		feed = {model.inputs: x_test,
+		feed = {model.inputs: x_test[0:250],
 				model.labels: predicted_y[:, None], #converting 1d to 2d array
 				model.keep_prob: dropout,
 				model.initial_state: test_state}
+		print("here")
 
 		# test = sess.run(opt, feed_dict=feed)
 
 		gradients_fed = sess.run(gradients, feed_dict=feed)
+		print("here")
 
 		inputs_here_fed = sess.run(inputs_here, feed_dict=feed)
 		variables_fed = sess.run(variables, feed_dict=feed)
@@ -125,11 +126,9 @@ def get_gradients(model, predicted_y):
 
 
 def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
-			  dropout, learning_rate, multiple_fc, fc_units):
+			  dropout, learning_rate, multiple_fc, fc_units, with_embd = True):
 	'''Build the Recurrent Neural Network'''
 
-
-	global opt
 
 	# tf.reset_default_graph()
 
@@ -205,11 +204,13 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 
 	# Export the nodes
 
-	export_nodes = ['inputs', 'labels','embedding', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
-					'predictions', 'cost', 'optimizer', 'gradients','merged']
+	if(with_embd):
 
-	# export_nodes = ['inputs', 'labels', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
-	# 				'predictions', 'cost', 'optimizer', 'gradients', 'merged']
+		export_nodes = ['inputs', 'labels','embedding', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
+						'predictions', 'cost', 'optimizer', 'gradients','merged']
+	else:
+		export_nodes = ['inputs', 'labels', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
+						'predictions', 'cost', 'optimizer', 'gradients', 'merged']
 
 
 	Graph = namedtuple('Graph', export_nodes)
@@ -221,7 +222,7 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 
 
 
-def train_model(model, epochs, log_string):
+def train_model(model, epochs, log_string, checkpoint_to_create):
 	'''Train the RNN'''
 
 	saver = tf.train.Saver()
@@ -315,18 +316,20 @@ def train_model(model, epochs, log_string):
 			else:
 				print("New Record!")
 				stop_early = 0
-				checkpoint = "/Users/sharan/Desktop/RNN_with_embd/{}.cptk".format(
-					log_string)
-				saver.save(sess, checkpoint)
 
-def load_and_make_predictions(lstm_size, multiple_fc, fc_units, n_words, checkpoint):
+
+				# checkpoint = "/Users/sharan/Desktop/RNN_with_embd/{}.cptk".format(
+				# 	log_string)
+				saver.save(sess, checkpoint_to_create)
+
+def load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint):
 	'''Predict the sentiment of the testing data'''
 
 	x_test_pruned = x_test[0:250]
 
 	all_preds = []
 
-	model = build_rnn(n_words=n_words,
+	model = build_rnn(n_words=vocab_size,
 					  embed_size=embed_size,
 					  batch_size=batch_size,
 					  lstm_size=lstm_size,
@@ -349,7 +352,6 @@ def load_and_make_predictions(lstm_size, multiple_fc, fc_units, n_words, checkpo
 			for p in predictions:
 				all_preds.append(float(p))
 				print("prediction is :{}".format(p))
-
 
 
 
@@ -444,34 +446,50 @@ def pad_split_data(train_tokenized, test_tokenized):
 	return  x_train, x_valid, y_train, y_valid, x_test
 
 
-def train_and_checkpoint():
+def train_and_checkpoint(checkpoint_to_create, l,m,f, vocab_size):
+
+
+	log_string = 'ru={},fcl={},fcu={}'.format(l,m,f)
+
+	model = build_rnn(n_words=vocab_size, embed_size=embed_size, batch_size=batch_size, lstm_size=l, num_layers=num_layers,
+					  dropout=dropout, learning_rate=learning_rate, multiple_fc=m, fc_units=f, with_embd=True)
+
+	train_model(model, epochs, log_string, checkpoint_to_create)
+
+def checkpoint_to_vars(checkpoint):
+	# returns ltsm_size, multiple_fc, and fc_units
+
+	filename = checkpoint.split("/")
+	filename = filename[len(filename)-1]
+
+	var_list = (filename.split("."))[0].split(",")
+
+	return var_list[0], var_list[1], var_list[2]
 
 
 
-	for lstm_size in [64, 128]:
-		if(lstm_size == 128):
-			continue
-		for multiple_fc in [True, False]:
-			if(multiple_fc == True):
-				continue
-			for fc_units in [128, 256]:
-				if(fc_units==256):
-					continue
 
-				log_string = 'ru={},fcl={},fcu={}'.format(lstm_size, multiple_fc, fc_units)
-				model = build_rnn(n_words=no_of_unique_words, embed_size=embed_size, batch_size=batch_size, lstm_size=lstm_size, num_layers=num_layers,
-								  dropout=dropout, learning_rate=learning_rate, multiple_fc=multiple_fc, fc_units=fc_units)
 
-				train_model(model, epochs, log_string)
 
 
 
 if __name__ == '__main__':
 
+	embed_size = 300
+	batch_size = 250
+
+	num_layers = 1
+	dropout = 0.5
+	learning_rate = 0.001
+	epochs = 100
+
+	lstm_size = 64
+	multiple_fc = False
+	fc_units = 128
 
 
-
-	checkpoint= "/Users/sharan/Desktop/RNN_with_embd/ru=64,fcl=False,fcu=128.cptk"
+	checkpoint_to_restore = ""
+	checkpoint_to_create= "/Users/sharan/Desktop/RNN_with_embd/64,False,128.ckpt"
 
 
 	imdb_train_path = "./imdb/train.tsv"
@@ -479,45 +497,30 @@ if __name__ == '__main__':
 
 	print("Started.")
 
-	train_tokenized, test_tokenized, no_of_unique_words = import_clean_tokenize_data(imdb_train_path, imdb_test_path)
+	train_tokenized, test_tokenized, vocab_size = import_clean_tokenize_data(imdb_train_path, imdb_test_path)
+
+	vocab_size += 1
+
 
 	x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
 
-	predicted_labels = []
+
+	model, all_preds = load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_create)
 
 
-	# model = load_model(checkpoint2, no_of_unique_words)
+	vars, grads, inputs = get_gradients(model, all_preds)
 
-	# print("The embedding tensor is {}".format(model.embedding))
+	indexed_slices = grads[0]
 
-	model, all_preds = load_and_make_predictions(lstm_size, multiple_fc, fc_units, no_of_unique_words, checkpoint)
-
-	print(all_preds)
-	print(type(all_preds))
-	print(type(all_preds[0]))
-
-	print(model.embedding)
-
-	print(model)
-
-
-	# predicted_labels = predict_from_model(model, x_test)
-
-	# model, predicted_labels = load_and_predict(checkpoint, no_of_unique_words)
-
-
-
-	# vars, grads, inputs = get_gradients(model, all_preds)
-	#
-	#
-	# print(grads)
+	for i in indexed_slices:
+		print(i)
+		print(len(i))
 
 
 
 
 
 
-	# train_and_checkpoint()
 
 
 
