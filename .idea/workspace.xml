@@ -47,18 +47,18 @@
     <session id="918213074">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.4" value="4" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
-          <entry key="py" value="15" />
+          <entry key="py" value="18" />
           <entry key="rough" value="1" />
         </counts>
       </usages-collector>
@@ -66,30 +66,72 @@
         <counts>
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="13" />
+          <entry key="Python" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="7486" />
+          <entry key="py" value="9721" />
           <entry key="rough" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="23" />
-          <entry key="Python" value="7475" />
+          <entry key="Python" value="9710" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/curie32.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="504" column="44" selection-start-line="504" selection-start-column="38" selection-end-line="504" selection-end-column="44" />
+            <state relative-caret-position="420">
+              <caret line="462" selection-start-line="462" selection-end-line="491" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ltsm_baseline.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1155">
+              <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+                <marker date="1565260297142" expanded="true" signature="393:615" ph="..." />
+                <marker date="1565260297142" expanded="true" signature="1839:1841" ph="..." />
+                <marker date="1565260297142" expanded="true" signature="2883:2885" ph="..." />
+                <marker date="1565260297142" expanded="true" signature="10544:10545" ph="..." />
+                <marker date="1565260297142" expanded="true" signature="11349:11352" ph="..." />
+                <marker date="1565260297142" expanded="true" signature="11404:11406" ph="..." />
+                <marker date="1565260297142" expanded="true" signature="13482:13491" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/attention_baseline.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/attention_keras/layers/attention.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,6 +170,7 @@
         <option value="$PROJECT_DIR$/build_baseline.py" />
         <option value="$PROJECT_DIR$/curie32.py" />
         <option value="$PROJECT_DIR$/ltsm_baseline.py" />
+        <option value="$PROJECT_DIR$/attention_baseline.py" />
       </list>
     </option>
   </component>
@@ -144,7 +187,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,7 +197,7 @@
             <path>
               <item name="attention-inter" type="b2602c69:ProjectViewProjectNode" />
               <item name="attention-inter" type="462c0819:PsiDirectoryNode" />
-              <item name="imdb" type="462c0819:PsiDirectoryNode" />
+              <item name="attention_keras" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="attention-inter" type="b2602c69:ProjectViewProjectNode" />
@@ -165,6 +207,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,7 +226,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ltsm_baseline">
+  <component name="RunManager" selected="Python.attention_baseline">
+    <configuration name="attention" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sentiment_baseline" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/attention_keras/layers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_keras/layers/attention.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="attention_baseline" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sentiment_baseline" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_baseline.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="build_baseline" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sentiment_baseline" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -226,27 +311,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="sentiment_baseline" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sentiment_baseline" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -269,17 +333,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.test2" />
       <item itemvalue="Python.build_baseline" />
       <item itemvalue="Python.ltsm_baseline" />
+      <item itemvalue="Python.attention" />
+      <item itemvalue="Python.attention_baseline" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.attention_baseline" />
+        <item itemvalue="Python.attention" />
         <item itemvalue="Python.ltsm_baseline" />
         <item itemvalue="Python.build_baseline" />
         <item itemvalue="Python.test2" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -304,12 +370,12 @@
     <frame x="0" y="23" width="1400" height="833" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48852903" visible="true" weight="0.1595359" />
-      <window_info id="Structure" order="1" sideWeight="0.511471" side_tool="true" visible="true" weight="0.1595359" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48300537" visible="true" weight="0.1595359" />
+      <window_info id="Structure" order="1" sideWeight="0.51699466" side_tool="true" visible="true" weight="0.1595359" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24561404" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24561404" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994602" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -329,6 +395,7 @@
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/attention_keras" />
     </ignored-roots>
   </component>
   <component name="debuggerHistoryManager">
@@ -396,23 +463,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ltsm_baseline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="343" column="51" lean-forward="true" selection-start-line="343" selection-start-column="51" selection-end-line="343" selection-end-column="51" />
+        <state relative-caret-position="1155">
+          <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1565183770859" expanded="true" signature="561:783" ph="..." />
-            <marker date="1565183770859" expanded="true" signature="2007:2069" ph="..." />
-            <marker date="1565183770859" expanded="true" signature="2965:2971" ph="..." />
-            <marker date="1565183770859" expanded="true" signature="13274:13278" ph="..." />
-            <marker date="1565183770859" expanded="true" signature="13330:13332" ph="..." />
+            <marker date="1565260297142" expanded="true" signature="393:615" ph="..." />
+            <marker date="1565260297142" expanded="true" signature="1839:1841" ph="..." />
+            <marker date="1565260297142" expanded="true" signature="2883:2885" ph="..." />
+            <marker date="1565260297142" expanded="true" signature="10544:10545" ph="..." />
+            <marker date="1565260297142" expanded="true" signature="11349:11352" ph="..." />
+            <marker date="1565260297142" expanded="true" signature="11404:11406" ph="..." />
+            <marker date="1565260297142" expanded="true" signature="13482:13491" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/curie32.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="504" column="44" selection-start-line="504" selection-start-column="38" selection-end-line="504" selection-end-column="44" />
+        <state relative-caret-position="420">
+          <caret line="462" selection-start-line="462" selection-end-line="491" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_keras/layers/attention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attention_baseline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
