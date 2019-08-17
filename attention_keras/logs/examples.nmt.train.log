@@ -1,0 +1,13 @@
+2019-08-10 13:09:30,177 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-10 13:12:52,552 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-10 13:12:52,670 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-10 13:12:53,589 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-10 13:12:53,590 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-10 13:12:53,590 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-10 13:12:53,590 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-10 13:13:16,330 | examples.nmt.train | train | INFO | Loss in epoch 1: 3.228421185261164
+2019-08-10 13:13:37,037 | examples.nmt.train | train | INFO | Loss in epoch 2: 1.772794355948766
+2019-08-10 13:13:56,207 | examples.nmt.train | train | INFO | Loss in epoch 3: 1.1685629525245764
+2019-08-10 13:13:56,642 | examples.nmt.train | <module> | INFO | Translating: his most loved animal is this rabbit .
+
+2019-08-10 13:13:56,957 | examples.nmt.train | <module> | INFO | 	French: la fraise est son fruit préféré mais la fraise est la moins eos 

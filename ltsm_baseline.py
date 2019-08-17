@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import tensorflow as tf
-import nltk, re, time
+import re
 from nltk.corpus import stopwords
 from string import punctuation
 from tqdm import tqdm
@@ -68,59 +68,52 @@ def get_test_batches(x, batch_size):
 
 def get_gradients(model, predicted_y):
 
+	variables_fed = []
+	gradients_fe = []
+	inputs_here_fed = []
 
 	optimizer_here = model.gradients
-	print("here")
-
 	inputs_here = model.inputs
-	print("here")
-
 	embedding_here = model.embedding
-
 	cost_here = model.cost
-	print("here")
+
+	print(len(predicted_y))
 
 
 	gradients, variables = zip(*optimizer_here.compute_gradients(cost_here, embedding_here))
-	print("here")
-
-
-	print(gradients)
+	print("gradients object: {}".format(gradients[0]))
 
 	opt = optimizer_here.apply_gradients(list(zip(gradients, variables)))
-	print("here")
+	# we do not have to run the optimizer as we do not want to BP
 
 	with tf.Session() as sess:
 
 		init = tf.global_variables_initializer()
-		print("here")
 
 		sess.run(init)
-		print("here")
 		test_state = sess.run(model.initial_state)
-		print("here")
 
-
-		feed = {model.inputs: x_test[0:250],
+		feed = {model.inputs: x_test[0:len(predicted_y)], # dims should match predicted_y
 				model.labels: predicted_y[:, None], #converting 1d to 2d array
 				model.keep_prob: dropout,
 				model.initial_state: test_state}
-		print("here")
 
 		# test = sess.run(opt, feed_dict=feed)
 
 		gradients_fed = sess.run(gradients, feed_dict=feed)
-		print("here")
 
-		inputs_here_fed = sess.run(inputs_here, feed_dict=feed)
-		variables_fed = sess.run(variables, feed_dict=feed)
-
+		# inputs_here_fed = sess.run(inputs_here, feed_dict=feed)
+		# variables_fed = sess.run(variables, feed_dict=feed)
 
 	return variables_fed, gradients_fed, inputs_here_fed
 
 
+def get_gradients_values(gradients): # takes IndexedSlices Object which store gradients as input
 
+	l = gradients[0].values
+	print("Shape of gradients list: {}".format(l.shape))
 
+	return l
 
 
 
@@ -129,8 +122,6 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 			  dropout, learning_rate, multiple_fc, fc_units, with_embd = True):
 	'''Build the Recurrent Neural Network'''
 
-
-	# tf.reset_default_graph()
 
 	# Declare placeholders we'll feed into the graph
 	with tf.name_scope('inputs'):
@@ -325,7 +316,9 @@ def train_model(model, epochs, log_string, checkpoint_to_create):
 def load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint):
 	'''Predict the sentiment of the testing data'''
 
-	x_test_pruned = x_test[0:250]
+	pruning_size = 250 # we do not want to use all 25000 examples for test_data
+
+	x_test_pruned = x_test[0:pruning_size]
 
 	all_preds = []
 
@@ -337,7 +330,7 @@ def load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, chec
 					  dropout=dropout,
 					  learning_rate=learning_rate,
 					  multiple_fc=multiple_fc,
-					  fc_units=fc_units)
+					  fc_units=fc_units) # default with_embd = True
 
 	with tf.Session() as sess:
 		saver = tf.train.Saver()
@@ -352,6 +345,8 @@ def load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, chec
 			for p in predictions:
 				all_preds.append(float(p))
 				print("prediction is :{}".format(p))
+
+	print(len(all_preds))
 
 
 
@@ -456,8 +451,8 @@ def train_and_checkpoint(checkpoint_to_create, l,m,f, vocab_size):
 
 	train_model(model, epochs, log_string, checkpoint_to_create)
 
-def checkpoint_to_vars(checkpoint):
-	# returns ltsm_size, multiple_fc, and fc_units
+def checkpoint_to_vars(checkpoint):# DO NOT USE
+	# returns ltsm_size, multiple_fc, and fc_units,
 
 	filename = checkpoint.split("/")
 	filename = filename[len(filename)-1]
@@ -465,9 +460,6 @@ def checkpoint_to_vars(checkpoint):
 	var_list = (filename.split("."))[0].split(",")
 
 	return var_list[0], var_list[1], var_list[2]
-
-
-
 
 
 
@@ -488,7 +480,7 @@ if __name__ == '__main__':
 	fc_units = 128
 
 
-	checkpoint_to_restore = ""
+	checkpoint_to_restore = "/Users/sharan/Desktop/RNN_with_embd/64,False,128.ckpt"
 	checkpoint_to_create= "/Users/sharan/Desktop/RNN_with_embd/64,False,128.ckpt"
 
 
@@ -501,20 +493,23 @@ if __name__ == '__main__':
 
 	vocab_size += 1
 
-
-	x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
+	# x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
+	_, _, _, _, x_test = pad_split_data(train_tokenized, test_tokenized)
+	# All the above code is NEEDED for both loading and creating models
 
 
 	model, all_preds = load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_create)
+	print(len(all_preds))
 
 
 	vars, grads, inputs = get_gradients(model, all_preds)
+	print("computed gradients tensor: {}".format(grads))
 
-	indexed_slices = grads[0]
+	grads_list =  get_gradients_values(grads)
 
-	for i in indexed_slices:
-		print(i)
-		print(len(i))
+	# for g in grads_list:
+	# 	print(max(g))
+	# 	print(sum(g))
 
 
 

@@ -3,22 +3,21 @@
 ---
 
 ## LTSM baseline
-*Libraries Used*
+Libraries Used:
 https://github.com/Currie32/Movie-Reviews-Sentiment
-
-*Dataset used*
+Dataset used:
 https://www.kaggle.com/c/word2vec-nlp-tutorial/data
-*Description*
+Description:
 Used for training LTSM on Kaggle movie reviews dataset of 50,000 reviews for sentiment analysis, and use gradient measure for input attribution
 
 ---
 
 ## Attention baseline using Keras
-*Libraries Used*
+:Libraries Used:
 https://github.com/thushv89/attention_keras
-*Dataset used*
+Dataset used:
 https://www.kaggle.com/c/word2vec-nlp-tutorial/data
-*Description*
+Description:
 Used for training Attention Model for machine translation and create heatmaps using 
 1. Energy of attention_states
 2. Leave one out
