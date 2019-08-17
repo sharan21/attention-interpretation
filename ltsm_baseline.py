@@ -44,7 +44,6 @@ def get_batches(x, y, batch_size):
 	for ii in range(0, len(x), batch_size):
 		yield x[ii:ii + batch_size], y[ii:ii + batch_size]
 
-
 def get_test_batches(x, batch_size):
 	'''Create the batches for the testing data'''
 	n_batches = len(x) // batch_size
@@ -91,7 +90,6 @@ def get_gradients(model, predicted_y, test_data): # ensure batch_size of loaded 
 
 
 	return gradients_fed
-
 
 def get_gradients_values(gradients): # takes IndexedSlices Object which store gradients as input
 
@@ -201,8 +199,6 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 	graph = Graph(*[local_dict[each] for each in export_nodes])
 
 	return graph
-
-
 
 def train_model(model, epochs, log_string, checkpoint_to_create):
 	'''Train the RNN'''
@@ -414,7 +410,6 @@ def write_submission(predictions, string):
 	submission = pd.DataFrame(data={"id": test["id"], "sentiment": predictions})
 	submission.to_csv("submission_{}.csv".format(string), index=False, quoting=3)
 
-
 def load_model(path, no_of_unique_words):
 
 	tf.reset_default_graph()
@@ -441,7 +436,6 @@ def save_tokenizer(tokenizer):
 	with open('tokenizer.pickle', 'wb') as handle:
 		pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-
 def load_tokenizer(path = './tokenizers/tokenizer_imdb.pickle'):
 
 	print("loading tokenizer...")
@@ -449,8 +443,6 @@ def load_tokenizer(path = './tokenizers/tokenizer_imdb.pickle'):
 		tokenizer = pickle.load(handle)
 
 	return tokenizer
-
-
 
 def import_clean_tokenize_data(trainpath, testpath):
 
@@ -484,7 +476,6 @@ def import_clean_tokenize_data(trainpath, testpath):
 
 	return  train_seq, test_seq, no_of_unique_words, tokenizer
 
-
 def pad_split_data(train_tokenized, test_tokenized):
 
 	global train, test
@@ -501,7 +492,6 @@ def pad_split_data(train_tokenized, test_tokenized):
 	x_test = test_pad
 
 	return  x_train, x_valid, y_train, y_valid, x_test
-
 
 def train_and_checkpoint(checkpoint_to_create, l,m,f, vocab_size):
 
@@ -540,10 +530,6 @@ def create_test_example(tokenizer): # to call this we first ought to have fed en
 
 	return test_example_seq
 
-# def create_baseline_example(test_data):
-
-
-
 def get_attribution_from_grads(grads):
 
 	return np.sum(grads, axis=1)
@@ -568,13 +554,6 @@ def visualize_attributes(attributions, word_list):
 	assert(sum(percent) == 100)
 
 	return set(attri_dict)
-
-
-
-
-
-
-
 
 if __name__ == '__main__':
 
