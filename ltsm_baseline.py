@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import tensorflow as tf
+import pickle
 import re
 from nltk.corpus import stopwords
 from string import punctuation
@@ -9,16 +10,7 @@ from sklearn.model_selection import train_test_split
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from collections import namedtuple
-
-
-
-def summarize_variable(var):
-
-	print("\n var is of type {} ".format(type(var)))
-	print(" var has leading length {} \n".format(len(var)))
-
-	if(type(var) == "<class 'numpy.ndarray'>"):
-		print("Shape of numpy array is {} \n".format(var, var.shape))
+tf.logging.set_verbosity(tf.logging.ERROR)
 
 
 def clean_text(text, remove_stopwords=True):
@@ -45,14 +37,12 @@ def clean_text(text, remove_stopwords=True):
 	# Return a list of words
 	return (text)
 
-
 def get_batches(x, y, batch_size):
 	'''Create the batches for the training and validation data'''
 	n_batches = len(x) // batch_size
 	x, y = x[:n_batches * batch_size], y[:n_batches * batch_size]
 	for ii in range(0, len(x), batch_size):
 		yield x[ii:ii + batch_size], y[ii:ii + batch_size]
-
 
 
 def get_test_batches(x, batch_size):
@@ -64,20 +54,15 @@ def get_test_batches(x, batch_size):
 
 def get_gradients(model, predicted_y, test_data): # ensure batch_size of loaded model == number of test cases
 
-	variables_fed = []
 	gradients_fed = []
-	inputs_here_fed = []
 
 	optimizer_here = model.gradients
-	inputs_here = model.inputs
 	embedding_here = model.embedding
 	cost_here = model.cost
 
 
-
-
 	gradients, variables = zip(*optimizer_here.compute_gradients(cost_here, embedding_here, gate_gradients=True, colocate_gradients_with_ops=True))
-	print("gradients object: {}".format(gradients[0]))
+	# print("gradients object: {}".format(gradients[0]))
 
 	opt = optimizer_here.apply_gradients(list(zip(gradients, variables)))
 	# we do not have to run the optimizer as we do not want to BP
@@ -104,28 +89,24 @@ def get_gradients(model, predicted_y, test_data): # ensure batch_size of loaded 
 
 		gradients_fed = sess.run(gradients, feed_dict=feed)
 
-		# inputs_here_fed = sess.run(inputs_here, feed_dict=feed)
-		# variables_fed = sess.run(variables, feed_dict=feed)
 
-	return variables_fed, gradients_fed, inputs_here_fed
+	return gradients_fed
 
 
 def get_gradients_values(gradients): # takes IndexedSlices Object which store gradients as input
 
 	index_slices = gradients[0]
 
-
 	vals = index_slices[0]
-
 	indices = index_slices[1]
-
-
 
 	#saving the gradients object
 	# np.savetxt("./vals.csv", vals, delimiter=",")
 	# np.savetxt("./indices.csv", indices, delimiter=",")
 
 	return vals, indices # val and indices are numpy arrays
+
+
 
 
 
@@ -216,7 +197,7 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 
 	Graph = namedtuple('Graph', export_nodes)
 	local_dict = locals()
-	print(local_dict)
+	# print(local_dict)
 	graph = Graph(*[local_dict[each] for each in export_nodes])
 
 	return graph
@@ -323,40 +304,39 @@ def train_model(model, epochs, log_string, checkpoint_to_create):
 				# 	log_string)
 				saver.save(sess, checkpoint_to_create)
 
-# def load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint):
-# 	'''Predict the sentiment of the testing data'''
-#
-# 	pruning_size = 1 # ensure that pruning_size == batch_size while getting gradients
-# 	x_test_pruned = x_test[0:pruning_size]
-# 	all_preds = []
-#
-# 	model = build_rnn(n_words=vocab_size,
-# 					  embed_size=embed_size,
-# 					  batch_size=batch_size,
-# 					  lstm_size=lstm_size,
-# 					  num_layers=num_layers,
-# 					  dropout=dropout,
-# 					  learning_rate=learning_rate,
-# 					  multiple_fc=multiple_fc,
-# 					  fc_units=fc_units) # default with_embd = True
-#
-# 	with tf.Session() as sess:
-# 		saver = tf.train.Saver()
-# 		# Load the model
-# 		saver.restore(sess, checkpoint)
-# 		test_state = sess.run(model.initial_state)
-# 		for _, x in enumerate(get_test_batches(x_test_pruned, batch_size=batch_size), 1):
-# 			feed = {model.inputs: x,
-# 					model.keep_prob: 1,
-# 					model.initial_state: test_state}
-# 			predictions = sess.run(model.predictions, feed_dict=feed)
-# 			for p in predictions:
-# 				all_preds.append(float(p))
-# 				print("prediction is :{}".format(p))
-#
-# 	print(len(all_preds))
-#
-# 	return model, np.array(all_preds)
+def load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint):
+	'''Predict the sentiment of the testing data'''
+
+	pruning_size = 1 # ensure that pruning_size == batch_size while getting gradients
+	x_test_pruned = x_test[0:pruning_size]
+	all_preds = []
+
+	model = build_rnn(n_words=vocab_size,
+					  embed_size=embed_size,
+					  batch_size=batch_size,
+					  lstm_size=lstm_size,
+					  num_layers=num_layers,
+					  dropout=dropout,
+					  learning_rate=learning_rate,
+					  multiple_fc=multiple_fc,
+					  fc_units=fc_units) # default with_embd = True
+
+	with tf.Session() as sess:
+		saver = tf.train.Saver()
+		# Load the model
+		saver.restore(sess, checkpoint)
+		test_state = sess.run(model.initial_state)
+		for _, x in enumerate(get_test_batches(x_test_pruned, batch_size=batch_size), 1):
+			feed = {model.inputs: x,
+					model.keep_prob: 1,
+					model.initial_state: test_state}
+			predictions = sess.run(model.predictions, feed_dict=feed)
+			for p in predictions:
+				all_preds.append(float(p))
+				print("prediction is :{}".format(p))
+
+
+	return model, np.array(all_preds)
 
 def load_and_make_predictions2(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint, test_data):
 	'''Predict the sentiment of the testing data'''
@@ -387,7 +367,7 @@ def load_and_make_predictions2(lstm_size, multiple_fc, fc_units, vocab_size, che
 			predictions = sess.run(model.predictions, feed_dict=feed)
 			for p in predictions:
 				all_preds.append(float(p))
-				print("prediction is :{}".format(p))
+				print("Prediction :{}".format(p))
 
 
 	return model, np.array(all_preds)
@@ -421,10 +401,25 @@ def load_model(path, no_of_unique_words):
 
 	return model
 
+def save_tokenizer(tokenizer):
+
+	print("saving tokenizer...")
+	with open('tokenizer.pickle', 'wb') as handle:
+		pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+
+def load_tokenizer(path = './tokenizer.pickle'):
+
+	print("loading tokenizer...")
+	with open(path, 'rb') as handle:
+		tokenizer = pickle.load(handle)
+
+	return tokenizer
 
 
 
 def import_clean_tokenize_data(trainpath, testpath):
+
 	global train, test, number_of_unique_words
 	train = pd.read_csv(trainpath, delimiter="\t")
 	test = pd.read_csv(testpath, delimiter="\t")
@@ -454,7 +449,6 @@ def import_clean_tokenize_data(trainpath, testpath):
 	no_of_unique_words = len(word_index) # we need this explicit parameter to build the model
 
 	return  train_seq, test_seq, no_of_unique_words, tokenizer
-
 
 
 def pad_split_data(train_tokenized, test_tokenized):
@@ -498,6 +492,8 @@ def create_test_example(tokenizer): # to call this we first ought to have fed en
 
 	test_example = pd.read_csv("./imdb/heatmap_test.tsv", delimiter="\t")
 
+	print("Test example :\n {}".format(test_example['review']))
+
 	test_example_clean = []
 	for review in test_example.review:
 		test_example_clean.append(clean_text(review))
@@ -507,7 +503,12 @@ def create_test_example(tokenizer): # to call this we first ought to have fed en
 	print("Test data tokenization is complete")
 
 
+
 	return test_example_seq
+
+# def create_baseline_example(test_data):
+
+
 
 def get_attribution_from_grads(grads):
 
@@ -519,12 +520,78 @@ def get_start_point(indices):
 			return(i)
 
 def get_word_from_index(indices, tokenizer):
-
 	text = tokenizer.sequences_to_texts([indices])
 	return text
 
+def visualize_attributes(attributions, word_list):
+
+
+	tot_sum = sum(abs(attributions))
+	percent = [(abs(e)/tot_sum)*100 for e in attributions]
+
+	attri_dict = zip(word_list, percent)
+
+	return set(attri_dict)
+
+
+
+
+
+
+
 
 if __name__ == '__main__':
+
+########################################################################## EXPERIMENT SECTION
+
+
+
+
+
+
+
+
+########################################################################## IMPORT DATA AND FIT TOKENIZER
+
+
+
+
+	# embed_size = 300
+# 	# batch_size = 1 #default was 250 for training
+# 	#
+# 	# num_layers = 1
+# 	# dropout = 0.5
+# 	# learning_rate = 0.001
+# 	# epochs = 1
+# 	#
+# 	# #stick to these parameters while training, restoring and predicting
+# 	# lstm_size = 64
+# 	# multiple_fc = False
+# 	# fc_units = 128
+# 	#
+# 	# checkpoint_to_restore = "/Users/sharan/Desktop/RNN_with_embd/64,False,128.ckpt"
+# 	# checkpoint_to_create= "/Users/sharan/Desktop/RNN_with_embed/64,False,128.ckpt"
+# 	#
+# 	#
+# 	# imdb_train_path = "./imdb/train.tsv"
+# 	# imdb_test_path = "./imdb/test.tsv"
+# 	#
+# 	# print("Started tokenization.")
+# 	#
+# 	# train_tokenized, test_tokenized, vocab_size, tokenizer = import_clean_tokenize_data(imdb_train_path, imdb_test_path)
+# 	#
+# 	# print("Tokenization complete.")
+# 	#
+# 	#
+# 	# vocab_size += 1 # needed to fit the model
+# 	#
+# 	# x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
+	
+
+
+
+
+########################################################################## LOAD, PREDICT AND GET GRADIENTS
 
 	embed_size = 300
 	batch_size = 1 #default was 250 for training
@@ -539,7 +606,6 @@ if __name__ == '__main__':
 	multiple_fc = False
 	fc_units = 128
 
-
 	checkpoint_to_restore = "/Users/sharan/Desktop/RNN_with_embd/64,False,128.ckpt"
 	checkpoint_to_create= "/Users/sharan/Desktop/RNN_with_embed/64,False,128.ckpt"
 
@@ -547,43 +613,40 @@ if __name__ == '__main__':
 	imdb_train_path = "./imdb/train.tsv"
 	imdb_test_path = "./imdb/test.tsv"
 
-	print("Started.")
 
-	train_tokenized, test_tokenized, vocab_size, tokenizer = import_clean_tokenize_data(imdb_train_path, imdb_test_path)
+	vocab_size = 99426
 
-	vocab_size += 1 # needed to fit the model
-
-	x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
-	# All the above code is NEEDED for both loading and creating models
-
-	#getting custom test data
-
+	tokenizer = load_tokenizer('./tokenizers/tokenizer_imdb.pickle')
+	
 	test_data = create_test_example(tokenizer) #creates embeddings for test sentences using tokenizer from import...()
 
 	model, all_preds = load_and_make_predictions2(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, test_data)
-		# print(len(all_preds))
 
-
-	vars, grads, inputs = get_gradients(model, all_preds, test_data)
+	grads = get_gradients(model, all_preds, test_data)
 	# print("computed gradients tensor: {}".format(grads))
 
 	grads_list, indices_list =  get_gradients_values(grads)
 
-	print("indices are {}".format(indices_list))
-	print("words from indices is {}".format(get_word_from_index(indices_list, tokenizer)))
+	text_list = get_word_from_index(indices_list, tokenizer)
+	word_list = [e for e in text_list[0].split(" ")]
 
-	attri = get_attribution_from_grads(grads_list)
+	# print("indices list: {}".format(indices_list))
+	print("words from indices: {}".format(text_list))
 
-	print("attri is {}".format(attri))
+	attributions = get_attribution_from_grads(grads_list)
 
+	attributions_dict = visualize_attributes(attributions, word_list)
 
-
-
-
-
-	# np.savetxt('./attributions.csv', attri, delimiter=",")
+	print(attributions_dict)
 
 
+
+
+
+
+
+
+########################################################################## TRAIN NEW MODEL
 
 	# train_and_checkpoint(checkpoint_to_create, lstm_size, multiple_fc, fc_units, vocab_size)
 
