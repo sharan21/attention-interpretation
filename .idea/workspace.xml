@@ -47,62 +47,148 @@
     <session id="918213074">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.4" value="5" />
+          <entry key="project.open.time.4" value="6" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="csv" value="2" />
           <entry key="h5" value="1" />
           <entry key="md" value="1" />
-          <entry key="py" value="30" />
+          <entry key="py" value="33" />
           <entry key="rough" value="1" />
+          <entry key="tsv" value="4" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CSV" value="2" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="28" />
+          <entry key="Python" value="31" />
+          <entry key="TSV" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="10872" />
+          <entry key="Python Console" value="7" />
+          <entry key="py" value="15811" />
           <entry key="rough" value="12" />
+          <entry key="tsv" value="376" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="26" />
-          <entry key="Python" value="10861" />
+          <entry key="Python" value="15807" />
+          <entry key="TSV" value="376" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ltsm_baseline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="669">
-              <caret line="110" column="96" selection-start-line="110" selection-start-column="96" selection-end-line="110" selection-end-column="96" />
+            <state relative-caret-position="-499">
+              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
               <folding>
-                <marker date="1566023277806" expanded="true" signature="381:603" ph="..." />
-                <marker date="1566023277806" expanded="true" signature="1889:1890" ph="..." />
-                <marker date="1566023277806" expanded="true" signature="2978:3136" ph="..." />
-                <marker date="1566023277806" expanded="true" signature="3133:3134" ph="..." />
-                <marker date="1566023277806" expanded="true" signature="10900:10901" ph="..." />
-                <marker date="1566023277806" expanded="true" signature="11705:11708" ph="..." />
-                <marker date="1566023277806" expanded="true" signature="11760:11762" ph="..." />
-                <marker date="1566023277806" expanded="true" signature="13851:13857" ph="..." />
+                <element signature="e#455#1075#0" />
+                <element signature="e#647#731#0" />
+                <element signature="e#1113#1365#0" />
+                <element signature="e#1406#1588#0" />
+                <element signature="e#1702#2839#0" />
+                <element signature="e#2182#2815#0" />
+                <element signature="e#2290#2373#0" />
+                <element signature="e#2524#2718#0" />
+                <element signature="e#2941#3213#0" />
+                <element signature="e#3023#3051#0" />
+                <element signature="e#3361#6682#0" />
+                <element signature="e#3799#3923#0" />
+                <element signature="e#3986#4163#0" />
+                <element signature="e#4528#5169#0" />
+                <element signature="e#4966#5169#0" />
+                <element signature="e#5233#5431#0" />
+                <element signature="e#5486#5576#0" />
+                <element signature="e#5629#5739#0" />
+                <element signature="e#5889#6067#0" />
+                <element signature="e#6173#6350#0" />
+                <element signature="e#6188#6350#0" />
+                <element signature="e#6360#6517#0" />
+                <element signature="e#6375#6517#0" />
+                <element signature="e#6753#9907#0" />
+                <element signature="e#6831#9907#0" />
+                <element signature="e#7291#9907#0" />
+                <element signature="e#7484#8080#0" />
+                <element signature="e#7563#8080#0" />
+                <element signature="e#7570#7688#0" />
+                <element signature="e#8310#8824#0" />
+                <element signature="e#8370#8824#0" />
+                <element signature="e#8377#8493#0" />
+                <element signature="e#8552#8633#0" />
+                <element signature="e#9507#9618#0" />
+                <element signature="e#9731#9907#0" />
+                <element signature="e#9777#9845#0" />
+                <element signature="e#9999#11013#0" />
+                <element signature="e#10521#10976#0" />
+                <element signature="e#10731#10976#0" />
+                <element signature="e#10738#10818#0" />
+                <element signature="e#10909#10976#0" />
+                <element signature="e#11117#13101#0" />
+                <element signature="e#11572#12020#0" />
+                <element signature="e#11778#12020#0" />
+                <element signature="e#11785#11865#0" />
+                <element signature="e#11956#12020#0" />
+                <element signature="e#12162#13103#0" />
+                <element signature="e#12618#13066#0" />
+                <element signature="e#12824#13066#0" />
+                <element signature="e#12831#12911#0" />
+                <element signature="e#13002#13066#0" />
+                <element signature="e#12105#12281#0" />
+                <element signature="e#12328#12856#0" />
+                <element signature="e#12718#12841#0" />
+                <element signature="e#12891#13034#0" />
+                <element signature="e#13088#13204#0" />
+                <element signature="e#13263#14198#0" />
+                <element signature="e#14256#14693#0" />
+                <element signature="e#14766#15095#0" />
+                <element signature="e#15146#15361#0" />
+                <element signature="e#15485#15869#0" />
+                <element signature="e#15957#15985#0" />
+                <element signature="e#16018#16083#0" />
+                <element signature="e#16050#16083#0" />
+                <element signature="e#16131#16190#0" />
+                <element signature="e#16246#16398#0" />
+                <element signature="e#16435#19051#0" />
+                <element signature="e#16435#16528#0" />
+                <element signature="e#19181#19271#0" />
+                <marker date="1566060336767" expanded="false" signature="406:407" ph="..." />
+                <marker date="1566060336767" expanded="false" signature="2878:2994" ph="..." />
+                <marker date="1566060336767" expanded="false" signature="2878:3217" ph="..." />
+                <marker date="1566060336767" expanded="false" signature="3215:3216" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/integrated_gradients.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+              <folding>
+                <marker date="1566060691176" expanded="true" signature="233:282" ph="..." />
+                <marker date="1566060691176" expanded="true" signature="279:281" ph="..." />
+                <marker date="1566060691176" expanded="true" signature="1213:1215" ph="..." />
               </folding>
             </state>
           </provider>
@@ -126,6 +212,13 @@
       <find>resultss</find>
       <find>results2</find>
       <find>epoch</find>
+      <find>batch_size</find>
+      <find>savetx</find>
+      <find>rand</find>
+      <find>save</find>
+      <find>save_t</find>
+      <find>print</find>
+      <find>print(</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -145,14 +238,16 @@
         <option value="$PROJECT_DIR$/attention_keras/examples/nmt/model.py" />
         <option value="$PROJECT_DIR$/attention_baseline.py" />
         <option value="$PROJECT_DIR$/attention_keras/examples/nmt/train.py" />
+        <option value="$PROJECT_DIR$/imdb/heatmap_test.tsv" />
         <option value="$PROJECT_DIR$/ltsm_baseline.py" />
+        <option value="$PROJECT_DIR$/integrated_gradients.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1400" />
-    <option name="height" value="833" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -162,7 +257,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,12 +266,18 @@
             </path>
             <path>
               <item name="attention-inter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="attention-inter" type="462c0819:PsiDirectoryNode" />
+              <item name="imdb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="attention-inter" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -196,28 +296,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ltsm_baseline">
-    <configuration name="attention" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="sentiment_baseline" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/attention_keras/layers" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/attention_keras/layers/attention.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.integrated_gradients">
     <configuration name="attention_baseline" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sentiment_baseline" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -239,6 +318,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="integrated_gradients" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sentiment_baseline" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/integrated_gradients.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ltsm_baseline" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sentiment_baseline" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -252,7 +352,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ltsm_baseline.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="-W ignore" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -304,18 +404,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.ltsm_baseline" />
-      <item itemvalue="Python.attention" />
       <item itemvalue="Python.attention_baseline" />
       <item itemvalue="Python.model" />
       <item itemvalue="Python.train" />
+      <item itemvalue="Python.integrated_gradients" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.integrated_gradients" />
         <item itemvalue="Python.ltsm_baseline" />
         <item itemvalue="Python.train" />
         <item itemvalue="Python.model" />
         <item itemvalue="Python.attention_baseline" />
-        <item itemvalue="Python.attention" />
       </list>
     </recent_temporary>
   </component>
@@ -336,24 +436,33 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4784689" visible="true" weight="0.13812543" />
-      <window_info id="Structure" order="1" sideWeight="0.5215311" side_tool="true" visible="true" weight="0.13812543" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47643098" visible="true" weight="0.13742071" />
+      <window_info id="Structure" order="1" sideWeight="0.52356905" side_tool="true" visible="true" weight="0.13742071" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24457832" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2433121" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3987952" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32866243" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.042168673" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.20509554" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32928476" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32866243" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -370,6 +479,26 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>type(gradients[0].indices)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>type(gradients[0].values)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>type(gradients[0])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>index_slices.values</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>train.columns</expression-string>
         <language-id>Python</language-id>
@@ -449,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/attention_baseline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/attention_keras/requirements.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -487,19 +609,125 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/indices.csv" />
+    <entry file="file://$PROJECT_DIR$/vals.csv" />
+    <entry file="file://$PROJECT_DIR$/attention_baseline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imdb/train.tsv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imdb/test.tsv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="90">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imdb/heatmap_test.tsv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ltsm_baseline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="110" column="96" selection-start-line="110" selection-start-column="96" selection-end-line="110" selection-end-column="96" />
+        <state relative-caret-position="-499">
+          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
           <folding>
-            <marker date="1566023277806" expanded="true" signature="381:603" ph="..." />
-            <marker date="1566023277806" expanded="true" signature="1889:1890" ph="..." />
-            <marker date="1566023277806" expanded="true" signature="2978:3136" ph="..." />
-            <marker date="1566023277806" expanded="true" signature="3133:3134" ph="..." />
-            <marker date="1566023277806" expanded="true" signature="10900:10901" ph="..." />
-            <marker date="1566023277806" expanded="true" signature="11705:11708" ph="..." />
-            <marker date="1566023277806" expanded="true" signature="11760:11762" ph="..." />
-            <marker date="1566023277806" expanded="true" signature="13851:13857" ph="..." />
+            <element signature="e#455#1075#0" />
+            <element signature="e#647#731#0" />
+            <element signature="e#1113#1365#0" />
+            <element signature="e#1406#1588#0" />
+            <element signature="e#1702#2839#0" />
+            <element signature="e#2182#2815#0" />
+            <element signature="e#2290#2373#0" />
+            <element signature="e#2524#2718#0" />
+            <element signature="e#2941#3213#0" />
+            <element signature="e#3023#3051#0" />
+            <element signature="e#3361#6682#0" />
+            <element signature="e#3799#3923#0" />
+            <element signature="e#3986#4163#0" />
+            <element signature="e#4528#5169#0" />
+            <element signature="e#4966#5169#0" />
+            <element signature="e#5233#5431#0" />
+            <element signature="e#5486#5576#0" />
+            <element signature="e#5629#5739#0" />
+            <element signature="e#5889#6067#0" />
+            <element signature="e#6173#6350#0" />
+            <element signature="e#6188#6350#0" />
+            <element signature="e#6360#6517#0" />
+            <element signature="e#6375#6517#0" />
+            <element signature="e#6753#9907#0" />
+            <element signature="e#6831#9907#0" />
+            <element signature="e#7291#9907#0" />
+            <element signature="e#7484#8080#0" />
+            <element signature="e#7563#8080#0" />
+            <element signature="e#7570#7688#0" />
+            <element signature="e#8310#8824#0" />
+            <element signature="e#8370#8824#0" />
+            <element signature="e#8377#8493#0" />
+            <element signature="e#8552#8633#0" />
+            <element signature="e#9507#9618#0" />
+            <element signature="e#9731#9907#0" />
+            <element signature="e#9777#9845#0" />
+            <element signature="e#9999#11013#0" />
+            <element signature="e#10521#10976#0" />
+            <element signature="e#10731#10976#0" />
+            <element signature="e#10738#10818#0" />
+            <element signature="e#10909#10976#0" />
+            <element signature="e#11117#13101#0" />
+            <element signature="e#11572#12020#0" />
+            <element signature="e#11778#12020#0" />
+            <element signature="e#11785#11865#0" />
+            <element signature="e#11956#12020#0" />
+            <element signature="e#12162#13103#0" />
+            <element signature="e#12618#13066#0" />
+            <element signature="e#12824#13066#0" />
+            <element signature="e#12831#12911#0" />
+            <element signature="e#13002#13066#0" />
+            <element signature="e#12105#12281#0" />
+            <element signature="e#12328#12856#0" />
+            <element signature="e#12718#12841#0" />
+            <element signature="e#12891#13034#0" />
+            <element signature="e#13088#13204#0" />
+            <element signature="e#13263#14198#0" />
+            <element signature="e#14256#14693#0" />
+            <element signature="e#14766#15095#0" />
+            <element signature="e#15146#15361#0" />
+            <element signature="e#15485#15869#0" />
+            <element signature="e#15957#15985#0" />
+            <element signature="e#16018#16083#0" />
+            <element signature="e#16050#16083#0" />
+            <element signature="e#16131#16190#0" />
+            <element signature="e#16246#16398#0" />
+            <element signature="e#16435#19051#0" />
+            <element signature="e#16435#16528#0" />
+            <element signature="e#19181#19271#0" />
+            <marker date="1566060336767" expanded="false" signature="406:407" ph="..." />
+            <marker date="1566060336767" expanded="false" signature="2878:2994" ph="..." />
+            <marker date="1566060336767" expanded="false" signature="2878:3217" ph="..." />
+            <marker date="1566060336767" expanded="false" signature="3215:3216" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/integrated_gradients.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding>
+            <marker date="1566060691176" expanded="true" signature="233:282" ph="..." />
+            <marker date="1566060691176" expanded="true" signature="279:281" ph="..." />
+            <marker date="1566060691176" expanded="true" signature="1213:1215" ph="..." />
           </folding>
         </state>
       </provider>

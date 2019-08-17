@@ -341,6 +341,7 @@ def load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, chec
 def load_and_make_predictions2(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint, test_data):
 	'''Predict the sentiment of the testing data'''
 
+
 	print("Size of test data: {}".format(len(test_data)))
 
 	all_preds = []
@@ -372,7 +373,40 @@ def load_and_make_predictions2(lstm_size, multiple_fc, fc_units, vocab_size, che
 
 	return model, np.array(all_preds)
 
+def load_and_make_predictions_safe(lstm_size, multiple_fc, fc_units, vocab_size, embed_size, batch_size, num_layers, dropout, learning_rate, checkpoint, test_data):
+	'''Predict the sentiment of the testing data'''
 
+
+	print("Size of test data: {}".format(len(test_data)))
+
+	all_preds = []
+
+	model = build_rnn(n_words=vocab_size,
+					  embed_size=embed_size,
+					  batch_size=batch_size,
+					  lstm_size=lstm_size,
+					  num_layers=num_layers,
+					  dropout=dropout,
+					  learning_rate=learning_rate,
+					  multiple_fc=multiple_fc,
+					  fc_units=fc_units) # default with_embd = True
+
+	with tf.Session() as sess:
+		saver = tf.train.Saver()
+		# Load the model
+		saver.restore(sess, checkpoint)
+		test_state = sess.run(model.initial_state)
+		for _, x in enumerate(get_test_batches(test_data, batch_size=batch_size), 1):
+			feed = {model.inputs: x,
+					model.keep_prob: 1,
+					model.initial_state: test_state}
+			predictions = sess.run(model.predictions, feed_dict=feed)
+			for p in predictions:
+				all_preds.append(float(p))
+				print("Prediction :{}".format(p))
+
+
+	return model, np.array(all_preds)
 def write_submission(predictions, string):
 
 	global train, test
@@ -408,7 +442,7 @@ def save_tokenizer(tokenizer):
 		pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 
-def load_tokenizer(path = './tokenizer.pickle'):
+def load_tokenizer(path = './tokenizers/tokenizer_imdb.pickle'):
 
 	print("loading tokenizer...")
 	with open(path, 'rb') as handle:
@@ -530,6 +564,8 @@ def visualize_attributes(attributions, word_list):
 	percent = [(abs(e)/tot_sum)*100 for e in attributions]
 
 	attri_dict = zip(word_list, percent)
+
+	assert(sum(percent) == 100)
 
 	return set(attri_dict)
 
