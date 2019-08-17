@@ -21,7 +21,6 @@ def summarize_variable(var):
 		print("Shape of numpy array is {} \n".format(var, var.shape))
 
 
-
 def clean_text(text, remove_stopwords=True):
 	'''Clean the text, with the option to remove stopwords'''
 
@@ -43,11 +42,8 @@ def clean_text(text, remove_stopwords=True):
 
 	# Remove punctuation from text
 	text = ''.join([c for c in text if c not in punctuation])
-
 	# Return a list of words
 	return (text)
-
-
 
 
 def get_batches(x, y, batch_size):
@@ -66,10 +62,10 @@ def get_test_batches(x, batch_size):
 	for ii in range(0, len(x), batch_size):
 		yield x[ii:ii + batch_size]
 
-def get_gradients(model, predicted_y):
+def get_gradients(model, predicted_y): # ensure batch_size of loaded model == number of test cases
 
 	variables_fed = []
-	gradients_fe = []
+	gradients_fed = []
 	inputs_here_fed = []
 
 	optimizer_here = model.gradients
@@ -77,10 +73,12 @@ def get_gradients(model, predicted_y):
 	embedding_here = model.embedding
 	cost_here = model.cost
 
+	print(predicted_y.shape)
+
 	print(len(predicted_y))
 
 
-	gradients, variables = zip(*optimizer_here.compute_gradients(cost_here, embedding_here))
+	gradients, variables = zip(*optimizer_here.compute_gradients(cost_here, embedding_here, gate_gradients=True, colocate_gradients_with_ops=True))
 	print("gradients object: {}".format(gradients[0]))
 
 	opt = optimizer_here.apply_gradients(list(zip(gradients, variables)))
@@ -110,11 +108,19 @@ def get_gradients(model, predicted_y):
 
 def get_gradients_values(gradients): # takes IndexedSlices Object which store gradients as input
 
-	l = gradients[0].values
-	print("Shape of gradients list: {}".format(l.shape))
+	index_slices = gradients[0]
 
-	return l
+	indices = index_slices[1]
+	vals = gradients[0].values
+	print("Shape of vals: {}".format(vals.shape))
+	print("Shape of indices: {}".format(indices.shape))
+	print("Indices Type: {}".format(type(indices)))
 
+	#saving the gradients object
+	# np.savetxt("./vals.csv", vals, delimiter=",")
+	# np.savetxt("./indices.csv", indices, delimiter=",")
+
+	return vals, indices
 
 
 
@@ -183,7 +189,6 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 	with tf.name_scope('gradients'):
 		gradients = tf.train.AdamOptimizer(learning_rate)
 
-
 	# Determine the accuracy
 	with tf.name_scope("accuracy"):
 		correct_pred = tf.equal(tf.cast(tf.round(predictions), tf.int32), labels)
@@ -197,7 +202,7 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 
 	if(with_embd):
 
-		export_nodes = ['inputs', 'labels','embedding', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
+		export_nodes = ['inputs', 'labels','embedding', 'embed', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
 						'predictions', 'cost', 'optimizer', 'gradients','merged']
 	else:
 		export_nodes = ['inputs', 'labels', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
@@ -299,7 +304,7 @@ def train_model(model, epochs, log_string, checkpoint_to_create):
 			if avg_valid_loss > min(valid_loss_summary):
 				print("No Improvement.")
 				stop_early += 1
-				if stop_early == 1:
+				if stop_early == 3: # set to 1 to prematuraly break
 					break
 
 				# Reset stop_early if the validation loss finds a new low
@@ -316,10 +321,8 @@ def train_model(model, epochs, log_string, checkpoint_to_create):
 def load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint):
 	'''Predict the sentiment of the testing data'''
 
-	pruning_size = 250 # we do not want to use all 25000 examples for test_data
-
+	pruning_size = 1 # ensure that pruning_size == batch_size while getting gradients
 	x_test_pruned = x_test[0:pruning_size]
-
 	all_preds = []
 
 	model = build_rnn(n_words=vocab_size,
@@ -337,7 +340,7 @@ def load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, chec
 		# Load the model
 		saver.restore(sess, checkpoint)
 		test_state = sess.run(model.initial_state)
-		for _, x in enumerate(get_test_batches(x_test_pruned, batch_size), 1):
+		for _, x in enumerate(get_test_batches(x_test_pruned, batch_size=batch_size), 1):
 			feed = {model.inputs: x,
 					model.keep_prob: 1,
 					model.initial_state: test_state}
@@ -348,12 +351,7 @@ def load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, chec
 
 	print(len(all_preds))
 
-
-
 	return model, np.array(all_preds)
-
-
-
 
 
 def write_submission(predictions, string):
@@ -362,7 +360,6 @@ def write_submission(predictions, string):
 
 	submission = pd.DataFrame(data={"id": test["id"], "sentiment": predictions})
 	submission.to_csv("submission_{}.csv".format(string), index=False, quoting=3)
-
 
 
 def load_model(path, no_of_unique_words):
@@ -375,8 +372,6 @@ def load_model(path, no_of_unique_words):
 
 	# saver = tf.train.import_meta_graph(path, clear_devices=True)
 	saver = tf.train.Saver()
-
-
 
 	with tf.Session() as sess:
 
@@ -456,24 +451,20 @@ def checkpoint_to_vars(checkpoint):# DO NOT USE
 
 	filename = checkpoint.split("/")
 	filename = filename[len(filename)-1]
-
 	var_list = (filename.split("."))[0].split(",")
 
 	return var_list[0], var_list[1], var_list[2]
 
 
-
-
-
 if __name__ == '__main__':
 
 	embed_size = 300
-	batch_size = 250
+	batch_size = 1
 
 	num_layers = 1
 	dropout = 0.5
 	learning_rate = 0.001
-	epochs = 100
+	epochs = 1
 
 	lstm_size = 64
 	multiple_fc = False
@@ -481,7 +472,7 @@ if __name__ == '__main__':
 
 
 	checkpoint_to_restore = "/Users/sharan/Desktop/RNN_with_embd/64,False,128.ckpt"
-	checkpoint_to_create= "/Users/sharan/Desktop/RNN_with_embd/64,False,128.ckpt"
+	checkpoint_to_create= "/Users/sharan/Desktop/RNN_with_embed/64,False,128.ckpt"
 
 
 	imdb_train_path = "./imdb/train.tsv"
@@ -493,13 +484,12 @@ if __name__ == '__main__':
 
 	vocab_size += 1
 
-	# x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
-	_, _, _, _, x_test = pad_split_data(train_tokenized, test_tokenized)
+	x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
+	# _, _, _, _, x_test = pad_split_data(train_tokenized, test_tokenized)
 	# All the above code is NEEDED for both loading and creating models
 
-
-	model, all_preds = load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_create)
-	print(len(all_preds))
+	model, all_preds = load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore)
+		# print(len(all_preds))
 
 
 	vars, grads, inputs = get_gradients(model, all_preds)
@@ -512,6 +502,7 @@ if __name__ == '__main__':
 	# 	print(sum(g))
 
 
+	# train_and_checkpoint(checkpoint_to_create, lstm_size, multiple_fc, fc_units, vocab_size)
 
 
 
