@@ -63,7 +63,7 @@
           <entry key="md" value="1" />
           <entry key="py" value="38" />
           <entry key="rough" value="1" />
-          <entry key="tsv" value="5" />
+          <entry key="tsv" value="6" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -73,23 +73,23 @@
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="Python" value="36" />
-          <entry key="TSV" value="5" />
+          <entry key="TSV" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="7" />
-          <entry key="py" value="18161" />
+          <entry key="py" value="19612" />
           <entry key="rough" value="12" />
-          <entry key="tsv" value="568" />
+          <entry key="tsv" value="797" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="26" />
-          <entry key="Python" value="18157" />
-          <entry key="TSV" value="568" />
+          <entry key="Python" value="19608" />
+          <entry key="TSV" value="797" />
         </counts>
       </usages-collector>
     </session>
@@ -99,11 +99,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/integrated_gradients.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="253">
+              <caret line="61" column="53" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
               <folding>
-                <marker date="1566122840173" expanded="true" signature="1352:1355" ph="..." />
+                <marker date="1566133034511" expanded="true" signature="1384:1387" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imdb/single_test_data.tsv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="103" selection-start-line="1" selection-start-column="103" selection-end-line="1" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -111,14 +123,80 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ltsm_baseline.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="704" lean-forward="true" selection-start-line="704" selection-end-line="704" />
+            <state relative-caret-position="2006">
+              <caret line="694" column="58" lean-forward="true" selection-start-line="694" selection-start-column="58" selection-end-line="694" selection-end-column="58" />
               <folding>
-                <marker date="1566122648257" expanded="false" signature="407:408" ph="..." />
-                <marker date="1566122648257" expanded="false" signature="2697:2813" ph="..." />
-                <marker date="1566122648257" expanded="false" signature="2697:3036" ph="..." />
-                <marker date="1566122648257" expanded="false" signature="3034:3035" ph="..." />
-                <marker date="1566122648257" expanded="false" signature="17732:17734" ph="..." />
+                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#456#1076#0" />
+                <element signature="e#648#732#0" />
+                <element signature="e#1114#1366#0" />
+                <element signature="e#1406#1588#0" />
+                <element signature="e#1720#2659#0" />
+                <element signature="e#2043#2635#0" />
+                <element signature="e#2151#2234#0" />
+                <element signature="e#2385#2579#0" />
+                <element signature="e#3180#6501#0" />
+                <element signature="e#3618#3742#0" />
+                <element signature="e#3805#3982#0" />
+                <element signature="e#4347#4988#0" />
+                <element signature="e#4785#4988#0" />
+                <element signature="e#5052#5250#0" />
+                <element signature="e#5305#5395#0" />
+                <element signature="e#5448#5558#0" />
+                <element signature="e#5708#5886#0" />
+                <element signature="e#5992#6169#0" />
+                <element signature="e#6007#6169#0" />
+                <element signature="e#6179#6336#0" />
+                <element signature="e#6194#6336#0" />
+                <element signature="e#6570#9724#0" />
+                <element signature="e#6648#9724#0" />
+                <element signature="e#7108#9724#0" />
+                <element signature="e#7301#7897#0" />
+                <element signature="e#7380#7897#0" />
+                <element signature="e#7387#7505#0" />
+                <element signature="e#8127#8641#0" />
+                <element signature="e#8187#8641#0" />
+                <element signature="e#8194#8310#0" />
+                <element signature="e#8369#8450#0" />
+                <element signature="e#9324#9435#0" />
+                <element signature="e#9548#9724#0" />
+                <element signature="e#9594#9662#0" />
+                <element signature="e#9830#10839#0" />
+                <element signature="e#10354#10802#0" />
+                <element signature="e#10557#10802#0" />
+                <element signature="e#10564#10644#0" />
+                <element signature="e#10735#10802#0" />
+                <element signature="e#10949#11890#0" />
+                <element signature="e#11405#11853#0" />
+                <element signature="e#11611#11853#0" />
+                <element signature="e#11618#11698#0" />
+                <element signature="e#11789#11853#0" />
+                <element signature="e#12518#12966#0" />
+                <element signature="e#12724#12966#0" />
+                <element signature="e#12731#12811#0" />
+                <element signature="e#12902#12966#0" />
+                <element signature="e#13050#13226#0" />
+                <element signature="e#13272#13800#0" />
+                <element signature="e#13662#13785#0" />
+                <element signature="e#13835#13978#0" />
+                <element signature="e#14047#14163#0" />
+                <element signature="e#14220#15155#0" />
+                <element signature="e#15212#15649#0" />
+                <element signature="e#15721#16050#0" />
+                <element signature="e#16101#16316#0" />
+                <element signature="e#16928#16993#0" />
+                <element signature="e#16960#16993#0" />
+                <element signature="e#17041#17100#0" />
+                <element signature="e#17404#17731#0" />
+                <element signature="e#17433#17731#0" />
+                <element signature="e#17565#17651#0" />
+                <element signature="e#17762#17855#0" />
+                <element signature="e#21811#21901#0" />
+                <marker date="1566132960041" expanded="false" signature="419:420" ph="..." />
+                <marker date="1566132960041" expanded="true" signature="2709:2825" ph="..." />
+                <marker date="1566132960041" expanded="true" signature="2709:3048" ph="..." />
+                <marker date="1566132960041" expanded="true" signature="3046:3047" ph="..." />
+                <marker date="1566132960041" expanded="false" signature="17821:17823" ph="..." />
               </folding>
             </state>
           </provider>
@@ -132,18 +210,6 @@
               <folding>
                 <marker date="1566110752974" expanded="true" signature="423:1100" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imdb/heatmap_test.tsv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="59" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -195,6 +261,7 @@
         <option value="$PROJECT_DIR$/attention_keras/examples/nmt/train.py" />
         <option value="$PROJECT_DIR$/ltsm_api.py" />
         <option value="$PROJECT_DIR$/imdb/heatmap_test.tsv" />
+        <option value="$PROJECT_DIR$/imdb/single_test_data.tsv" />
         <option value="$PROJECT_DIR$/ltsm_baseline.py" />
         <option value="$PROJECT_DIR$/integrated_gradients.py" />
       </list>
@@ -402,18 +469,18 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47275642" visible="true" weight="0.13742071" />
-      <window_info id="Structure" order="1" sideWeight="0.5272436" side_tool="true" visible="true" weight="0.13742071" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47306398" visible="true" weight="0.13742071" />
+      <window_info id="Structure" order="1" sideWeight="0.52693605" side_tool="true" visible="true" weight="0.13742071" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2433121" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2433121" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3987261" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32866243" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.20509554" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.20509554" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32866243" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -432,6 +499,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>sum(percent)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>type(gradients[0].indices)</expression-string>
         <language-id>Python</language-id>
@@ -586,16 +658,6 @@
         <state relative-caret-position="-951" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ltsm_api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-          <folding>
-            <marker date="1566110752974" expanded="true" signature="423:1100" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imdb/heatmap_test.tsv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
@@ -606,26 +668,112 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ltsm_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding>
+            <marker date="1566110752974" expanded="true" signature="423:1100" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imdb/single_test_data.tsv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="103" selection-start-line="1" selection-start-column="103" selection-end-line="1" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ltsm_baseline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="704" lean-forward="true" selection-start-line="704" selection-end-line="704" />
+        <state relative-caret-position="2006">
+          <caret line="694" column="58" lean-forward="true" selection-start-line="694" selection-start-column="58" selection-end-line="694" selection-end-column="58" />
           <folding>
-            <marker date="1566122648257" expanded="false" signature="407:408" ph="..." />
-            <marker date="1566122648257" expanded="false" signature="2697:2813" ph="..." />
-            <marker date="1566122648257" expanded="false" signature="2697:3036" ph="..." />
-            <marker date="1566122648257" expanded="false" signature="3034:3035" ph="..." />
-            <marker date="1566122648257" expanded="false" signature="17732:17734" ph="..." />
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#456#1076#0" />
+            <element signature="e#648#732#0" />
+            <element signature="e#1114#1366#0" />
+            <element signature="e#1406#1588#0" />
+            <element signature="e#1720#2659#0" />
+            <element signature="e#2043#2635#0" />
+            <element signature="e#2151#2234#0" />
+            <element signature="e#2385#2579#0" />
+            <element signature="e#3180#6501#0" />
+            <element signature="e#3618#3742#0" />
+            <element signature="e#3805#3982#0" />
+            <element signature="e#4347#4988#0" />
+            <element signature="e#4785#4988#0" />
+            <element signature="e#5052#5250#0" />
+            <element signature="e#5305#5395#0" />
+            <element signature="e#5448#5558#0" />
+            <element signature="e#5708#5886#0" />
+            <element signature="e#5992#6169#0" />
+            <element signature="e#6007#6169#0" />
+            <element signature="e#6179#6336#0" />
+            <element signature="e#6194#6336#0" />
+            <element signature="e#6570#9724#0" />
+            <element signature="e#6648#9724#0" />
+            <element signature="e#7108#9724#0" />
+            <element signature="e#7301#7897#0" />
+            <element signature="e#7380#7897#0" />
+            <element signature="e#7387#7505#0" />
+            <element signature="e#8127#8641#0" />
+            <element signature="e#8187#8641#0" />
+            <element signature="e#8194#8310#0" />
+            <element signature="e#8369#8450#0" />
+            <element signature="e#9324#9435#0" />
+            <element signature="e#9548#9724#0" />
+            <element signature="e#9594#9662#0" />
+            <element signature="e#9830#10839#0" />
+            <element signature="e#10354#10802#0" />
+            <element signature="e#10557#10802#0" />
+            <element signature="e#10564#10644#0" />
+            <element signature="e#10735#10802#0" />
+            <element signature="e#10949#11890#0" />
+            <element signature="e#11405#11853#0" />
+            <element signature="e#11611#11853#0" />
+            <element signature="e#11618#11698#0" />
+            <element signature="e#11789#11853#0" />
+            <element signature="e#12518#12966#0" />
+            <element signature="e#12724#12966#0" />
+            <element signature="e#12731#12811#0" />
+            <element signature="e#12902#12966#0" />
+            <element signature="e#13050#13226#0" />
+            <element signature="e#13272#13800#0" />
+            <element signature="e#13662#13785#0" />
+            <element signature="e#13835#13978#0" />
+            <element signature="e#14047#14163#0" />
+            <element signature="e#14220#15155#0" />
+            <element signature="e#15212#15649#0" />
+            <element signature="e#15721#16050#0" />
+            <element signature="e#16101#16316#0" />
+            <element signature="e#16928#16993#0" />
+            <element signature="e#16960#16993#0" />
+            <element signature="e#17041#17100#0" />
+            <element signature="e#17404#17731#0" />
+            <element signature="e#17433#17731#0" />
+            <element signature="e#17565#17651#0" />
+            <element signature="e#17762#17855#0" />
+            <element signature="e#21811#21901#0" />
+            <marker date="1566132960041" expanded="false" signature="419:420" ph="..." />
+            <marker date="1566132960041" expanded="true" signature="2709:2825" ph="..." />
+            <marker date="1566132960041" expanded="true" signature="2709:3048" ph="..." />
+            <marker date="1566132960041" expanded="true" signature="3046:3047" ph="..." />
+            <marker date="1566132960041" expanded="false" signature="17821:17823" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/integrated_gradients.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="253">
+          <caret line="61" column="53" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
           <folding>
-            <marker date="1566122840173" expanded="true" signature="1352:1355" ph="..." />
+            <marker date="1566133034511" expanded="true" signature="1384:1387" ph="..." />
           </folding>
         </state>
       </provider>

@@ -3,6 +3,7 @@ import numpy as np
 import tensorflow as tf
 import pickle
 import re
+import math
 from nltk.corpus import stopwords
 from string import punctuation
 from tqdm import tqdm
@@ -373,6 +374,8 @@ def load_and_make_predictions_withargs(lstm_size, multiple_fc, fc_units, vocab_s
 
 	all_preds = []
 
+	tf.reset_default_graph() # fixes the Model already in use problem.
+
 	model = build_rnn(n_words=vocab_size,
 					  embed_size=embed_size,
 					  batch_size=batch_size,
@@ -511,7 +514,7 @@ def checkpoint_to_vars(checkpoint):# DO NOT USE
 
 def create_test_example(tokenizer): # to call this we first ought to have fed entire dataset into the tokenizer earlier
 
-	test_example = pd.read_csv("./imdb/heatmap_test.tsv", delimiter="\t")
+	test_example = pd.read_csv("./imdb/single_test_data.tsv", delimiter="\t")
 
 	print("Test example :\n {}".format(test_example['review']))
 
@@ -527,7 +530,7 @@ def create_test_example(tokenizer): # to call this we first ought to have fed en
 
 	return test_example_seq
 
-def get_attribution_from_grads(grads):
+def compress_gradients(grads):
 
 	return np.sum(grads, axis=1)
 
@@ -540,7 +543,7 @@ def get_word_from_index(indices, tokenizer):
 	text = tokenizer.sequences_to_texts([indices])
 	return text
 
-def visualize_attributes(attributions, word_list):
+def clean_attributes(attributions, word_list):
 
 
 	tot_sum = sum(abs(attributions))
@@ -548,7 +551,7 @@ def visualize_attributes(attributions, word_list):
 
 	attri_dict = zip(word_list, percent)
 
-	assert(sum(percent) == 100)
+	# assert(math.ceil(sum(percent) or  == 100)
 
 	return set(attri_dict)
 
@@ -699,9 +702,9 @@ if __name__ == '__main__':
 	# print("indices list: {}".format(indices_list))
 	print("words from indices: {}".format(text_list))
 
-	attributions = get_attribution_from_grads(grads_list)
+	attributions = compress_gradients(grads_list)
 
-	attributions_dict = visualize_attributes(attributions, word_list)
+	attributions_dict = clean_attributes(attributions, word_list)
 
 	# print(attributions_dict)
 
