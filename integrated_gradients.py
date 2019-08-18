@@ -1,5 +1,7 @@
 from ltsm_baseline import *
 
+tf.logging.set_verbosity(tf.logging.ERROR)
+
 
 def create_baseline_example(test_data):# empirical for NLP
 
@@ -9,7 +11,6 @@ def create_baseline_example(test_data):# empirical for NLP
 	assert(len(baseline[0] == len(test_data[0])))
 
 	return baseline
-
 
 def create_input_collection(test_data, baseline_data, step = 11): # will return step + 1 inputs
 
@@ -21,11 +22,10 @@ def create_input_collection(test_data, baseline_data, step = 11): # will return 
 	temp = baseline_data[0]
 
 	increment = diff/step
-	# print("inc is {}".format(diff))
 	input_collection.append(baseline_data[0])
 
 	for i in range(step-1): #X..steps-2...X'
-		temp = [int(e) for e in temp+increment]
+		temp = [abs(int(e)) for e in temp+increment]
 		input_collection.append(np.array(temp))
 
 	input_collection.append(test_data[0])
@@ -33,7 +33,6 @@ def create_input_collection(test_data, baseline_data, step = 11): # will return 
 	assert(len(input_collection) == step+1)
 
 	return input_collection
-
 
 # TODO Refactor below function to use list arg or *args
 def run_one_grad(lstm_size, multiple_fc, fc_units, vocab_size, embed_size, batch_size, num_layers, dropout, learning_rate, checkpoint_to_restore, test_data):
@@ -61,12 +60,8 @@ def run_one_grad(lstm_size, multiple_fc, fc_units, vocab_size, embed_size, batch
 
 	grads_cleaned = clean_attributes(compressed_grads, word_list)
 
-	# print(attributions_dict)
 
 	return grads_list, compressed_grads , grads_cleaned
-
-
-
 
 def compute_integrated_gradients(input_collection):
 
@@ -104,23 +99,47 @@ def compute_integrated_gradients(input_collection):
 	return intergrated_grads
 
 
+def write_to_file(test_sentence, prediction, test_data_sentence, baseline_sentence, test_data, grads_cleaned, integ_grads_cleaned):
+	print("Saving stats into disk...")
+
+	f = open("./analysis/ig_vs_sg.txt", "a")
+	f.write("Test Sentence: {} \n".format(test_sentence))
+	f.write("Prediction: {} \n".format(prediction))
+	f.write("Cleaned Sentence: {}\n".format(test_data_sentence))
+	f.write("Tokenised test sentence: {}\n".format(test_data))
+	f.write("Baseline Sentence: {}\n".format(baseline_sentence))
+	f.write("Standard Gradient Attributions: {}\n".format(grads_cleaned))
+	f.write("Integrated Gradients Attributions: {}\n\n\n\n".format(integ_grads_cleaned))
 
 
-
-
-
-
-
-
-
-
-
-
-
+	print("Done Saving!")
 
 
 if __name__ == "__main__":
 
+
+
+	########################################################################## EXPERIMENT SECTION
+
+	# dict = {
+	#
+	# "apple": [87, 34, 56, 12],
+	#
+	# "cat": [23, 00, 30, 10],
+	#
+	# "doll": [1, 6, 2, 9],
+	#
+	# "ball": [40, 34, 21, 67]
+	# 	}
+	#
+	# s = sort_dict(dict)
+	# print(s)
+
+
+
+
+
+	########################################################################## IMPORT MODEL AND GET SG AND IG
 	# TODO remove the need for these annoying global definitions
 
 	embed_size = 300
@@ -147,18 +166,26 @@ if __name__ == "__main__":
 
 	tokenizer = load_tokenizer()
 
-	test_data = create_test_example(tokenizer) # read from ./imdb/heatmap_test.tsv and import
+	test_data, df = create_test_example(tokenizer) # read from ./imdb/single_test_data.tsv and import
+	test_sentence = df.loc[0, 'review']
 	print("test data: {}".format(test_data))
-	test_data_sent = get_word_from_index(test_data[0], tokenizer)
-	print("test sentence: {}".format(test_data_sent))
-	test_data_words = [e for e in test_data_sent[0].split(" ")]
+	test_data_sentence = get_word_from_index(test_data[0], tokenizer)
+	print("test sentence: {}".format(test_data_sentence))
+	test_data_words = [e for e in test_data_sentence[0].split(" ")]
 	print("test sentence word list: {}".format(test_data_words))
 	baseline_data = create_baseline_example(test_data)
 	print("baseline data: {}".format(baseline_data))
+	baseline_data_sentence = get_word_from_index(baseline_data[0], tokenizer)
+
+	_, prediction = load_and_make_predictions_withargs(lstm_size, multiple_fc, fc_units,
+														  vocab_size, embed_size, batch_size,
+														  num_layers, dropout, learning_rate,
+														  checkpoint_to_restore, test_data)
 
 
-	input_collection = create_input_collection(test_data, baseline_data)  #returns a list of integer lists
-	# we now have all input vectors for IG
+
+
+	input_collection = create_input_collection(test_data, baseline_data)
 
 	integ_grads = compute_integrated_gradients(input_collection)
 
@@ -167,13 +194,14 @@ if __name__ == "__main__":
 
 
 	grads_list, compressed_grads, grads_cleaned = run_one_grad(lstm_size, multiple_fc, fc_units,
-						 vocab_size, embed_size, batch_size,
-					 num_layers, dropout, learning_rate,
-					 checkpoint_to_restore, test_data)
+						 										vocab_size, embed_size, batch_size,
+																num_layers, dropout, learning_rate,
+					 											checkpoint_to_restore, test_data)
 
 	print(integ_grads_cleaned)
 	print(grads_cleaned)
 
+	write_to_file(test_sentence, prediction, test_data_sentence, baseline_data_sentence, test_data, grads_cleaned,integ_grads_cleaned)
 
 
 

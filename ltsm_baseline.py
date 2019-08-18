@@ -512,14 +512,20 @@ def checkpoint_to_vars(checkpoint):# DO NOT USE
 
 	return var_list[0], var_list[1], var_list[2]
 
+def sort_dict(dict):
+	buffer = [e for e in dict.items()]
+	buffer.sort()
+
+	return {x: y for x,y in buffer}
+
 def create_test_example(tokenizer): # to call this we first ought to have fed entire dataset into the tokenizer earlier
 
-	test_example = pd.read_csv("./imdb/single_test_data.tsv", delimiter="\t")
+	df = pd.read_csv("./imdb/single_test_data.tsv", delimiter="\t")
 
-	print("Test example :\n {}".format(test_example['review']))
+	print("Test example :\n {}".format(df['review']))
 
 	test_example_clean = []
-	for review in test_example.review:
+	for review in df.review:
 		test_example_clean.append(clean_text(review))
 
 
@@ -528,7 +534,7 @@ def create_test_example(tokenizer): # to call this we first ought to have fed en
 
 
 
-	return test_example_seq
+	return test_example_seq, df
 
 def compress_gradients(grads):
 
@@ -549,11 +555,11 @@ def clean_attributes(attributions, word_list):
 	tot_sum = sum(abs(attributions))
 	percent = [(abs(e)/tot_sum)*100 for e in attributions]
 
-	attri_dict = zip(word_list, percent)
+	attri_dict = dict(zip(word_list, percent))
 
 	# assert(math.ceil(sum(percent) or  == 100)
 
-	return set(attri_dict)
+	return sort_dict(attri_dict)
 
 def predict_single_from_model(model, checkpoint, test_data):
 
@@ -569,6 +575,7 @@ def predict_single_from_model(model, checkpoint, test_data):
 		prediction = sess.run(model.predictions, feed_dict=feed)
 
 		return prediction
+
 
 
 if __name__ == '__main__':
@@ -687,7 +694,7 @@ if __name__ == '__main__':
 
 	tokenizer = load_tokenizer('./tokenizers/tokenizer_imdb.pickle')
 
-	test_data = create_test_example(tokenizer) #creates embeddings for test sentences using tokenizer from import...()
+	test_data = create_test_example(tokenizer) #creates embeddings from single_test_data
 
 	model, all_preds = load_and_make_predictions_single(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, test_data)
 
@@ -705,12 +712,6 @@ if __name__ == '__main__':
 	attributions = compress_gradients(grads_list)
 
 	attributions_dict = clean_attributes(attributions, word_list)
-
-	# print(attributions_dict)
-
-
-
-
 
 
 
