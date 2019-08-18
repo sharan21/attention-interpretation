@@ -1,7 +1,7 @@
 from ltsm_baseline import *
 
 
-def create_baseline_example(test_data):
+def create_baseline_example(test_data):# empirical for NLP
 
 	baseline =  np.zeros_like(test_data)+32 #F(x) is very close to 0
 	assert(len(baseline[0] == len(test_data[0])))
@@ -9,23 +9,25 @@ def create_baseline_example(test_data):
 	return baseline
 
 
-def create_steps(test_data, baseline_data, step = 10):
-
+def create_steps(test_data, baseline_data, step = 11): # will return step + 1 inputs
 	input_collection = []
 
 	print("creating steps between X and X'")
 
-	diff = baseline_data - test_data
-	increment = diff/step
-	input_collection.append(baseline_data)
+	diff = test_data[0] - baseline_data[0]
+	temp = baseline_data[0]
 
-	for i in range(step-2): #X..steps-2...X'
-		temp = baseline_data+increment
+	increment = diff/step
+	print("inc is {}".format(diff))
+	input_collection.append(baseline_data[0])
+
+	for i in range(step-1): #X..steps-2...X'
+		temp = [int(e) for e in temp+increment]
 		input_collection.append(temp)
 
-	input_collection.append(test_data)
+	input_collection.append(test_data[0])
 
-	assert(len(input_collection) == step)
+	assert(len(input_collection) == step+1)
 
 	return input_collection
 
@@ -56,7 +58,6 @@ if __name__ == "__main__":
 	# for imdb dataset
 	vocab_size = 99426
 
-
 	tokenizer = load_tokenizer()
 
 	test_data = create_test_example(tokenizer) # read from ./imdb/heatmap_test.tsv and import
@@ -76,7 +77,8 @@ if __name__ == "__main__":
 														baseline_data)
 
 	inputs = create_steps(test_data, baseline_data)
-	print(inputs)
+
+
 
 
 
