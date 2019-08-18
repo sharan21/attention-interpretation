@@ -10,6 +10,7 @@ from sklearn.model_selection import train_test_split
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from collections import namedtuple
+
 tf.logging.set_verbosity(tf.logging.ERROR)
 
 
@@ -51,20 +52,16 @@ def get_test_batches(x, batch_size):
 	for ii in range(0, len(x), batch_size):
 		yield x[ii:ii + batch_size]
 
-def get_gradients(model, predicted_y, test_data): # ensure batch_size of loaded model == number of test cases
+def get_gradients(model, predicted_y, test_data,  dropout = 0.5): # ensure batch_size of loaded model == number of test cases
 
-	gradients_fed = []
+
 
 	optimizer_here = model.gradients
 	embedding_here = model.embedding
 	cost_here = model.cost
 
-
 	gradients, variables = zip(*optimizer_here.compute_gradients(cost_here, embedding_here, gate_gradients=True, colocate_gradients_with_ops=True))
 	# print("gradients object: {}".format(gradients[0]))
-
-	opt = optimizer_here.apply_gradients(list(zip(gradients, variables)))
-	# we do not have to run the optimizer as we do not want to BP
 
 	with tf.Session() as sess:
 
@@ -84,7 +81,6 @@ def get_gradients(model, predicted_y, test_data): # ensure batch_size of loaded 
 				model.keep_prob: dropout,
 				model.initial_state: test_state}
 
-		# test = sess.run(opt, feed_dict=feed)
 
 		gradients_fed = sess.run(gradients, feed_dict=feed)
 
@@ -300,10 +296,10 @@ def train_model(model, epochs, log_string, checkpoint_to_create):
 				# 	log_string)
 				saver.save(sess, checkpoint_to_create)
 
-def load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint):
+def load_and_make_predictions_batch(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint, x_test):
 	'''Predict the sentiment of the testing data'''
 
-	pruning_size = 1 # ensure that pruning_size == batch_size while getting gradients
+	pruning_size = 250 # ensure that pruning_size == batch_size while getting gradients
 	x_test_pruned = x_test[0:pruning_size]
 	all_preds = []
 
@@ -322,7 +318,7 @@ def load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, chec
 		# Load the model
 		saver.restore(sess, checkpoint)
 		test_state = sess.run(model.initial_state)
-		for _, x in enumerate(get_test_batches(x_test_pruned, batch_size=batch_size), 1):
+		for _, x in enumerate(get_test_batches(x_test_pruned, batch_size=250), 1):
 			feed = {model.inputs: x,
 					model.keep_prob: 1,
 					model.initial_state: test_state}
@@ -334,7 +330,7 @@ def load_and_make_predictions(lstm_size, multiple_fc, fc_units, vocab_size, chec
 
 	return model, np.array(all_preds)
 
-def load_and_make_predictions2(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint, test_data):
+def load_and_make_predictions_single(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint, test_data):
 	'''Predict the sentiment of the testing data'''
 
 
@@ -369,7 +365,7 @@ def load_and_make_predictions2(lstm_size, multiple_fc, fc_units, vocab_size, che
 
 	return model, np.array(all_preds)
 
-def load_and_make_predictions_safe(lstm_size, multiple_fc, fc_units, vocab_size, embed_size, batch_size, num_layers, dropout, learning_rate, checkpoint, test_data):
+def load_and_make_predictions_withargs(lstm_size, multiple_fc, fc_units, vocab_size, embed_size, batch_size, num_layers, dropout, learning_rate, checkpoint, test_data):
 	'''Predict the sentiment of the testing data'''
 
 
@@ -403,6 +399,7 @@ def load_and_make_predictions_safe(lstm_size, multiple_fc, fc_units, vocab_size,
 
 
 	return model, np.array(all_preds)
+
 def write_submission(predictions, string):
 
 	global train, test
@@ -555,9 +552,61 @@ def visualize_attributes(attributions, word_list):
 
 	return set(attri_dict)
 
+def predict_single_from_model(model, checkpoint, test_data):
+
+
+	with tf.Session() as sess:
+		saver = tf.train.Saver()
+		# Load the model
+		saver.restore(sess, checkpoint)
+		test_state = sess.run(model.initial_state)
+		feed = {model.inputs: test_data,
+				model.keep_prob: 1,
+				model.initial_state: test_state}
+		prediction = sess.run(model.predictions, feed_dict=feed)
+
+		return prediction
+
+
 if __name__ == '__main__':
 
 ########################################################################## EXPERIMENT SECTION
+
+
+	# embed_size = 300
+	# batch_size = 1  # default was 250 for training
+	#
+	# num_layers = 1
+	# dropout = 0.5
+	# learning_rate = 0.001
+	# epochs = 1
+	#
+	# # stick to these parameters while training, restoring and predicting
+	# lstm_size = 64
+	# multiple_fc = False
+	# fc_units = 128
+	#
+	# checkpoint_to_restore = "/Users/sharan/Desktop/RNN_with_embd/64,False,128.ckpt"
+	# checkpoint_to_create = "/Users/sharan/Desktop/RNN_with_embed/64,False,128.ckpt"
+	#
+	# imdb_train_path = "./imdb/train.tsv"
+	# imdb_test_path = "./imdb/test.tsv"
+	#
+	# vocab_size = 99426
+	#
+	# tokenizer = load_tokenizer('./tokenizers/tokenizer_imdb.pickle')
+	#
+	# test_data = create_test_example(tokenizer)  # creates embeddings for test sentences using tokenizer from import...()
+	#
+	# model = build_rnn(n_words = vocab_size, embed_size = embed_size, batch_size = batch_size, lstm_size = lstm_size, num_layers = num_layers,
+	# 		  dropout = dropout, learning_rate = learning_rate, multiple_fc = multiple_fc, fc_units = fc_units)
+	#
+	# # model, all_preds = load_and_make_predictions_single(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore,
+	# # 													test_data)
+	#
+	# single_prediction = predict_single_from_model(model=model, checkpoint=checkpoint_to_restore, test_data=test_data)
+	# print(single_prediction)
+
 
 
 
@@ -572,37 +621,39 @@ if __name__ == '__main__':
 
 
 	# embed_size = 300
-# 	# batch_size = 1 #default was 250 for training
-# 	#
-# 	# num_layers = 1
-# 	# dropout = 0.5
-# 	# learning_rate = 0.001
-# 	# epochs = 1
-# 	#
-# 	# #stick to these parameters while training, restoring and predicting
-# 	# lstm_size = 64
-# 	# multiple_fc = False
-# 	# fc_units = 128
-# 	#
-# 	# checkpoint_to_restore = "/Users/sharan/Desktop/RNN_with_embd/64,False,128.ckpt"
-# 	# checkpoint_to_create= "/Users/sharan/Desktop/RNN_with_embed/64,False,128.ckpt"
-# 	#
-# 	#
-# 	# imdb_train_path = "./imdb/train.tsv"
-# 	# imdb_test_path = "./imdb/test.tsv"
-# 	#
-# 	# print("Started tokenization.")
-# 	#
-# 	# train_tokenized, test_tokenized, vocab_size, tokenizer = import_clean_tokenize_data(imdb_train_path, imdb_test_path)
-# 	#
-# 	# print("Tokenization complete.")
-# 	#
-# 	#
-# 	# vocab_size += 1 # needed to fit the model
-# 	#
-# 	# x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
-	
-
+	# batch_size = 250 #default was 250 for training
+	#
+	# num_layers = 1
+	# dropout = 0.5
+	# learning_rate = 0.001
+	# epochs = 1
+	#
+	# #stick to these parameters while training, restoring and predicting
+	# lstm_size = 64
+	# multiple_fc = False
+	# fc_units = 128
+	#
+	# checkpoint_to_restore = "/Users/sharan/Desktop/RNN_with_embd/64,False,128.ckpt"
+	# checkpoint_to_create= "/Users/sharan/Desktop/RNN_with_embed/64,False,128.ckpt"
+	#
+	#
+	# imdb_train_path = "./imdb/train.tsv"
+	# imdb_test_path = "./imdb/test.tsv"
+	#
+	# print("Started tokenization.")
+	#
+	# train_tokenized, test_tokenized, vocab_size, tokenizer = import_clean_tokenize_data(imdb_train_path, imdb_test_path)
+	#
+	# print("Tokenization complete.")
+	#
+	#
+	# vocab_size += 1 # needed to fit the model
+	#
+	# x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
+	#
+	# model, all_preds = load_and_make_predictions_batch(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, x_test)
+	#
+	# print(all_preds)
 
 
 
@@ -632,10 +683,10 @@ if __name__ == '__main__':
 	vocab_size = 99426
 
 	tokenizer = load_tokenizer('./tokenizers/tokenizer_imdb.pickle')
-	
+
 	test_data = create_test_example(tokenizer) #creates embeddings for test sentences using tokenizer from import...()
 
-	model, all_preds = load_and_make_predictions2(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, test_data)
+	model, all_preds = load_and_make_predictions_single(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, test_data)
 
 	grads = get_gradients(model, all_preds, test_data)
 	# print("computed gradients tensor: {}".format(grads))
@@ -652,7 +703,7 @@ if __name__ == '__main__':
 
 	attributions_dict = visualize_attributes(attributions, word_list)
 
-	print(attributions_dict)
+	# print(attributions_dict)
 
 
 
