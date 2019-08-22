@@ -11,3 +11,15 @@
 2019-08-10 13:13:56,642 | examples.nmt.train | <module> | INFO | Translating: his most loved animal is this rabbit .
 
 2019-08-10 13:13:56,957 | examples.nmt.train | <module> | INFO | 	French: la fraise est son fruit préféré mais la fraise est la moins eos 
+2019-08-22 12:34:54,533 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-22 12:34:54,657 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-22 12:34:55,608 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-22 12:34:55,609 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-22 12:34:55,609 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-22 12:34:55,609 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-22 12:35:18,778 | examples.nmt.train | train | INFO | Loss in epoch 1: 3.1461876386251206
+2019-08-22 12:35:38,694 | examples.nmt.train | train | INFO | Loss in epoch 2: 1.7185342197234814
+2019-08-22 12:35:57,793 | examples.nmt.train | train | INFO | Loss in epoch 3: 1.1820777494173784
+2019-08-22 12:35:58,282 | examples.nmt.train | <module> | INFO | Translating: his most loved animal is this rabbit .
+
+2019-08-22 12:35:58,607 | examples.nmt.train | <module> | INFO | 	French: la france est jamais agréable en juillet mais il est jamais agréable en juillet eos 

@@ -1,13 +1,13 @@
 from ltsm_baseline import *
 
-tf.logging.set_verbosity(tf.logging.ERROR)
+tf.logging.set_verbosity(tf.logging.ERROR);
 
 
 def create_baseline_example(test_data):# empirical for NLP
 
 	print("Creating Baseline example...'")
 
-	baseline =  np.zeros_like(test_data)+35 #F(x) is very close to 0
+	baseline =  np.zeros_like(test_data) #F(x) is very close to 0
 	assert(len(baseline[0] == len(test_data[0])))
 
 	return baseline
@@ -176,6 +176,9 @@ if __name__ == "__main__":
 	baseline_data = create_baseline_example(test_data)
 	print("baseline data: {}".format(baseline_data))
 	baseline_data_sentence = get_word_from_index(baseline_data[0], tokenizer)
+
+
+
 
 	_, prediction = load_and_make_predictions_withargs(lstm_size, multiple_fc, fc_units,
 														  vocab_size, embed_size, batch_size,

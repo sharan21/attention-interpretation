@@ -58,3 +58,25 @@ Integrated Gradients Attributions: {'ability': 0.00023053669117338897, 'academy'
 
 
 
+Test Sentence:  "This was a decent movie, but I prefered the last one. Still recommend watching." 
+Prediction: [0.68719757] 
+Cleaned Sentence: ['this decent movie prefered last one still recommend watching']
+Tokenised test sentence: [[45, 457, 2, 80070, 146, 4, 55, 293, 65]]
+Baseline Sentence: ['']
+Standard Gradient Attributions: {'decent': 0.7948984492914177, 'last': 0.21925600223352223, 'movie': 9.750420906789486, 'one': 7.701639295548973, 'prefered': 4.954200178837483, 'recommend': 8.708685983306212, 'still': 4.392975960654356, 'this': 0.3288557903738949, 'watching': 63.14906743296466}
+Integrated Gradients Attributions: {'decent': 0.36531690435815695, 'last': 0.36192333366845797, 'movie': 0.0019013873981122058, 'one': 0.006768791198176599, 'prefered': 98.10082790815726, 'recommend': 0.9297599565428379, 'still': 0.17739104092261887, 'this': 0.02267471813469037, 'watching': 0.03343595961969294}
+
+
+
+
+
+Test Sentence:  "The story was good but the acting was very bad, so I did not like it" 
+Prediction: [0.38866377] 
+Cleaned Sentence: ['the story good acting bad like it']
+Tokenised test sentence: [[9, 13, 8, 42, 18, 5, 7]]
+Baseline Sentence: ['']
+Standard Gradient Attributions: {'acting': 9.827807117819344, 'bad': 16.591453510399955, 'good': 4.800216445795384, 'it': 49.71196506756008, 'like': 13.308126270593085, 'story': 1.01520179920966, 'the': 4.745229788622498}
+Integrated Gradients Attributions: {'acting': 27.9181827497826, 'bad': 29.796024376783393, 'good': 0.8012185358495304, 'it': 22.128285288755247, 'like': 9.888574878083782, 'story': 7.9415024528227764, 'the': 1.5262117179226715}
+
+
+

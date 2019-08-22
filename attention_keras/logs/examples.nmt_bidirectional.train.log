@@ -1,0 +1,8 @@
+2019-08-22 12:42:27,038 | examples.nmt_bidirectional.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt_bidirectional.train
+2019-08-22 12:42:27,128 | examples.nmt_bidirectional.train | get_data | INFO | Length of text: 137860
+2019-08-22 12:42:27,423 | examples.nmt_bidirectional.train | get_data | INFO | Average length of an English sentence: 13.22084
+2019-08-22 12:42:27,542 | examples.nmt_bidirectional.train | get_data | INFO | Average length of a French sentence: 16.22397
+2019-08-22 12:42:36,019 | examples.nmt_bidirectional.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-22 12:42:36,021 | examples.nmt_bidirectional.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-22 12:42:36,021 | examples.nmt_bidirectional.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-22 12:42:36,021 | examples.nmt_bidirectional.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)

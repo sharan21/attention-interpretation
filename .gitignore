@@ -1,2 +1,10 @@
 .DS_Store
 *.iml
+*.xml
+.idea
+__pycache__
+
+
+
+
+
