@@ -31,8 +31,11 @@ For recurrent neural networks for LSTM (and Attention model) <br />
 
 
 ## To Do
-1. Implement IG on attention model
-2. Add more Datasets for LSTM and Attention model
-3. Leave One out and random permutation methods for attributions for attention model<br />
+1. Add random zero padding to inputs 
+2. Add distraction cell to Attention baseline
+3. Add distracgtion cell to LSTM baseline
+4. Implement IG on attention model
+5. Add more Datasets for LSTM and Attention model
+6. Leave One out and random permutation methods for attributions for attention model<br />
 
 
