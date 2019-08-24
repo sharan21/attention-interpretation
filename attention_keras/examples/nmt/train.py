@@ -205,6 +205,8 @@ def infer_nmt(encoder_model, decoder_model, test_en_seq, en_vsize, fr_vsize):
 
 if __name__ == '__main__':
 
+    pass
+
     ############################################################ EXPERIMENTAL SECTION 1 FOR RANDOM 0 PADDING
 
     # debug = True
