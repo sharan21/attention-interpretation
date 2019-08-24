@@ -630,47 +630,8 @@ if __name__ == '__main__':
 
 
 
-	# embed_size = 300
-	# batch_size = 250 #default was 250 for training
-	#
-	# num_layers = 1
-	# dropout = 0.5
-	# learning_rate = 0.001
-	# epochs = 1
-	#
-	# #stick to these parameters while training, restoring and predicting
-	# lstm_size = 64
-	# multiple_fc = False
-	# fc_units = 128
-	#
-	# checkpoint_to_restore = "/Users/sharan/Desktop/RNN_with_embd/64,False,128.ckpt"
-	# checkpoint_to_create= "/Users/sharan/Desktop/RNN_with_embed/64,False,128.ckpt"
-	#
-	#
-	# imdb_train_path = "./imdb/train.tsv"
-	# imdb_test_path = "./imdb/test.tsv"
-	#
-	# print("Started tokenization.")
-	#
-	# train_tokenized, test_tokenized, vocab_size, tokenizer = import_clean_tokenize_data(imdb_train_path, imdb_test_path)
-	#
-	# print("Tokenization complete.")
-	#
-	#
-	# vocab_size += 1 # needed to fit the model
-	#
-	# x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
-	#
-	# model, all_preds = load_and_make_predictions_batch(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, x_test)
-	#
-	# print(all_preds)
-
-
-
-########################################################################## LOAD, PREDICT AND GET GRADIENTS
-
 	embed_size = 300
-	batch_size = 1 #default was 250 for training
+	batch_size = 250 #default was 250 for training
 
 	num_layers = 1
 	dropout = 0.5
@@ -689,29 +650,68 @@ if __name__ == '__main__':
 	imdb_train_path = "./imdb/train.tsv"
 	imdb_test_path = "./imdb/test.tsv"
 
+	print("Started tokenization.")
 
-	vocab_size = 99426
+	train_tokenized, test_tokenized, vocab_size, tokenizer = import_clean_tokenize_data(imdb_train_path, imdb_test_path)
 
-	tokenizer = load_tokenizer('./tokenizers/tokenizer_imdb.pickle')
+	print("Tokenization complete.")
 
-	test_data = create_test_example(tokenizer) #creates embeddings from single_test_data
 
-	model, all_preds = load_and_make_predictions_single(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, test_data)
+	vocab_size += 1 # needed to fit the model
 
-	grads = get_gradients(model, all_preds, test_data)
-	# print("computed gradients tensor: {}".format(grads))
+	x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
 
-	grads_list, indices_list =  get_gradients_values(grads)
+	model, all_preds = load_and_make_predictions_batch(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, x_test)
 
-	text_list = get_word_from_index(indices_list, tokenizer)
-	word_list = [e for e in text_list[0].split(" ")]
+	print(all_preds)
 
-	# print("indices list: {}".format(indices_list))
-	print("words from indices: {}".format(text_list))
 
-	attributions = compress_gradients(grads_list)
 
-	attributions_dict = clean_attributes(attributions, word_list)
+########################################################################## LOAD, PREDICT AND GET GRADIENTS
+
+	# embed_size = 300
+	# batch_size = 1 #default was 250 for training
+	#
+	# num_layers = 1
+	# dropout = 0.5
+	# learning_rate = 0.001
+	# epochs = 1
+	#
+	# #stick to these parameters while training, restoring and predicting
+	# lstm_size = 64
+	# multiple_fc = False
+	# fc_units = 128
+	#
+	# checkpoint_to_restore = "/Users/sharan/Desktop/RNN_with_embd/64,False,128.ckpt"
+	# checkpoint_to_create= "/Users/sharan/Desktop/RNN_with_embed/64,False,128.ckpt"
+	#
+	#
+	# imdb_train_path = "./imdb/train.tsv"
+	# imdb_test_path = "./imdb/test.tsv"
+	#
+	#
+	# vocab_size = 99426
+	#
+	# tokenizer = load_tokenizer('./tokenizers/tokenizer_imdb.pickle')
+	#
+	# test_data, df = create_test_example(tokenizer) #creates embeddings from single_test_data
+	#
+	# model, all_preds = load_and_make_predictions_single(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, test_data)
+	#
+	# grads = get_gradients(model, all_preds, test_data)
+	# # print("computed gradients tensor: {}".format(grads))
+	#
+	# grads_list, indices_list =  get_gradients_values(grads)
+	#
+	# text_list = get_word_from_index(indices_list, tokenizer)
+	# word_list = [e for e in text_list[0].split(" ")]
+	#
+	# # print("indices list: {}".format(indices_list))
+	# print("words from indices: {}".format(text_list))
+	#
+	# attributions = compress_gradients(grads_list)
+	#
+	# attributions_dict = clean_attributes(attributions, word_list)
 
 
 
