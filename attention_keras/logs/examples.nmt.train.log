@@ -59,3 +59,90 @@
 2019-08-23 13:46:06,985 | examples.nmt.train | <module> | INFO | Translating: his most loved animal is this rabbit .
 
 2019-08-23 13:46:07,304 | examples.nmt.train | <module> | INFO | 	French: il est le pamplemousse est le pamplemousse mais eos 
+2019-08-23 15:20:43,495 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-23 15:20:43,632 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-23 15:20:45,584 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-23 15:20:45,585 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-23 15:20:45,585 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-23 15:20:45,585 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-23 15:21:23,175 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-23 15:21:23,291 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-23 15:21:25,252 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-23 15:21:25,252 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-23 15:21:25,253 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-23 15:21:25,253 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-23 15:23:18,203 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-23 15:23:18,346 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-23 15:23:20,295 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-23 15:23:20,296 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-23 15:23:20,296 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-23 15:23:20,296 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-23 15:23:33,463 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-23 15:23:33,580 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-23 15:23:35,538 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-23 15:23:35,538 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-23 15:23:35,538 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-23 15:23:35,538 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-24 12:13:31,577 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-24 12:13:31,780 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-24 12:13:34,057 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-24 12:13:34,057 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-24 12:13:34,057 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-24 12:13:34,057 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-24 12:15:06,763 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-24 12:15:06,877 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-24 12:15:08,816 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-24 12:15:08,816 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-24 12:15:08,816 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-24 12:15:08,816 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-24 12:18:03,316 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-24 12:18:03,432 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-24 12:18:05,432 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-24 12:18:05,432 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-24 12:18:05,432 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-24 12:18:05,432 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-24 12:20:38,931 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-24 12:20:39,053 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-24 12:20:40,986 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-24 12:20:40,986 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-24 12:20:40,986 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-24 12:20:40,986 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-24 12:23:47,135 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-24 12:23:47,258 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-24 12:23:49,218 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-24 12:23:49,218 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-24 12:23:49,218 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-24 12:23:49,218 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-24 12:24:11,684 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-24 12:24:11,802 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-24 12:24:13,753 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-24 12:24:13,754 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-24 12:24:13,754 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-24 12:24:13,754 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-24 12:25:59,603 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-24 12:25:59,727 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-24 12:26:01,657 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-24 12:26:01,659 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-24 12:26:01,660 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-24 12:26:01,660 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-24 12:33:13,899 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-24 12:33:14,015 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-24 12:33:22,139 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-24 12:33:22,141 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-24 12:33:22,141 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-24 12:33:22,141 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-24 12:34:44,648 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-24 12:34:44,739 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-24 12:34:45,668 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-24 12:34:45,668 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-24 12:34:45,668 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-24 12:34:45,668 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-24 12:35:08,560 | examples.nmt.train | train | INFO | Loss in epoch 1: 3.2199585208526025
+2019-08-24 12:35:38,740 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-24 12:35:38,831 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-24 12:35:46,791 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-24 12:35:46,793 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-24 12:35:46,793 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-24 12:35:46,793 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-24 12:39:15,072 | examples.nmt.train | train | INFO | Loss in epoch 1: 1.1557855996065958
+2019-08-24 12:42:38,123 | examples.nmt.train | train | INFO | Loss in epoch 2: 0.4425917131380296
