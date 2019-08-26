@@ -1,0 +1,10 @@
+Test Sentence:  "The story was good but the acting was very bad, so I did not like it" 
+Prediction: [0.38866377] 
+Cleaned Sentence: ['the story good acting bad like it']
+Tokenised test sentence: [[9, 13, 8, 42, 18, 5, 7]]
+Baseline Sentence: ['']
+Standard Gradient Attributions: {'acting': 14.624266937336285, 'bad': 4.218924536350761, 'good': 18.579056878970814, 'it': 4.029486408592155, 'like': 32.03060002687753, 'story': 14.362441830727388, 'the': 12.155223381145065}
+Integrated Gradients Attributions: {'acting': 55.33601668938135, 'bad': 20.084560753647157, 'good': 6.372314786115804, 'it': 0.8367993399837131, 'like': 8.132573707417176, 'story': 4.462819090720641, 'the': 4.77491563273416}
+
+
+

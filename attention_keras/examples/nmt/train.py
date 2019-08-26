@@ -53,6 +53,7 @@ def find_start_word(seq_text):
         if(seq_text[i] != 0):
             return i
 
+
 def add_intermediate_padding(en_seq, fr_seq = [], pad_size = 5):
     '''Adds 0s in between the sentence or randomly assorted'''
     en_seq_padded = []
@@ -78,6 +79,7 @@ def add_intermediate_padding(en_seq, fr_seq = [], pad_size = 5):
         fr_seq_padded.append(new_f)
 
     return np.array(en_seq_padded), np.array(fr_seq_padded)
+
 
 def add_random_padding(en_seq, fr_seq = []):
     '''Adds 2, 0 padding to all the train sentences'''
@@ -120,6 +122,9 @@ def add_random_padding(en_seq, fr_seq = []):
 
     return np.array(en_seq_padded), np.array(fr_seq_padded)
 
+
+
+
 def save_model(model, pathtojson = "./nmt_models/untitled.json", pathtoh5 = "./nmt_models/untitled.h5"):
 
     print("Saving model")
@@ -130,6 +135,9 @@ def save_model(model, pathtojson = "./nmt_models/untitled.json", pathtoh5 = "./n
     model.save_weights(pathtoh5)
 
     print("Saved model to disk!")
+
+
+
 
 
 

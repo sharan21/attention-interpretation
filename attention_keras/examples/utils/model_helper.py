@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def plot_attention_weights(encoder_inputs, attention_weights, en_id2word, fr_id2word, base_dir, filename=None):
+def plot_attention_weights(encoder_inputs, attention_weights, en_id2word, fr_id2word, filename="attention.png"):
     """
     Plots attention weights
     :param encoder_inputs: Sequence of word ids (list/numpy.ndarray)
@@ -37,9 +37,4 @@ def plot_attention_weights(encoder_inputs, attention_weights, en_id2word, fr_id2
     ax.tick_params(labelsize=32)
     ax.tick_params(axis='x', labelrotation=90)
 
-    if not os.path.exists(os.path.join(base_dir, 'results')):
-        os.mkdir(os.path.join(base_dir, 'results'))
-    if filename is None:
-        plt.savefig(os.path.join(base_dir, 'results', 'attention.png'))
-    else:
-        plt.savefig(os.path.join(base_dir, 'results', '{}'.format(filename)))
+    plt.savefig('./analysis/attention_heatmaps/'+ filename)

@@ -146,3 +146,31 @@
 2019-08-24 12:35:46,793 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
 2019-08-24 12:39:15,072 | examples.nmt.train | train | INFO | Loss in epoch 1: 1.1557855996065958
 2019-08-24 12:42:38,123 | examples.nmt.train | train | INFO | Loss in epoch 2: 0.4425917131380296
+2019-08-26 14:37:45,637 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 14:42:32,485 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 14:42:41,095 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 14:42:41,197 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 14:42:49,291 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-26 14:42:49,293 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-26 14:42:49,293 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-26 14:42:49,293 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-26 15:05:37,100 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 15:05:37,225 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 15:05:45,549 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-26 15:05:45,552 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-26 15:05:45,552 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-26 15:05:45,552 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-26 15:07:41,375 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 15:07:41,467 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 15:09:42,671 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 15:09:42,763 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 15:09:43,819 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-26 15:09:43,821 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-26 15:09:43,822 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-26 15:09:43,822 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-26 15:10:14,175 | examples.nmt.train | train | INFO | Loss in epoch 1: 3.0190752362593627
+2019-08-26 15:10:41,262 | examples.nmt.train | train | INFO | Loss in epoch 2: 1.81382590226638
+2019-08-26 15:11:10,807 | examples.nmt.train | train | INFO | Loss in epoch 3: 1.136303579578033
+2019-08-26 15:11:11,091 | examples.nmt.train | <module> | INFO | Translating: his most loved animal is this rabbit .
+
+2019-08-26 15:11:11,684 | examples.nmt.train | <module> | INFO | 	French: la fraise est le plus aimé mais la mais 

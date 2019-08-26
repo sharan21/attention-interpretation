@@ -1,4 +1,4 @@
-from ltsm_baseline import *
+from lstm_baseline import *
 
 tf.logging.set_verbosity(tf.logging.ERROR);
 
@@ -86,7 +86,6 @@ def compute_integrated_gradients(input_collection):
 
 		buffer.append(input)
 
-
 		grads, attri, attri_dict = run_one_grad(lstm_size, multiple_fc, fc_units,
 												vocab_size, embed_size, batch_size,
 												num_layers, dropout, learning_rate,
@@ -97,7 +96,6 @@ def compute_integrated_gradients(input_collection):
 		intergrated_grads = np.multiply(diff, integral)
 
 	return intergrated_grads
-
 
 def write_to_file(test_sentence, prediction, test_data_sentence, baseline_sentence, test_data, grads_cleaned, integ_grads_cleaned):
 	print("Saving stats into disk...")
@@ -111,12 +109,10 @@ def write_to_file(test_sentence, prediction, test_data_sentence, baseline_senten
 	f.write("Standard Gradient Attributions: {}\n".format(grads_cleaned))
 	f.write("Integrated Gradients Attributions: {}\n\n\n\n".format(integ_grads_cleaned))
 
-
 	print("Done Saving!")
 
 
 if __name__ == "__main__":
-
 
 
 	########################################################################## EXPERIMENT SECTION
@@ -137,8 +133,6 @@ if __name__ == "__main__":
 
 
 
-
-
 	########################################################################## IMPORT MODEL AND GET SG AND IG
 	# TODO remove the need for these annoying global definitions
 
@@ -156,10 +150,10 @@ if __name__ == "__main__":
 	multiple_fc = False
 	fc_units = 128
 
-	checkpoint_to_restore = "/Users/sharan/Desktop/RNN_with_embd/64,False,128.ckpt"
+	checkpoint_to_restore = "./models/LSTM_models/64,False,128/64,False,128.ckpt"
 
-	imdb_train_path = "./imdb/train.tsv"
-	imdb_test_path = "./imdb/test.tsv"
+	imdb_train_path = "./datasets/imdb/train.tsv"
+	imdb_test_path = "./datasets/imdb/test.tsv"
 
 	# for imdb dataset
 	vocab_size = 99426
@@ -178,14 +172,10 @@ if __name__ == "__main__":
 	baseline_data_sentence = get_word_from_index(baseline_data[0], tokenizer)
 
 
-
-
 	_, prediction = load_and_make_predictions_withargs(lstm_size, multiple_fc, fc_units,
 														  vocab_size, embed_size, batch_size,
 														  num_layers, dropout, learning_rate,
 														  checkpoint_to_restore, test_data)
-
-
 
 
 	input_collection = create_input_collection(test_data, baseline_data)
@@ -193,7 +183,6 @@ if __name__ == "__main__":
 	integ_grads = compute_integrated_gradients(input_collection)
 
 	integ_grads_cleaned = clean_attributes(integ_grads, test_data_words)
-
 
 
 	grads_list, compressed_grads, grads_cleaned = run_one_grad(lstm_size, multiple_fc, fc_units,
@@ -204,7 +193,7 @@ if __name__ == "__main__":
 	print(integ_grads_cleaned)
 	print(grads_cleaned)
 
-	write_to_file(test_sentence, prediction, test_data_sentence, baseline_data_sentence, test_data, grads_cleaned,integ_grads_cleaned)
+	write_to_file(test_sentence, prediction, test_data_sentence, baseline_data_sentence, test_data, grads_cleaned, integ_grads_cleaned)
 
 
 
