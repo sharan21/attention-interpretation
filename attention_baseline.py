@@ -3,9 +3,9 @@ from random import sample
 
 from tensorflow.python.keras.utils import to_categorical
 import numpy as np
-import os
+import os, sys
 
-from keras.models import model_from_json
+
 
 from attention_keras.examples.utils.data_helper import read_data, sents2sequences
 from attention_keras.examples.nmt.model import define_nmt
@@ -321,7 +321,7 @@ if __name__ == '__main__':
 
     ############################################################ MAIN SECTION TO TRAIN DEFAULT NMT MODEL WITHOUT PADDING
 
-    debug = True
+    debug = False
     """ Hyperparameters """
 
     train_size = 100000 if not debug else 10000
