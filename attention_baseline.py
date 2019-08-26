@@ -226,9 +226,7 @@ def infer_nmt(encoder_model, decoder_model, test_en_seq, en_vsize, fr_vsize):
 
 if __name__ == '__main__':
 
-    pass
-
-    ############################################################ EXPERIMENTAL SECTION 1 FOR RANDOM 0 PADDING
+    ############################################################ TRAIN MODEL WITH RANDOM 0 PADDED INPUTS
 
     # debug = True
     # """ Hyperparameters """
@@ -257,6 +255,72 @@ if __name__ == '__main__':
 
     ############################################################  TRAIN MODEL WITH INTERMEDIATE 0 PADDED INPUTS
 
+    # debug = True
+    # """ Hyperparameters """
+    #
+    # train_size = 100000 if not debug else 10000
+    # filename = ''
+    #
+    # tr_en_text, tr_fr_text, ts_en_text, ts_fr_text = get_data(train_size=train_size)
+    #
+    # """ Defining tokenizers """
+    # en_tokenizer = keras.preprocessing.text.Tokenizer(oov_token='UNK')
+    # en_tokenizer.fit_on_texts(tr_en_text)
+    #
+    # fr_tokenizer = keras.preprocessing.text.Tokenizer(oov_token='UNK')
+    # fr_tokenizer.fit_on_texts(tr_fr_text)
+    #
+    # """ Getting preprocessed data """
+    # en_seq, fr_seq = preprocess_data(en_tokenizer, fr_tokenizer, tr_en_text, tr_fr_text, en_timesteps, fr_timesteps)
+    #
+    # start_indices = []
+    # for e in en_seq:
+    #     start_indices.append(find_start_word(e))
+    #
+    # en_seq_padded, fr_seq_padded= add_intermediate_padding(en_seq, fr_seq)
+    #
+    # en_vsize = max(en_tokenizer.index_word.keys()) + 1
+    # fr_vsize = max(fr_tokenizer.index_word.keys()) + 1
+    #
+    # """ Defining the full model for padded inputs """
+    # # below line is for padded inputs of size 5
+    # full_model, infer_enc_model, infer_dec_model = define_nmt(
+    #     hidden_size=hidden_size, batch_size=batch_size,
+    #     en_timesteps=en_timesteps+5, fr_timesteps=fr_timesteps+5,
+    #     en_vsize=en_vsize, fr_vsize=fr_vsize)
+    #
+    # n_epochs = 10 if not debug else 3
+    #
+    # train(full_model, en_seq_padded, fr_seq_padded, batch_size, n_epochs)
+    #
+    # """ Save model """
+    #
+    # save_model(full_model,
+    #            pathtojson="./models/Attention_models/nmt_models/with_middlepads_100.json",
+    #            pathtoh5="./models/Attention_models/nmt_models/with_middlepads_100.h5")
+    #
+    # """ Index2word """
+    # en_index2word = dict(zip(en_tokenizer.word_index.values(), en_tokenizer.word_index.keys()))
+    # fr_index2word = dict(zip(fr_tokenizer.word_index.values(), fr_tokenizer.word_index.keys()))
+    #
+    # """ Inferring with trained model """
+    # test_en = ts_en_text[0]
+    # logger.info('Translating: {}'.format(test_en))
+    #
+    # test_en_seq = sents2sequences(en_tokenizer, [test_en], pad_length=en_timesteps)
+    # test_en_seq_padded, _ = add_intermediate_padding(test_en_seq)
+    # test_fr, attn_weights = infer_nmt(
+    #     encoder_model=infer_enc_model, decoder_model=infer_dec_model,
+    #     test_en_seq=test_en_seq_padded, en_vsize=en_vsize, fr_vsize=fr_vsize)
+    # logger.info('\tFrench: {}'.format(test_fr))
+    #
+    # """ Attention plotting """
+    # filename = "attention.png"
+    # plot_attention_weights(test_en_seq, attn_weights, en_index2word, fr_index2word, filename)
+
+
+    ############################################################ MAIN SECTION TO TRAIN DEFAULT NMT MODEL WITHOUT PADDING
+
     debug = True
     """ Hyperparameters """
 
@@ -275,38 +339,24 @@ if __name__ == '__main__':
     """ Getting preprocessed data """
     en_seq, fr_seq = preprocess_data(en_tokenizer, fr_tokenizer, tr_en_text, tr_fr_text, en_timesteps, fr_timesteps)
 
-    start_indices = []
-    for e in en_seq:
-        start_indices.append(find_start_word(e))
-
-    en_seq_padded, fr_seq_padded= add_intermediate_padding(en_seq, fr_seq)
-
     en_vsize = max(en_tokenizer.index_word.keys()) + 1
     fr_vsize = max(fr_tokenizer.index_word.keys()) + 1
 
     """ Defining the full model """
-    # below line is for padded inputs of size 5
     full_model, infer_enc_model, infer_dec_model = define_nmt(
         hidden_size=hidden_size, batch_size=batch_size,
-        en_timesteps=en_timesteps+5, fr_timesteps=fr_timesteps+5,
+        en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
         en_vsize=en_vsize, fr_vsize=fr_vsize)
 
-
-    # below line is default model with unpadded inputs
-    # full_model, infer_enc_model, infer_dec_model = define_nmt(
-    #     hidden_size=hidden_size, batch_size=batch_size,
-    #     en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
-    #     en_vsize=en_vsize, fr_vsize=fr_vsize)
-
     n_epochs = 10 if not debug else 3
-
-    train(full_model, en_seq_padded, fr_seq_padded, batch_size, n_epochs)
+    train(full_model, en_seq, fr_seq, batch_size, n_epochs)
 
     """ Save model """
 
+
     save_model(full_model,
-               pathtojson="./models/Attention_models/nmt_models/with_middlepads_100.json",
-               pathtoh5="./models/Attention_models/nmt_models/with_middlepads_100.h5")
+               pathtojson="./models/Attention_models/nmt_models/nmt_without_pads.json",
+               pathtoh5="./models/Attention_models/nmt_models/nmt_without_pads.h5")
 
     """ Index2word """
     en_index2word = dict(zip(en_tokenizer.word_index.values(), en_tokenizer.word_index.keys()))
@@ -317,70 +367,12 @@ if __name__ == '__main__':
     logger.info('Translating: {}'.format(test_en))
 
     test_en_seq = sents2sequences(en_tokenizer, [test_en], pad_length=en_timesteps)
-    test_en_seq_padded, _ = add_intermediate_padding(test_en_seq)
     test_fr, attn_weights = infer_nmt(
         encoder_model=infer_enc_model, decoder_model=infer_dec_model,
-        test_en_seq=test_en_seq_padded, en_vsize=en_vsize, fr_vsize=fr_vsize)
+        test_en_seq=test_en_seq, en_vsize=en_vsize, fr_vsize=fr_vsize)
     logger.info('\tFrench: {}'.format(test_fr))
 
     """ Attention plotting """
     filename = "attention.png"
     plot_attention_weights(test_en_seq, attn_weights, en_index2word, fr_index2word, filename)
-
-
-    ############################################################ MAIN SECTION TO TRAIN DEFAULT NMT MODEL WITHOUT PADDING
-
-    # debug = False
-    # """ Hyperparameters """
-    #
-    # train_size = 100000 if not debug else 10000
-    # filename = ''
-    #
-    # tr_en_text, tr_fr_text, ts_en_text, ts_fr_text = get_data(train_size=train_size)
-    #
-    # """ Defining tokenizers """
-    # en_tokenizer = keras.preprocessing.text.Tokenizer(oov_token='UNK')
-    # en_tokenizer.fit_on_texts(tr_en_text)
-    #
-    # fr_tokenizer = keras.preprocessing.text.Tokenizer(oov_token='UNK')
-    # fr_tokenizer.fit_on_texts(tr_fr_text)
-    #
-    # """ Getting preprocessed data """
-    # en_seq, fr_seq = preprocess_data(en_tokenizer, fr_tokenizer, tr_en_text, tr_fr_text, en_timesteps, fr_timesteps)
-    #
-    # en_vsize = max(en_tokenizer.index_word.keys()) + 1
-    # fr_vsize = max(fr_tokenizer.index_word.keys()) + 1
-    #
-    # """ Defining the full model """
-    # full_model, infer_enc_model, infer_dec_model = define_nmt(
-    #     hidden_size=hidden_size, batch_size=batch_size,
-    #     en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
-    #     en_vsize=en_vsize, fr_vsize=fr_vsize)
-    #
-    # n_epochs = 10 if not debug else 3
-    # train(full_model, en_seq, fr_seq, batch_size, n_epochs)
-    #
-    # """ Save model """
-    # if not os.path.exists(os.path.join('..', 'h5.models')):
-    #     os.mkdir(os.path.join('..', 'h5.models'))
-    # full_model.save(os.path.join('..', 'h5.models', 'nmt.h5'))
-    #
-    # save_model(full_model, pathtojson="./nmt_models/without_pads.json", pathtoh5="./nmt_models/without_pads.h5")
-    #
-    # """ Index2word """
-    # en_index2word = dict(zip(en_tokenizer.word_index.values(), en_tokenizer.word_index.keys()))
-    # fr_index2word = dict(zip(fr_tokenizer.word_index.values(), fr_tokenizer.word_index.keys()))
-    #
-    # """ Inferring with trained model """
-    # test_en = ts_en_text[0]
-    # logger.info('Translating: {}'.format(test_en))
-    #
-    # test_en_seq = sents2sequences(en_tokenizer, [test_en], pad_length=en_timesteps)
-    # test_fr, attn_weights = infer_nmt(
-    #     encoder_model=infer_enc_model, decoder_model=infer_dec_model,
-    #     test_en_seq=test_en_seq, en_vsize=en_vsize, fr_vsize=fr_vsize)
-    # logger.info('\tFrench: {}'.format(test_fr))
-    #
-    # """ Attention plotting """
-    # plot_attention_weights(test_en_seq, attn_weights, en_index2word, fr_index2word, base_dir=base_dir)
 
