@@ -1,27 +1,19 @@
-import tensorflow.keras as keras
 from random import sample
+import keras
 
 from tensorflow.python.keras.utils import to_categorical
 import numpy as np
-import os, sys
-
-
+import os
 
 from attention_keras.examples.utils.data_helper import read_data, sents2sequences
 from attention_keras.examples.nmt.model import define_nmt
 from attention_keras.examples.utils.model_helper import plot_attention_weights
 from attention_keras.examples.utils.logger import get_logger
 
-base_dir = os.path.sep.join(os.path.abspath(__file__).split(os.path.sep)[:-3])
-
 logger = get_logger("examples.nmt.train","./attention_keras/logs")
 
 batch_size = 64
 hidden_size = 96
-
-# project_path = os.path.sep.join(os.path.abspath(__file__).split(os.path.sep)[:-3])
-# if project_path not in sys.path:
-#     sys.path.append(project_path)
 
 
 # en_timesteps, fr_timesteps = 20, 20 # for unmasked inputs
@@ -86,6 +78,16 @@ def add_intermediate_padding(en_seq, fr_seq = [], pad_size = 5):
 
     return np.array(en_seq_padded), np.array(fr_seq_padded)
 
+def testmodel(model, data, labels):
+
+    labels = to_categorical(labels)
+    score, acc = model.evaluate(data, labels, batch_size=16)
+
+    # print ("Scores for Test set: {}".format(score))
+    # print ("Accuracy for Test set: {}".format(acc))
+
+    return score, acc
+
 
 def add_random_padding(en_seq, fr_seq = []):
     '''Adds 2, 0 padding to all the train sentences'''
@@ -140,6 +142,11 @@ def save_model(model, pathtojson = "./nmt_models/untitled.json", pathtoh5 = "./n
 
     print("Saved model to disk!")
 
+def getNumberOfFiles(path = './analysis/attention_heatmaps'):
+    list = os.listdir(path)
+    return len(list)
+
+
 
 
 def preprocess_data(en_tokenizer, fr_tokenizer, en_text, fr_text, en_timesteps, fr_timesteps):
@@ -175,28 +182,24 @@ def train(full_model, en_seq, fr_seq, batch_size, n_epochs=10):
             logger.info("Loss in epoch {}: {}".format(ep + 1, np.mean(losses)))
 
 
-def loadmodel(pathtojson, pathtoh5):
+def loadmodel(pathtoh5="./models/Attention_models/nmt_models/test.h5", en_vsize = 201, fr_vsize = 345):
 
-    json_file = open(pathtojson, 'r')
-    loaded_model_json = json_file.read()
-    json_file.close()
-    loaded_model = model_from_json(loaded_model_json)
+
+    loaded_model, infer_enc_model, infer_dec_model = define_nmt(
+        hidden_size=hidden_size, batch_size=batch_size,
+        en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
+        en_vsize=en_vsize, fr_vsize=fr_vsize)
 
     loaded_model.load_weights(pathtoh5)
 
-    return loaded_model
+    return loaded_model, infer_enc_model, infer_dec_model
 
 
 
 def infer_nmt(encoder_model, decoder_model, test_en_seq, en_vsize, fr_vsize):
     """
-    Infer logic
     :param encoder_model: keras.Model
     :param decoder_model: keras.Model
-    :param test_en_seq: sequence of word ids
-    :param en_vsize: int
-    :param fr_vsize: int
-    :return:
     """
 
     test_fr_seq = sents2sequences(fr_tokenizer, ['sos'], fr_vsize)
@@ -342,37 +345,52 @@ if __name__ == '__main__':
     en_vsize = max(en_tokenizer.index_word.keys()) + 1
     fr_vsize = max(fr_tokenizer.index_word.keys()) + 1
 
-    """ Defining the full model """
-    full_model, infer_enc_model, infer_dec_model = define_nmt(
-        hidden_size=hidden_size, batch_size=batch_size,
-        en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
-        en_vsize=en_vsize, fr_vsize=fr_vsize)
+    # """ Defining the full model """
+    # full_model, infer_enc_model, infer_dec_model = define_nmt(
+    #     hidden_size=hidden_size, batch_size=batch_size,
+    #     en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
+    #     en_vsize=en_vsize, fr_vsize=fr_vsize)
+    #
+    # n_epochs = 10 if not debug else 3
+    # train(full_model, en_seq, fr_seq, batch_size, n_epochs)
 
-    n_epochs = 10 if not debug else 3
-    train(full_model, en_seq, fr_seq, batch_size, n_epochs)
+    """ Load Model"""
 
-    """ Save model """
+    model, infer_enc_model, infer_dec_model = loadmodel('./models/attention_models/nmt_models/nmt_100000_10.h5')
 
-
-    save_model(full_model,
-               pathtojson="./models/Attention_models/nmt_models/nmt_without_pads.json",
-               pathtoh5="./models/Attention_models/nmt_models/nmt_without_pads.h5")
+    # """ Save model """
+    # full_model.save_weights("./models/Attention_models/nmt_models/.h5")
 
     """ Index2word """
     en_index2word = dict(zip(en_tokenizer.word_index.values(), en_tokenizer.word_index.keys()))
     fr_index2word = dict(zip(fr_tokenizer.word_index.values(), fr_tokenizer.word_index.keys()))
 
     """ Inferring with trained model """
-    test_en = ts_en_text[0]
+
+    sample= 4
+
+    test_en = ts_en_text[sample]
+    test_fr = ts_fr_text[sample]
+    custom_input = 'Hello my name is sharan, and I am from India \n'
+
     logger.info('Translating: {}'.format(test_en))
 
     test_en_seq = sents2sequences(en_tokenizer, [test_en], pad_length=en_timesteps)
+    test_fr_seq = sents2sequences(fr_tokenizer, [test_fr], pad_length=fr_timesteps)
+    custom_input_seq = sents2sequences(en_tokenizer, [custom_input], pad_length=en_timesteps)
+
     test_fr, attn_weights = infer_nmt(
         encoder_model=infer_enc_model, decoder_model=infer_dec_model,
         test_en_seq=test_en_seq, en_vsize=en_vsize, fr_vsize=fr_vsize)
+
     logger.info('\tFrench: {}'.format(test_fr))
 
-    """ Attention plotting """
-    filename = "attention.png"
-    plot_attention_weights(test_en_seq, attn_weights, en_index2word, fr_index2word, filename)
+
+
+
+
+    # """ Attention plotting """
+    # fileoffset = getNumberOfFiles(path='./analysis/attention_heatmaps')
+    # plot_attention_weights(test_en_seq, attn_weights, en_index2word,
+    #                        fr_index2word, filename="nmt_100000_10_test{}.png".format(fileoffset))
 

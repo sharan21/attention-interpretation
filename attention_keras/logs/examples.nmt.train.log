@@ -186,3 +186,306 @@
 2019-08-26 15:28:42,463 | examples.nmt.train | <module> | INFO | Translating: his most loved animal is this rabbit .
 
 2019-08-26 15:28:42,776 | examples.nmt.train | <module> | INFO | 	French: la fraise est son fruit préféré moins mais la fraise est son moins aimé eos 
+2019-08-26 16:23:35,673 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 16:23:35,809 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 16:23:37,778 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-26 16:23:37,779 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-26 16:23:37,779 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-26 16:23:37,780 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-26 16:27:51,816 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 16:27:51,953 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 16:27:54,053 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-26 16:27:54,053 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-26 16:27:54,054 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-26 16:27:54,054 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-26 16:33:41,252 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 16:33:41,374 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 16:33:43,561 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-26 16:33:43,561 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-26 16:33:43,562 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-26 16:33:43,562 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-26 16:34:11,217 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 16:34:11,335 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 16:34:13,388 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-26 16:34:13,389 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-26 16:34:13,389 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-26 16:34:13,389 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-26 16:59:35,837 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 16:59:36,011 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 16:59:38,060 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-26 16:59:38,061 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-26 16:59:38,061 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-26 16:59:38,061 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-26 17:01:02,406 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 17:01:02,532 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 17:01:03,498 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-26 17:01:03,501 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-26 17:01:03,501 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-26 17:01:03,501 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-26 17:43:58,299 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 17:43:58,488 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 17:44:00,534 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 200
+2019-08-26 17:44:00,534 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 321
+2019-08-26 17:44:00,534 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-08-26 17:44:00,534 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-08-26 17:51:13,521 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-26 17:51:13,643 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 17:51:21,547 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-26 17:51:21,548 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-26 17:51:21,549 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-26 17:51:21,549 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-26 17:52:58,641 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-26 17:52:58,733 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 17:53:06,767 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-26 17:53:06,768 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-26 17:53:06,769 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-26 17:53:06,769 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-26 18:03:09,234 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 18:03:09,366 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 18:03:17,282 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-26 18:03:17,284 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-26 18:03:17,284 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-26 18:03:17,284 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-26 18:12:07,460 | examples.nmt.train | get_logger | INFO | Started log /Users/sharan/attention-inter/attention_keras/logs/examples.nmt.train
+2019-08-26 18:12:07,576 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 18:12:15,526 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-26 18:12:15,527 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-26 18:12:15,527 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-26 18:12:15,527 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-26 18:15:45,621 | examples.nmt.train | train | INFO | Loss in epoch 1: 1.1442940885370427
+2019-08-26 18:49:08,407 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-26 18:49:08,529 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-26 18:49:08,694 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 118
+2019-08-26 18:49:08,694 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 148
+2019-08-26 18:49:08,694 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-08-26 18:49:08,694 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-08-26 18:49:12,453 | examples.nmt.train | train | INFO | Loss in epoch 1: 4.956448554992676
+2019-08-26 18:49:12,544 | examples.nmt.train | train | INFO | Loss in epoch 2: 4.935159683227539
+2019-08-26 18:49:12,634 | examples.nmt.train | train | INFO | Loss in epoch 3: 4.913449764251709
+2019-08-26 18:49:12,735 | examples.nmt.train | train | INFO | Loss in epoch 4: 4.891093730926514
+2019-08-26 18:49:12,827 | examples.nmt.train | train | INFO | Loss in epoch 5: 4.867864608764648
+2019-08-26 18:49:12,926 | examples.nmt.train | train | INFO | Loss in epoch 6: 4.843506813049316
+2019-08-26 18:49:13,026 | examples.nmt.train | train | INFO | Loss in epoch 7: 4.817721843719482
+2019-08-26 18:49:13,114 | examples.nmt.train | train | INFO | Loss in epoch 8: 4.790160179138184
+2019-08-26 18:49:13,201 | examples.nmt.train | train | INFO | Loss in epoch 9: 4.7604193687438965
+2019-08-26 18:49:13,301 | examples.nmt.train | train | INFO | Loss in epoch 10: 4.728018283843994
+2019-08-26 18:49:13,520 | examples.nmt.train | <module> | INFO | Translating: the united states is usually beautiful during december , but it is usually nice in august .
+
+2019-08-26 18:49:13,837 | examples.nmt.train | <module> | INFO | 	French: 
+2019-08-28 11:53:39,172 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 11:53:39,363 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 11:53:39,568 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 118
+2019-08-28 11:53:39,569 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 148
+2019-08-28 11:53:39,569 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-08-28 11:53:39,569 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-08-28 11:53:57,105 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 11:53:57,222 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 11:54:15,166 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 11:54:15,169 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 11:54:15,169 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 11:54:15,169 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 13:17:44,772 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 13:17:44,944 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 13:18:09,573 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 13:18:09,577 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 348
+2019-08-28 13:18:09,578 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (137860, 20)
+2019-08-28 13:18:09,579 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (137860, 20)
+2019-08-28 16:30:31,883 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 16:30:32,024 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 16:30:50,249 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 16:30:50,251 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 16:30:50,251 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 16:30:50,251 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 16:31:09,983 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 16:31:10,099 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 16:31:28,011 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 16:31:28,013 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 16:31:28,013 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 16:31:28,013 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 16:36:44,951 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 16:36:45,049 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 16:36:52,895 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 16:36:52,897 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 16:36:52,897 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 16:36:52,897 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 16:36:54,020 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes chilly during december , but it is sometimes freezing in june .
+
+2019-08-28 16:36:54,278 | examples.nmt.train | <module> | INFO | 	French: les états unis est jamais relaxant en décembre mais il est parfois le gel en juin eos 
+2019-08-28 16:38:14,300 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 16:38:14,399 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 16:38:22,393 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 16:38:22,395 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 16:38:22,395 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 16:38:22,395 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 16:38:23,536 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes chilly during december , but it is sometimes freezing in june .
+
+2019-08-28 16:38:23,768 | examples.nmt.train | <module> | INFO | 	French: les états unis est jamais relaxant en décembre mais il est parfois le gel en juin eos 
+2019-08-28 16:38:43,787 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 16:38:43,904 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 16:39:02,548 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 16:39:02,549 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 16:39:02,550 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 16:39:02,550 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 16:41:41,387 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 16:41:41,479 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 16:41:49,451 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 16:41:49,453 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 16:41:49,453 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 16:41:49,453 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 16:41:50,601 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes chilly during december , but it is sometimes freezing in june .
+
+2019-08-28 16:41:50,839 | examples.nmt.train | <module> | INFO | 	French: les états unis est jamais relaxant en décembre mais il est parfois le gel en juin eos 
+2019-08-28 16:43:13,822 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 16:43:13,923 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 16:43:22,033 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 16:43:22,035 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 16:43:22,035 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 16:43:22,035 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 16:43:23,172 | examples.nmt.train | <module> | INFO | Translating: Hello my name is sharan, and I am from India
+2019-08-28 16:43:23,399 | examples.nmt.train | <module> | INFO | 	French: mon qu'il qu'il est mon de traduire entre le et est est amusant eos 
+2019-08-28 16:43:48,994 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 16:43:49,092 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 16:43:57,193 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 16:43:57,195 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 16:43:57,195 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 16:43:57,195 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 16:43:58,314 | examples.nmt.train | <module> | INFO | Translating: Hello my name is sharan, and I am from India 
+
+2019-08-28 16:43:58,552 | examples.nmt.train | <module> | INFO | 	French: mon qu'il qu'il est mon de traduire entre le et est est amusant eos 
+2019-08-28 16:44:22,886 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 16:44:22,986 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 16:44:31,036 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 16:44:31,038 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 16:44:31,038 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 16:44:31,038 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 16:44:32,172 | examples.nmt.train | <module> | INFO | Translating: your most loved fruit is the lemon , but his most loved is the peach .
+
+2019-08-28 16:44:32,407 | examples.nmt.train | <module> | INFO | 	French: votre fruit le plus aimé est le citron mais son plus aimé est la pêche eos 
+2019-08-28 16:44:58,882 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 16:44:58,984 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 16:45:07,145 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 16:45:07,146 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 16:45:07,146 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 16:45:07,146 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 16:45:08,251 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+2019-08-28 16:45:08,489 | examples.nmt.train | <module> | INFO | 	French: chine est jamais le gel habituellement en octobre mais il est jamais chaud en février eos 
+2019-08-28 16:45:41,702 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 16:45:41,803 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 16:45:49,914 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 16:45:49,915 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 16:45:49,915 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 16:45:49,915 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 16:45:51,040 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+2019-08-28 16:45:51,269 | examples.nmt.train | <module> | INFO | 	French: chine est jamais le gel habituellement en octobre mais il est jamais chaud en février eos 
+2019-08-28 17:02:37,087 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 17:02:37,195 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 17:02:45,340 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 17:02:45,342 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 17:02:45,342 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 17:02:45,342 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 17:02:46,481 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+2019-08-28 17:02:46,724 | examples.nmt.train | <module> | INFO | 	French: chine est jamais le gel habituellement en octobre mais il est jamais chaud en février eos 
+2019-08-28 17:03:28,610 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 17:03:28,703 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 17:03:36,803 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 17:03:36,807 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 17:03:36,807 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 17:03:36,807 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 17:03:37,952 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes chilly during december , but it is sometimes freezing in june .
+
+2019-08-28 17:03:38,192 | examples.nmt.train | <module> | INFO | 	French: les états unis est jamais relaxant en décembre mais il est parfois le gel en juin eos 
+2019-08-28 17:03:48,603 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 17:03:48,724 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 17:03:56,780 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 17:03:56,782 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 17:03:56,782 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 17:03:56,782 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 17:03:57,930 | examples.nmt.train | <module> | INFO | Translating: your most loved fruit is the lemon , but his most loved is the peach .
+
+2019-08-28 17:03:58,173 | examples.nmt.train | <module> | INFO | 	French: votre fruit le plus aimé est le citron mais son plus aimé est la pêche eos 
+2019-08-28 17:04:04,571 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 17:04:04,691 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 17:04:12,798 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 17:04:12,800 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 17:04:12,800 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 17:04:12,800 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 17:04:13,932 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+2019-08-28 17:04:14,190 | examples.nmt.train | <module> | INFO | 	French: chine est jamais le gel habituellement en octobre mais il est jamais chaud en février eos 
+2019-08-28 17:04:25,793 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 17:04:25,922 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 17:04:34,284 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 17:04:34,288 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 17:04:34,288 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 17:04:34,288 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 17:04:35,442 | examples.nmt.train | <module> | INFO | Translating: california is sometimes dry during summer , but it is sometimes chilly in winter .
+
+2019-08-28 17:04:35,689 | examples.nmt.train | <module> | INFO | 	French: la chine est parfois parfois sec pendant l' été mais il est parfois frisquet en hiver eos 
+2019-08-28 17:18:47,055 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 17:18:47,165 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 17:18:55,190 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 17:18:55,192 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 17:18:55,192 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 17:18:55,192 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 17:18:56,652 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-08-28 17:18:57,042 | examples.nmt.train | <module> | INFO | 	French: new jersey est jamais la neige en mars et il est généralement sec en mai eos 
+2019-08-28 17:22:44,564 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 17:22:44,703 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 17:23:02,881 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 17:23:02,882 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-08-28 17:23:02,882 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 17:23:02,882 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 17:23:04,916 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-08-28 17:23:05,183 | examples.nmt.train | <module> | INFO | 	French: new jersey est jamais la neige en mars et il est généralement sec en mai eos 
+2019-08-28 17:54:19,578 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 17:55:13,456 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 17:55:13,570 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 17:57:47,507 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 17:57:47,600 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 17:57:53,470 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 17:57:53,473 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 348
+2019-08-28 17:57:53,473 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (137860, 20)
+2019-08-28 17:57:53,473 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (137860, 20)
+2019-08-28 17:58:15,836 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 17:58:15,963 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 17:58:29,435 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 17:58:29,437 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 348
+2019-08-28 17:58:29,437 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (137860, 20)
+2019-08-28 17:58:29,437 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (137860, 20)
+2019-08-28 17:58:53,137 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 17:58:53,249 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 17:58:59,113 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 17:58:59,115 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 348
+2019-08-28 17:58:59,115 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (137860, 20)
+2019-08-28 17:58:59,115 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (137860, 20)
+2019-08-28 17:59:48,740 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 17:59:48,835 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 17:59:54,681 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 17:59:54,683 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 348
+2019-08-28 17:59:54,683 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (137860, 20)
+2019-08-28 17:59:54,683 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (137860, 20)
+2019-08-28 18:01:14,356 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 18:01:14,448 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 18:01:20,291 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 18:01:20,293 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 348
+2019-08-28 18:01:20,293 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (137860, 20)
+2019-08-28 18:01:20,293 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (137860, 20)
+2019-08-28 18:16:08,886 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 18:16:08,994 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 18:16:14,803 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 18:16:14,805 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 348
+2019-08-28 18:16:14,805 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (137860, 20)
+2019-08-28 18:16:14,805 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (137860, 20)
+2019-08-28 18:27:52,196 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-08-28 18:27:52,292 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-08-28 18:27:56,569 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-08-28 18:27:56,571 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-08-28 18:27:56,571 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-08-28 18:27:56,571 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-08-28 18:27:57,717 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
