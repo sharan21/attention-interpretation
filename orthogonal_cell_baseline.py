@@ -3,7 +3,6 @@ import numpy as np
 import tensorflow as tf
 import pickle
 import re
-import math
 from nltk.corpus import stopwords
 from string import punctuation
 from tqdm import tqdm
@@ -12,8 +11,6 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from collections import namedtuple
 from rnn_cell import *
-
-
 
 tf.logging.set_verbosity(tf.logging.ERROR)
 
@@ -62,8 +59,6 @@ def get_gradients(model, predicted_y, test_data,  dropout = 0.5):
 	# VIP!!!
 	# ensure batch_size of loaded model == number of test cases
 
-
-
 	optimizer_here = model.gradients
 	embedding_here = model.embedding
 	cost_here = model.cost
@@ -107,9 +102,6 @@ def get_gradients_values(gradients): # takes IndexedSlices Object which store gr
 	# np.savetxt("./indices.csv", indices, delimiter=",")
 
 	return vals, indices # val and indices are numpy arrays
-
-
-
 
 
 def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
@@ -204,8 +196,101 @@ def build_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 
 	return graph
 
+
+def build_ortho_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
+			  dropout, learning_rate, multiple_fc, fc_units, with_embd = True):
+	'''Build the Recurrent Neural Network'''
+
+	# Declare placeholders we'll feed into the graph
+	with tf.name_scope('inputs'):
+		inputs = tf.placeholder(tf.int32, [None, None], name='inputs')
+
+	with tf.name_scope('labels'):
+		labels = tf.placeholder(tf.int32, [None, None], name='labels')
+
+	keep_prob = tf.placeholder(tf.float32, name='keep_prob')
+
+	# Create the embeddings
+	with tf.name_scope("embeddings"): # "embeddings" for old models
+		embedding = tf.Variable(tf.random_uniform((n_words, embed_size), -1, 1))
+		embed = tf.nn.embedding_lookup(embedding, inputs)
+
+	# Build the RNN layers
+	with tf.name_scope("RNN_layers"):
+		lstm = tf.contrib.rnn.BasicLSTMCell(lstm_size)
+		drop = tf.contrib.rnn.DropoutWrapper(lstm, output_keep_prob=keep_prob)
+		cell = tf.contrib.rnn.MultiRNNCell([drop] * num_layers)
+
+	# Set the initial state
+	with tf.name_scope("RNN_init_state"):
+		initial_state = cell.zero_state(batch_size, tf.float32)
+
+	# Run the data through the RNN layers
+	with tf.name_scope("RNN_forward"):
+		outputs, final_state = tf.nn.dynamic_rnn(cell, embed, initial_state=initial_state)
+
+	# Create the fully connected layers
+	with tf.name_scope("fully_connected"):
+		# Initialize the weights and biases
+		weights = tf.truncated_normal_initializer(stddev=0.1)
+		biases = tf.zeros_initializer()
+
+		dense = tf.contrib.layers.fully_connected(outputs[:, -1],num_outputs=fc_units,activation_fn=tf.sigmoid,weights_initializer=weights,biases_initializer=biases)
+		dense = tf.contrib.layers.dropout(dense, keep_prob)
+
+		# Depending on the iteration, use a second fully connected layer
+		if multiple_fc == True:
+			dense = tf.contrib.layers.fully_connected(dense,num_outputs=fc_units,activation_fn=tf.sigmoid,weights_initializer=weights,biases_initializer=biases)
+			dense = tf.contrib.layers.dropout(dense, keep_prob)
+
+	# Make the predictions
+	with tf.name_scope('predictions'):
+		predictions = tf.contrib.layers.fully_connected(dense,num_outputs=1,activation_fn=tf.sigmoid,weights_initializer=weights,biases_initializer=biases)
+		tf.summary.histogram('predictions', predictions)
+
+	# Calculate the cost
+	with tf.name_scope('cost'):
+		cost = tf.losses.mean_squared_error(labels, predictions)
+		tf.summary.scalar('cost', cost)
+
+	# Train the model
+	with tf.name_scope('train'):
+		optimizer = tf.train.AdamOptimizer(learning_rate).minimize(cost)
+		opt = tf.train.AdamOptimizer(learning_rate)
+
+	with tf.name_scope('gradients'):
+		gradients = tf.train.AdamOptimizer(learning_rate)
+
+	# Determine the accuracy
+	with tf.name_scope("accuracy"):
+		correct_pred = tf.equal(tf.cast(tf.round(predictions), tf.int32), labels)
+		accuracy = tf.reduce_mean(tf.cast(correct_pred, tf.float32))
+		tf.summary.scalar('accuracy', accuracy)
+
+	# Merge all of the summaries
+	merged = tf.summary.merge_all()
+
+	# Export the nodes
+
+	if(with_embd):
+
+		export_nodes = ['inputs', 'labels','embedding', 'embed', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
+						'predictions', 'cost', 'optimizer', 'gradients','merged']
+	else:
+		export_nodes = ['inputs', 'labels', 'keep_prob', 'initial_state', 'final_state', 'accuracy',
+						'predictions', 'cost', 'optimizer', 'gradients', 'merged']
+
+
+	Graph = namedtuple('Graph', export_nodes)
+	local_dict = locals()
+	# print(local_dict)
+	graph = Graph(*[local_dict[each] for each in export_nodes])
+
+	return graph
+
 def train_model(model, epochs, log_string, checkpoint_to_create):
 	'''Train the RNN'''
+
 
 	saver = tf.train.Saver()
 
@@ -290,7 +375,7 @@ def train_model(model, epochs, log_string, checkpoint_to_create):
 			if avg_valid_loss > min(valid_loss_summary):
 				print("No Improvement.")
 				stop_early += 1
-				if stop_early == 3: # set to 1 to prematuraly break
+				if stop_early == 3: # set to 1 to prematurely break
 					break
 
 				# Reset stop_early if the validation loss finds a new low
@@ -310,6 +395,8 @@ def load_and_make_predictions_batch(lstm_size, multiple_fc, fc_units, vocab_size
 	pruning_size = 250 # ensure that pruning_size == batch_size while getting gradients
 	x_test_pruned = x_test[0:pruning_size]
 	all_preds = []
+
+	tf.reset_default_graph()
 
 	model = build_rnn(n_words=vocab_size,
 					  embed_size=embed_size,
@@ -629,44 +716,8 @@ if __name__ == '__main__':
 ########################################################################## IMPORT DATA AND FIT TOKENIZER
 
 
-	# embed_size = 300
-	# batch_size = 250 #default was 250 for training
-	#
-	# num_layers = 1
-	# dropout = 0.5
-	# learning_rate = 0.001
-	# epochs = 1
-	#
-	# #stick to these parameters while training, restoring and predicting
-	# lstm_size = 64
-	# multiple_fc = False
-	# fc_units = 128
-	#
-	# checkpoint_to_create= "/Users/sharan/Desktop/RNN_with_embed/64,False,128.ckpt"
-	# checkpoint_to_restore = "./models/LSTM_models/64,False,128/64,False,128.ckpt"
-	#
-	#
-	# imdb_train_path = "./datasets/imdb/train.tsv"
-	# imdb_test_path = "./datasets/imdb/test.tsv"
-	#
-	# print("Started tokenization.")
-	#
-	# train_tokenized, test_tokenized, vocab_size, tokenizer = import_clean_tokenize_data(imdb_train_path, imdb_test_path)
-	#
-	# print("Tokenization complete.")
-	#
-	# x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
-	#
-	# model, all_preds = load_and_make_predictions_batch(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, x_test)
-	#
-	# print(all_preds)
-
-
-
-########################################################################## LOAD, PREDICT AND GET GRADIENT ATTRIBUTIONS DICTIONARY
-
 	embed_size = 300
-	batch_size = 1 #default was 250 for training
+	batch_size = 250 #default was 250 for training
 
 	num_layers = 1
 	dropout = 0.5
@@ -678,39 +729,82 @@ if __name__ == '__main__':
 	multiple_fc = False
 	fc_units = 128
 
-	vocab_size = 99426
 
-	checkpoint_to_restore = "./models/LSTM_models/64,False,128/64,False,128.ckpt"
-
-	# checkpoint_to_create= "/Users/sharan/Desktop/RNN_with_embed/64,False,128.ckpt"
+	checkpoint_to_create= "./models/lstm_models/64,False,128,ortho/64,False,128,ortho.ckpt"
+	checkpoint_to_restore = "./models/lstm_models/64,False,128,ortho/64,False,128,ortho.ckpt"
 
 
 	imdb_train_path = "./datasets/imdb/train.tsv"
 	imdb_test_path = "./datasets/imdb/test.tsv"
 
+	print("Started tokenization.")
 
-	tokenizer = load_tokenizer('./tokenizers/tokenizer_imdb.pickle')
+	train_tokenized, test_tokenized, vocab_size, tokenizer = import_clean_tokenize_data(imdb_train_path, imdb_test_path)
 
-	test_data, df = create_test_example(tokenizer) #creates embeddings from single_test_data
+	vocab_size += 1
 
-	model, all_preds = load_and_make_predictions_single(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, test_data)
 
-	grads = get_gradients(model, all_preds, test_data)
-	# print("computed gradients tensor: {}".format(grads))
+	print("Tokenization complete.")
 
-	grads_list, indices_list =  get_gradients_values(grads)
+	x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
 
-	text_list = get_word_from_index(indices_list, tokenizer)
-	word_list = [e for e in text_list[0].split(" ")]
+	train_and_checkpoint(checkpoint_to_create, lstm_size, multiple_fc, fc_units, vocab_size)
 
-	# print("indices list: {}".format(indices_list))
-	print("words from indices: {}".format(text_list))
 
-	attributions = compress_gradients(grads_list)
+	model, all_preds = load_and_make_predictions_batch(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, x_test)
 
-	attributions_dict = clean_attributes(attributions, word_list)
+	print(all_preds)
 
-	print(attributions_dict)
+
+
+########################################################################## LOAD, PREDICT AND GET GRADIENT ATTRIBUTIONS DICTIONARY
+
+	# embed_size = 300
+	# batch_size = 1 #default was 250 for training
+	#
+	# num_layers = 1
+	# dropout = 0.5
+	# learning_rate = 0.001
+	# epochs = 1
+	#
+	# #stick to these parameters while training, restoring and predicting
+	# lstm_size = 64
+	# multiple_fc = False
+	# fc_units = 128
+	#
+	# vocab_size = 99426
+	#
+	# checkpoint_to_restore = "./models/lstm_models/64,False,128/64,False,128.ckpt"
+	#
+	# # checkpoint_to_create= "/Users/sharan/Desktop/RNN_with_embed/64,False,128.ckpt"
+	#
+	#
+	# imdb_train_path = "./datasets/imdb/train.tsv"
+	# imdb_test_path = "./datasets/imdb/test.tsv"
+	#
+	#
+	# tokenizer = load_tokenizer('./tokenizers/tokenizer_imdb.pickle')
+	#
+	# test_data, df = create_test_example(tokenizer) #creates embeddings from single_test_data
+	#
+	# model, all_preds = load_and_make_predictions_single(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, test_data)
+	#
+	# grads = get_gradients(model, all_preds, test_data)
+	# # print("computed gradients tensor: {}".format(grads))
+	#
+	# grads_list, indices_list =  get_gradients_values(grads)
+	#
+	# text_list = get_word_from_index(indices_list, tokenizer)
+	# word_list = [e for e in text_list[0].split(" ")]
+	#
+	# # print("indices list: {}".format(indices_list))
+	# print("words from indices: {}".format(text_list))
+	#
+	# attributions = compress_gradients(grads_list)
+	#
+	# attributions_dict = clean_attributes(attributions, word_list)
+	#
+	# print(attributions_dict)
 
 
 
