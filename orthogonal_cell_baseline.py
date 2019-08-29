@@ -217,7 +217,10 @@ def build_ortho_rnn(n_words, embed_size, batch_size, lstm_size, num_layers,
 
 	# Build the RNN layers
 	with tf.name_scope("RNN_layers"):
-		lstm = tf.contrib.rnn.BasicLSTMCell(lstm_size)
+
+		# lstm = tf.contrib.rnn.BasicLSTMCell(lstm_size)
+
+		lstm = OrthogonalLSTMCell_hard(lstm_size)
 		drop = tf.contrib.rnn.DropoutWrapper(lstm, output_keep_prob=keep_prob)
 		cell = tf.contrib.rnn.MultiRNNCell([drop] * num_layers)
 
@@ -398,7 +401,7 @@ def load_and_make_predictions_batch(lstm_size, multiple_fc, fc_units, vocab_size
 
 	tf.reset_default_graph()
 
-	model = build_rnn(n_words=vocab_size,
+	model = build_ortho_rnn(n_words=vocab_size,
 					  embed_size=embed_size,
 					  batch_size=batch_size,
 					  lstm_size=lstm_size,
@@ -592,7 +595,10 @@ def train_and_checkpoint(checkpoint_to_create, l,m,f, vocab_size):
 
 	log_string = 'ru={},fcl={},fcu={}'.format(l,m,f)
 
-	model = build_rnn(n_words=vocab_size, embed_size=embed_size, batch_size=batch_size, lstm_size=l, num_layers=num_layers,
+	# model = build_rnn(n_words=vocab_size, embed_size=embed_size, batch_size=batch_size, lstm_size=l,num_layers=num_layers,
+	# 						dropout=dropout, learning_rate=learning_rate, multiple_fc=m, fc_units=f, with_embd=True)
+
+	model = build_ortho_rnn(n_words=vocab_size, embed_size=embed_size, batch_size=batch_size, lstm_size=l, num_layers=num_layers,
 					  dropout=dropout, learning_rate=learning_rate, multiple_fc=m, fc_units=f, with_embd=True)
 
 	train_model(model, epochs, log_string, checkpoint_to_create)
