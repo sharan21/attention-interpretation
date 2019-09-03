@@ -489,3 +489,258 @@
 2019-08-28 18:27:56,571 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
 2019-08-28 18:27:57,717 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
 
+2019-09-03 14:30:45,703 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 14:30:45,979 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 14:30:53,910 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 14:30:53,913 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 14:30:53,913 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 14:30:53,913 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 14:30:55,644 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 14:30:56,012 | examples.nmt.train | <module> | INFO | 	French: new jersey est jamais la neige en mars et il est généralement sec en mai eos 
+2019-09-03 14:31:38,865 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 14:31:38,962 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 14:31:47,189 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 14:31:47,194 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 14:31:47,194 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 14:31:47,194 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 14:31:48,344 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-03 14:31:48,578 | examples.nmt.train | <module> | INFO | 	French: new jersey est généralement doux en décembre et il est parfois sèche en été eos 
+2019-09-03 14:32:35,077 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 14:32:35,201 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 14:32:53,011 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 14:32:53,012 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 14:32:53,012 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 14:32:53,013 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 14:32:55,067 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-03 14:44:12,472 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 14:44:12,610 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 14:44:31,459 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 14:44:31,461 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 14:44:31,461 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 14:44:31,461 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 14:44:33,897 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-03 14:45:19,550 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 14:45:19,703 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 14:45:25,848 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 14:45:25,971 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 14:45:44,061 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 14:45:44,063 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 14:45:44,063 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 14:45:44,063 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 14:45:46,214 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-03 14:50:15,685 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 14:50:15,837 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 14:50:34,180 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 14:50:34,183 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 14:50:34,183 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 14:50:34,183 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 14:50:36,286 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-03 14:55:56,648 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 14:55:56,813 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 14:56:14,738 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 14:56:14,742 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 14:56:14,742 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 14:56:14,742 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 14:56:16,811 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-03 14:56:42,781 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 14:56:42,917 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 14:57:00,803 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 14:57:00,805 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 14:57:00,805 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 14:57:00,805 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 14:57:02,844 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-03 14:59:24,937 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 14:59:25,071 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 14:59:29,384 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 14:59:29,386 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 14:59:29,386 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 14:59:29,386 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 14:59:30,517 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:00:57,566 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:00:57,659 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:01:02,084 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:01:02,085 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:01:02,085 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:01:02,085 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:01:03,273 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:02:05,063 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:02:05,175 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:02:09,404 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:02:09,406 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:02:09,406 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:02:09,406 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:02:10,529 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:02:33,927 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:02:34,022 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:02:38,256 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:02:38,258 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:02:38,258 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:02:38,258 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:02:39,390 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:03:01,340 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:03:01,442 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:03:05,987 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:03:05,989 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:03:05,989 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:03:05,989 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:03:07,120 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:03:13,511 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:03:13,607 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:03:17,903 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:03:17,905 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:03:17,905 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:03:17,905 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:03:19,042 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:03:26,881 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:03:26,993 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:03:31,210 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:03:31,212 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:03:31,212 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:03:31,212 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:03:32,332 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:04:56,248 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:04:56,363 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:05:00,635 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:05:00,636 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:05:00,637 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:05:00,637 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:05:12,748 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:05:12,859 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:05:17,270 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:05:17,274 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:05:17,275 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:05:17,275 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:05:18,418 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:06:08,569 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:06:08,664 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:06:12,951 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:06:12,953 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:06:12,953 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:06:12,953 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:06:14,100 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:06:41,876 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:06:41,970 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:06:46,347 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:06:46,352 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:06:46,353 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:06:46,353 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:06:47,552 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:07:04,243 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:07:04,338 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:07:08,606 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:07:08,608 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:07:08,608 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:07:08,608 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:07:09,728 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:07:56,765 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:07:56,862 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:08:01,105 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:08:01,107 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:08:01,107 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:08:01,107 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:08:02,242 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:09:15,213 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:09:15,310 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:09:19,613 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:09:19,614 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:09:19,614 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:09:19,614 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:09:20,768 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:09:34,192 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:09:34,289 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:09:38,563 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:09:38,564 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:09:38,565 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:09:38,565 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:09:39,690 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:10:23,596 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:10:23,703 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:10:27,986 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:10:27,987 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 347
+2019-09-03 15:10:27,987 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:10:27,987 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:11:05,638 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:11:05,731 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:11:13,795 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:11:13,797 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 15:11:13,797 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:11:13,797 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:11:48,524 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:11:48,616 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:11:56,655 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:11:56,657 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 15:11:56,657 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:11:56,657 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:12:35,918 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:12:36,012 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:12:44,488 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:12:44,489 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 15:12:44,489 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:12:44,490 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:12:59,323 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:12:59,416 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:13:07,359 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:13:07,361 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 15:13:07,361 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:13:07,361 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:13:48,905 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:13:49,021 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:13:57,962 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:13:57,963 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 15:13:57,963 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:13:57,963 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:13:59,158 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:13:59,285 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:14:02,844 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:14:02,965 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:14:07,990 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:14:07,992 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 15:14:07,992 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:14:07,993 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:14:11,539 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:14:11,540 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 15:14:11,540 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:14:11,540 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:14:59,808 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:14:59,898 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:15:08,044 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:15:08,045 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 15:15:08,045 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:15:08,045 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:16:05,340 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:16:05,432 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:16:13,338 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:16:13,340 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 15:16:13,340 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:16:13,340 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:16:38,684 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-03 15:16:38,790 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-03 15:16:46,913 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (English): 201
+2019-09-03 15:16:46,915 | examples.nmt.train | preprocess_data | INFO | Vocabulary size (French): 345
+2019-09-03 15:16:46,915 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-03 15:16:46,915 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-03 15:16:48,435 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-03 15:16:48,664 | examples.nmt.train | <module> | INFO | 	French: new jersey est jamais la neige en mars et il est généralement sec en mai eos 

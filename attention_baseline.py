@@ -385,12 +385,3 @@ if __name__ == '__main__':
 
     logger.info('\tFrench: {}'.format(test_fr))
 
-
-
-
-
-    # """ Attention plotting """
-    # fileoffset = getNumberOfFiles(path='./analysis/attention_heatmaps')
-    # plot_attention_weights(test_en_seq, attn_weights, en_index2word,
-    #                        fr_index2word, filename="nmt_100000_10_test{}.png".format(fileoffset))
-

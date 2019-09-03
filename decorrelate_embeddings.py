@@ -33,8 +33,8 @@ if __name__ == "__main__":
 	""" Getting preprocessed data """
 	en_seq, fr_seq = preprocess_data(en_tokenizer, fr_tokenizer, tr_en_text, tr_fr_text, en_timesteps, fr_timesteps)
 
-	en_vsize = max(en_tokenizer.index_word.keys()) + 1
-	fr_vsize = max(fr_tokenizer.index_word.keys()) + 1
+	en_vsize = max(en_tokenizer.index_word.keys()) + 4
+	fr_vsize = max(fr_tokenizer.index_word.keys()) + 4
 
 
 
@@ -63,7 +63,7 @@ if __name__ == "__main__":
 
 	test_fr, attn_weights = infer_nmt(
 		encoder_model=infer_enc_model, decoder_model=infer_dec_model,
-		test_en_seq=test_en_seq, en_vsize=en_vsize, fr_vsize=fr_vsize)
+		test_en_seq=test_en_seq, en_vsize=en_vsize, fr_vsize=fr_vsize, fr_tokenizer=fr_tokenizer)
 
 	logger.info('\tFrench: {}'.format(test_fr))
 
