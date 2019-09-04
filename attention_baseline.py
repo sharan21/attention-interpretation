@@ -14,12 +14,7 @@ from attention_keras.examples.utils.logger import get_logger
 
 logger = get_logger("examples.nmt.train","./attention_keras/logs")
 
-batch_size = 1
-hidden_size = 96
 
-
-en_timesteps, fr_timesteps = 20, 20 # for unmasked inputs
-# en_timesteps, fr_timesteps = 25, 25 # for masked inputs
 
 
 def get_data(train_size, random_seed=100):
@@ -378,10 +373,16 @@ if __name__ == '__main__':
 
     ############################################################ MAIN SECTION TO TRAIN DEFAULT NMT MODEL WITHOUT PADDING
 
+    batch_size = 1
+    hidden_size = 96
+
+    en_timesteps, fr_timesteps = 20, 20  # for unmasked inputs
+    # en_timesteps, fr_timesteps = 25, 25 # for masked inputs
+
     debug = False
     """ Hyperparameters """
 
-    train_size = 10000 if not debug else 10000
+    train_size = 100 if not debug else 10000
     filename = ''
 
     tr_en_text, tr_fr_text, ts_en_text, ts_fr_text = get_data(train_size=train_size)
@@ -413,18 +414,18 @@ if __name__ == '__main__':
     full_model, infer_enc_model, infer_dec_model = define_nmt(
         hidden_size=hidden_size, batch_size=batch_size,
         en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
-        en_vsize=en_vsize, fr_vsize=fr_vsize, ortho=True)
+        en_vsize=en_vsize, fr_vsize=fr_vsize, ortho=False)
 
     n_epochs = 10 if not debug else 3
 
-    # train(full_model, en_seq, fr_seq, batch_size, n_epochs)
+    train(full_model, en_seq, fr_seq, batch_size, n_epochs)
 
     """ Load Model"""
 
     # model, infer_enc_model, infer_dec_model = load_attn_model('./models/attention_models/nmt_models/nmt_100000_10.h5')
 
     # """ Save model """
-    # full_model.save_weights("./models/Attention_models/nmt_models/.h5")
+    full_model.save_weights("./models/Attention_models/nmt_models/ortho_test.h5")
 
     """ Index2word """
     en_index2word = dict(zip(en_tokenizer.word_index.values(), en_tokenizer.word_index.keys()))
@@ -446,7 +447,7 @@ if __name__ == '__main__':
 
     test_fr, attn_weights = infer_nmt(
         encoder_model=infer_enc_model, decoder_model=infer_dec_model,
-        test_en_seq=test_en_seq, en_vsize=en_vsize, fr_vsize=fr_vsize, fr_tokenizer=fr_tokenizer)
+        test_en_seq=test_en_seq, en_vsize=en_vsize, fr_vsize=fr_vsize, fr_tokenizer=fr_tokenizer, fr_index2word=fr_index2word)
 
     logger.info('\tFrench: {}'.format(test_fr))
 
