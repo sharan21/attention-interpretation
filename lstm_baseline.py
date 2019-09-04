@@ -63,7 +63,6 @@ def get_gradients(model, predicted_y, test_data,  dropout = 0.5):
 	# ensure batch_size of loaded model == number of test cases
 
 
-
 	optimizer_here = model.gradients
 	embedding_here = model.embedding
 	cost_here = model.cost

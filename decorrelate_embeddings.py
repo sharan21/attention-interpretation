@@ -33,14 +33,15 @@ if __name__ == "__main__":
 	""" Getting preprocessed data """
 	en_seq, fr_seq = preprocess_data(en_tokenizer, fr_tokenizer, tr_en_text, tr_fr_text, en_timesteps, fr_timesteps)
 
-	en_vsize = max(en_tokenizer.index_word.keys()) + 4
-	fr_vsize = max(fr_tokenizer.index_word.keys()) + 4
 
+	# Full Vocab Size for MT Dataset, Use only these for training
+	en_vsize = 201
+	fr_vsize = 345
 
 
 	""" Load Model"""
 
-	model, infer_enc_model, infer_dec_model = loadmodel('./models/attention_models/nmt_models/nmt_100000_10.h5')
+	model, infer_enc_model, infer_dec_model = load_attn_model('./models/attention_models/nmt_models/nmt_100000_10.h5')
 
 
 	""" Index2word """
@@ -63,7 +64,7 @@ if __name__ == "__main__":
 
 	test_fr, attn_weights = infer_nmt(
 		encoder_model=infer_enc_model, decoder_model=infer_dec_model,
-		test_en_seq=test_en_seq, en_vsize=en_vsize, fr_vsize=fr_vsize, fr_tokenizer=fr_tokenizer)
+		test_en_seq=test_en_seq, en_vsize=en_vsize, fr_vsize=fr_vsize, fr_tokenizer=fr_tokenizer, fr_index2word=fr_index2word)
 
 	logger.info('\tFrench: {}'.format(test_fr))
 

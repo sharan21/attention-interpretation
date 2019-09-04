@@ -754,7 +754,7 @@ if __name__ == '__main__':
 
 	x_train, x_valid, y_train, y_valid, x_test = pad_split_data(train_tokenized, test_tokenized)
 
-	train_and_checkpoint(checkpoint_to_create, lstm_size, multiple_fc, fc_units, vocab_size)
+	# train_and_checkpoint(checkpoint_to_create, lstm_size, multiple_fc, fc_units, vocab_size)
 
 
 	model, all_preds = load_and_make_predictions_batch(lstm_size, multiple_fc, fc_units, vocab_size, checkpoint_to_restore, x_test)

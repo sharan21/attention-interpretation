@@ -8,3 +8,13 @@ Integrated Gradients Attributions: {'acting': 55.33601668938135, 'bad': 20.08456
 
 
 
+Test Sentence:  "The story was good but the acting was very bad, so I did not like it" 
+Prediction: [0.38866377] 
+Cleaned Sentence: ['the story good acting bad like it']
+Tokenised test sentence: [[9, 13, 8, 42, 18, 5, 7]]
+Baseline Sentence: ['']
+Standard Gradient Attributions: {'acting': 15.642928795488118, 'bad': 21.61692094838846, 'good': 15.8013616650719, 'it': 2.709716121025201, 'like': 27.57819962945373, 'story': 8.30777312307958, 'the': 8.343099717493004}
+Integrated Gradients Attributions: {'acting': 50.803840526281064, 'bad': 19.196674117669314, 'good': 5.3317845243196365, 'it': 7.179657543795229, 'like': 4.888976489213754, 'story': 7.9765531339318185, 'the': 4.622513664789178}
+
+
+

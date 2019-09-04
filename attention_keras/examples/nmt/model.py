@@ -1,9 +1,10 @@
 from tensorflow.python.keras.layers import Input, GRU, Dense, Concatenate, TimeDistributed
 from tensorflow.python.keras.models import Model
 from attention_keras.layers.attention import AttentionLayer
+from attention_keras.layers.attention_ortho import AttentionLayerOrtho
 
 
-def define_nmt(hidden_size, batch_size, en_timesteps, en_vsize, fr_timesteps, fr_vsize):
+def define_nmt(hidden_size, batch_size, en_timesteps, en_vsize, fr_timesteps, fr_vsize, ortho=False):
     """ Defining a NMT model """
 
     # Define an input sequence and process it.
@@ -23,8 +24,13 @@ def define_nmt(hidden_size, batch_size, en_timesteps, en_vsize, fr_timesteps, fr
     decoder_out, decoder_state = decoder_gru(decoder_inputs, initial_state=encoder_state)
 
     # Attention layer
-    attn_layer = AttentionLayer(name='attention_layer')
-    attn_out, attn_states = attn_layer([encoder_out, decoder_out])
+
+    if(ortho == True):
+        attn_layer = AttentionLayerOrtho(name='attention_layer')
+        attn_out, attn_states = attn_layer([encoder_out, decoder_out])
+    else:
+        attn_layer = AttentionLayer(name='attention_layer')
+        attn_out, attn_states = attn_layer([encoder_out, decoder_out])
 
     # Concat attention input and decoder GRU output
     decoder_concat_input = Concatenate(axis=-1, name='concat_layer')([decoder_out, attn_out])

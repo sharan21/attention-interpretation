@@ -5,6 +5,7 @@ from tensorflow.python.keras.utils import to_categorical
 import numpy as np
 import os
 
+
 from attention_keras.examples.utils.data_helper import read_data, sents2sequences
 from attention_keras.examples.nmt.model import define_nmt
 from attention_keras.examples.utils.model_helper import plot_attention_weights
@@ -44,6 +45,28 @@ def get_data(train_size, random_seed=100):
     ts_fr_text = [fr_text[ti] for ti in test_inds]
 
     return tr_en_text, tr_fr_text, ts_en_text, ts_fr_text
+
+def orthogonalize_enc(encodings):
+    ortho_encodings = []
+    encodings = encodings[0]
+
+    for i in range(len(encodings)):
+
+        for j in range(len(encodings)):
+            if(i == j):
+                break
+            mul_num = np.multiply(encodings[i], encodings[j])
+            mul_den = np.multiply(encodings[i], encodings[j])
+            angle = np.divide(mul_num, mul_den)
+            cos_factor = np.multiply(encodings[j], angle)
+
+        ortho_encodings.append(encodings[j]-cos_factor)
+
+    return ortho_encodings
+
+
+
+
 
 def find_start_word(seq_text):
     '''takes 1d tokenized vector and return start index'''
@@ -182,7 +205,19 @@ def train(full_model, en_seq, fr_seq, batch_size, n_epochs=10):
             logger.info("Loss in epoch {}: {}".format(ep + 1, np.mean(losses)))
 
 
-def loadmodel(pathtoh5="./models/Attention_models/nmt_models/test.h5", en_vsize = 201, fr_vsize = 345):
+def load_attn_model(pathtoh5="./models/Attention_models/nmt_models/test.h5", en_vsize = 201, fr_vsize = 345):
+
+
+    loaded_model, infer_enc_model, infer_dec_model = define_nmt(
+        hidden_size=hidden_size, batch_size=batch_size,
+        en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
+        en_vsize=en_vsize, fr_vsize=fr_vsize)
+
+    loaded_model.load_weights(pathtoh5)
+
+    return loaded_model, infer_enc_model, infer_dec_model
+
+def load_orthoattn_model(pathtoh5="./models/Attention_models/nmt_models/test.h5", en_vsize = 201, fr_vsize = 345):
 
 
     loaded_model, infer_enc_model, infer_dec_model = define_nmt(
@@ -196,7 +231,7 @@ def loadmodel(pathtoh5="./models/Attention_models/nmt_models/test.h5", en_vsize 
 
 
 
-def infer_nmt(encoder_model, decoder_model, test_en_seq, en_vsize, fr_vsize):
+def infer_nmt(encoder_model, decoder_model, test_en_seq, en_vsize, fr_vsize, fr_tokenizer, fr_index2word):
     """
     :param encoder_model: keras.Model
     :param decoder_model: keras.Model
@@ -327,7 +362,7 @@ if __name__ == '__main__':
     debug = False
     """ Hyperparameters """
 
-    train_size = 100000 if not debug else 10000
+    train_size = 10000 if not debug else 10000
     filename = ''
 
     tr_en_text, tr_fr_text, ts_en_text, ts_fr_text = get_data(train_size=train_size)
@@ -345,18 +380,20 @@ if __name__ == '__main__':
     en_vsize = max(en_tokenizer.index_word.keys()) + 1
     fr_vsize = max(fr_tokenizer.index_word.keys()) + 1
 
-    # """ Defining the full model """
-    # full_model, infer_enc_model, infer_dec_model = define_nmt(
-    #     hidden_size=hidden_size, batch_size=batch_size,
-    #     en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
-    #     en_vsize=en_vsize, fr_vsize=fr_vsize)
-    #
-    # n_epochs = 10 if not debug else 3
-    # train(full_model, en_seq, fr_seq, batch_size, n_epochs)
+    """ Defining the full model """
+    #Put ortho=True if you want to create ortho model
+    full_model, infer_enc_model, infer_dec_model = define_nmt(
+        hidden_size=hidden_size, batch_size=batch_size,
+        en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
+        en_vsize=en_vsize, fr_vsize=fr_vsize, ortho=True)
+
+    n_epochs = 10 if not debug else 3
+
+    train(full_model, en_seq, fr_seq, batch_size, n_epochs)
 
     """ Load Model"""
 
-    model, infer_enc_model, infer_dec_model = loadmodel('./models/attention_models/nmt_models/nmt_100000_10.h5')
+    # model, infer_enc_model, infer_dec_model = load_attn_model('./models/attention_models/nmt_models/nmt_100000_10.h5')
 
     # """ Save model """
     # full_model.save_weights("./models/Attention_models/nmt_models/.h5")
@@ -381,7 +418,7 @@ if __name__ == '__main__':
 
     test_fr, attn_weights = infer_nmt(
         encoder_model=infer_enc_model, decoder_model=infer_dec_model,
-        test_en_seq=test_en_seq, en_vsize=en_vsize, fr_vsize=fr_vsize)
+        test_en_seq=test_en_seq, en_vsize=en_vsize, fr_vsize=fr_vsize, fr_tokenizer=fr_tokenizer)
 
     logger.info('\tFrench: {}'.format(test_fr))
 
