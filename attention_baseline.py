@@ -4,6 +4,7 @@ import keras
 from tensorflow.python.keras.utils import to_categorical
 import numpy as np
 import os
+import pickle
 
 
 from attention_keras.examples.utils.data_helper import read_data, sents2sequences
@@ -170,15 +171,33 @@ def getNumberOfFiles(path = './analysis/attention_heatmaps'):
     return len(list)
 
 
+def save_tokenizer(tokenizer, path='./tokenizers/unnames_tokenizer.pickle'):
+
+    print("Saving tokenizer...")
+
+    with open(path, 'wb') as handle:
+        pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+def load_tokenizer(path = './tokenizers/tokenizer_imdb.pickle'):
+
+    print("Loading tokenizer...")
+    with open(path, 'rb') as handle:
+        tokenizer = pickle.load(handle)
+
+    return tokenizer
+
+
+
+
+
 
 
 def preprocess_data(en_tokenizer, fr_tokenizer, en_text, fr_text, en_timesteps, fr_timesteps):
-    """ Preprocessing data and getting a sequence of word indices """
 
     en_seq = sents2sequences(en_tokenizer, en_text, reverse=False, padding_type='pre', pad_length=en_timesteps)
     fr_seq = sents2sequences(fr_tokenizer, fr_text, pad_length=fr_timesteps)
-    logger.info('Vocabulary size (English): {}'.format(np.max(en_seq)+1))
-    logger.info('Vocabulary size (French): {}'.format(np.max(fr_seq)+1))
+    # logger.info('Vocabulary size (English): {}'.format(np.max(en_seq)+1))
+    # logger.info('Vocabulary size (French): {}'.format(np.max(fr_seq)+1))
     logger.debug('En text shape: {}'.format(en_seq.shape))
     logger.debug('Fr text shape: {}'.format(fr_seq.shape))
 
@@ -367,18 +386,27 @@ if __name__ == '__main__':
 
     tr_en_text, tr_fr_text, ts_en_text, ts_fr_text = get_data(train_size=train_size)
 
-    """ Defining tokenizers """
-    en_tokenizer = keras.preprocessing.text.Tokenizer(oov_token='UNK')
-    en_tokenizer.fit_on_texts(tr_en_text)
+    # """ Defining tokenizers """
+    # en_tokenizer = keras.preprocessing.text.Tokenizer(oov_token='UNK')
+    # en_tokenizer.fit_on_texts(tr_en_text)
+    #
+    # fr_tokenizer = keras.preprocessing.text.Tokenizer(oov_token='UNK')
+    # fr_tokenizer.fit_on_texts(tr_fr_text)
 
-    fr_tokenizer = keras.preprocessing.text.Tokenizer(oov_token='UNK')
-    fr_tokenizer.fit_on_texts(tr_fr_text)
+    """ Defining tokenizers """
+    en_tokenizer = load_tokenizer(path='./tokenizers/en_tokenizer.pickle')
+    fr_tokenizer = load_tokenizer(path='./tokenizers/fr_tokenizer.pickle')
 
     """ Getting preprocessed data """
     en_seq, fr_seq = preprocess_data(en_tokenizer, fr_tokenizer, tr_en_text, tr_fr_text, en_timesteps, fr_timesteps)
 
-    en_vsize = max(en_tokenizer.index_word.keys()) + 1
-    fr_vsize = max(fr_tokenizer.index_word.keys()) + 1
+    # Calculate the vocab size according to the train size (BAD)
+    # en_vsize = max(en_tokenizer.index_word.keys()) + 1
+    # fr_vsize = max(fr_tokenizer.index_word.keys()) + 1
+
+    # Full Vocab Size for MT Dataset, Use only these for training
+    en_vsize = 201
+    fr_vsize = 345
 
     """ Defining the full model """
     #Put ortho=True if you want to create ortho model
@@ -389,7 +417,7 @@ if __name__ == '__main__':
 
     n_epochs = 10 if not debug else 3
 
-    train(full_model, en_seq, fr_seq, batch_size, n_epochs)
+    # train(full_model, en_seq, fr_seq, batch_size, n_epochs)
 
     """ Load Model"""
 

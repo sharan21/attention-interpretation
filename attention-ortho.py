@@ -32,13 +32,9 @@ class AttentionLayerOrtho(Layer):
 		        """
 		assert type(inputs) == list
 		encoder_out_seq, decoder_out_seq = inputs
-
 		if verbose:
 			print('encoder_out_seq>', encoder_out_seq.shape)
 			print('decoder_out_seq>', decoder_out_seq.shape)
-
-		h_states_ortho = self.orthogonalize_encoder_inputs(encoder_out_seq)
-		pass
 
 		def energy_step(inputs, states):
 			""" Step function for computing energy for a single decoder state """
@@ -122,28 +118,7 @@ class AttentionLayerOrtho(Layer):
 
 	def orthogonalize_encoder_inputs(self, encoder_out_seq):
 		# Unwrap the batch_size shape
-		ortho_h_states = []
 		h_states = encoder_out_seq[0]
-		runs = h_states.shape._dims[0]
-
-		for i in range(runs):
-			# pivot = h_states[i]
-
-			for j in range(runs):
-				#Orthogonalize h_states[j] and pivot
-				#Stop once you reach yourself
-				if(i == j):
-					break
-				num = tf.multiply(h_states[i], h_states[j])
-				den = tf.multiply(h_states[i], h_states[i])
-				angle = tf.divide(num, den)
-				cos_factor = tf.multiply(angle, h_states[i])
-				ortho_h_states.append(h_states[i] - cos_factor)
-			pass
-
-		pass
-		return h_states
-
-
+		for i in range(len(h_states)):
 
 
