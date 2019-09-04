@@ -1,5 +1,6 @@
 import tensorflow as tf
 from tensorflow.python.keras.layers import Layer
+import numpy as np
 from tensorflow.python.keras import backend as K
 
 class AttentionLayerOrtho(Layer):
@@ -37,8 +38,7 @@ class AttentionLayerOrtho(Layer):
 			print('encoder_out_seq>', encoder_out_seq.shape)
 			print('decoder_out_seq>', decoder_out_seq.shape)
 
-		h_states_ortho = self.orthogonalize_encoder_inputs(encoder_out_seq)
-		pass
+		self.orthogonalize_encoder_inputs(encoder_out_seq)
 
 		def energy_step(inputs, states):
 			""" Step function for computing energy for a single decoder state """
@@ -121,28 +121,32 @@ class AttentionLayerOrtho(Layer):
 		]
 
 	def orthogonalize_encoder_inputs(self, encoder_out_seq):
-		# Unwrap the batch_size shape
-		ortho_h_states = []
-		h_states = encoder_out_seq[0]
-		runs = h_states.shape._dims[0]
+
+		# Number of runs = Number of words = Indices = 20
+		runs = encoder_out_seq[0].shape._dims[0]
+		#reshape the encoder tensor to change leading dim.
+		encoder_out_seq_reshaped = tf.reshape(encoder_out_seq, (20, 96))
+		#convert reshaped tensor into variable to use scatter_update()
+		encoder_out_seq_reshaped_v = tf.Variable(encoder_out_seq_reshaped)
+
 
 		for i in range(runs):
-			# pivot = h_states[i]
-
 			for j in range(runs):
-				#Orthogonalize h_states[j] and pivot
+				# indices to update the new orthogonalized variable using scatter_update
+				indices = tf.convert_to_tensor(np.array([i], dtype=np.int32))
 				#Stop once you reach yourself
 				if(i == j):
 					break
-				num = tf.multiply(h_states[i], h_states[j])
-				den = tf.multiply(h_states[i], h_states[i])
+				num = tf.multiply(encoder_out_seq_reshaped_v[i], encoder_out_seq_reshaped_v[j])
+				den = tf.multiply(encoder_out_seq_reshaped_v[i], encoder_out_seq_reshaped_v[i])
 				angle = tf.divide(num, den)
-				cos_factor = tf.multiply(angle, h_states[i])
-				ortho_h_states.append(h_states[i] - cos_factor)
-			pass
+				cos_factor = tf.multiply(angle, encoder_out_seq_reshaped_v[i])
+				#reshape needed to use scatter_update()
+				cos_factor_reshaped = tf.reshape(cos_factor, (1,96))
+				# equivalent: h_tilda = h - proj
+				tf.scatter_update(encoder_out_seq_reshaped_v, indices, encoder_out_seq_reshaped_v[i] - cos_factor_reshaped)
 
-		pass
-		return h_states
+
 
 
 
