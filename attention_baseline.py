@@ -13,12 +13,12 @@ from attention_keras.examples.utils.logger import get_logger
 
 logger = get_logger("examples.nmt.train","./attention_keras/logs")
 
-batch_size = 64
+batch_size = 1
 hidden_size = 96
 
 
-# en_timesteps, fr_timesteps = 20, 20 # for unmasked inputs
-en_timesteps, fr_timesteps = 20, 20 # for masked inputs
+en_timesteps, fr_timesteps = 20, 20 # for unmasked inputs
+# en_timesteps, fr_timesteps = 25, 25 # for masked inputs
 
 
 def get_data(train_size, random_seed=100):

@@ -33,6 +33,10 @@ class AttentionLayerOrtho(Layer):
 
         super(AttentionLayerOrtho, self).build(input_shape)  # Be sure to call this at the end
 
+
+
+
+
     def call(self, inputs, verbose=False):
         """
         inputs: [encoder_output_sequence, decoder_output_sequence]
@@ -121,3 +125,8 @@ class AttentionLayerOrtho(Layer):
             tf.TensorShape((input_shape[1][0], input_shape[1][1], input_shape[1][2])),
             tf.TensorShape((input_shape[1][0], input_shape[1][1], input_shape[0][1]))
         ]
+
+    # def orthogonalize_encoder_inputs(self):
+	#
+	# 	for
+    #     a = tf.math.multiply()
