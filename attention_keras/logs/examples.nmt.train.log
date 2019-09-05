@@ -1750,3 +1750,37 @@
 2019-09-05 11:52:02,961 | examples.nmt.train | <module> | INFO | Translating: he likes the little blue car .
 
 2019-09-05 11:52:03,907 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-05 11:54:03,464 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 11:54:03,555 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 11:54:03,701 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 11:54:03,701 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 11:54:14,272 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.811651229858398
+2019-09-05 11:54:14,402 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.792649269104004
+2019-09-05 11:54:14,542 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.77308988571167
+2019-09-05 11:54:14,670 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.7527546882629395
+2019-09-05 11:54:14,802 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.731402397155762
+2019-09-05 11:54:14,929 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.708759307861328
+2019-09-05 11:54:15,073 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.684503078460693
+2019-09-05 11:54:15,202 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.6582417488098145
+2019-09-05 11:54:15,333 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.629510402679443
+2019-09-05 11:54:15,460 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.597736835479736
+2019-09-05 11:54:16,196 | examples.nmt.train | <module> | INFO | Translating: he likes the little blue car .
+
+2019-09-05 11:54:17,119 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-05 11:54:52,226 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 11:54:52,340 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 11:54:52,477 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 11:54:52,477 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 11:54:56,101 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.823695659637451
+2019-09-05 11:54:56,236 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.805545330047607
+2019-09-05 11:54:56,374 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.787042140960693
+2019-09-05 11:54:56,501 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.768003940582275
+2019-09-05 11:54:56,639 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.74821662902832
+2019-09-05 11:54:56,770 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.727431297302246
+2019-09-05 11:54:56,901 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.705358982086182
+2019-09-05 11:54:57,028 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.681654930114746
+2019-09-05 11:54:57,163 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.6559062004089355
+2019-09-05 11:54:57,298 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.6276068687438965
+2019-09-05 11:54:57,470 | examples.nmt.train | <module> | INFO | Translating: he likes the little blue car .
+
+2019-09-05 11:54:57,777 | examples.nmt.train | <module> | INFO | 	French: 

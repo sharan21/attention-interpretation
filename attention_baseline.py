@@ -382,21 +382,21 @@ if __name__ == '__main__':
     debug = False
     """ Hyperparameters """
 
-    train_size = 100 if not debug else 10000
+    train_size = 100000 if not debug else 10000
     filename = ''
 
     tr_en_text, tr_fr_text, ts_en_text, ts_fr_text = get_data(train_size=train_size)
 
-    # """ Defining tokenizers """
-    # en_tokenizer = keras.preprocessing.text.Tokenizer(oov_token='UNK')
-    # en_tokenizer.fit_on_texts(tr_en_text)
-    #
-    # fr_tokenizer = keras.preprocessing.text.Tokenizer(oov_token='UNK')
-    # fr_tokenizer.fit_on_texts(tr_fr_text)
-
     """ Defining tokenizers """
-    en_tokenizer = load_tokenizer(path='./tokenizers/en_tokenizer.pickle')
-    fr_tokenizer = load_tokenizer(path='./tokenizers/fr_tokenizer.pickle')
+    en_tokenizer = keras.preprocessing.text.Tokenizer(oov_token='UNK')
+    en_tokenizer.fit_on_texts(tr_en_text)
+
+    fr_tokenizer = keras.preprocessing.text.Tokenizer(oov_token='UNK')
+    fr_tokenizer.fit_on_texts(tr_fr_text)
+
+    # """ Defining tokenizers """
+    # en_tokenizer = load_tokenizer(path='./tokenizers/en_tokenizer.pickle')
+    # fr_tokenizer = load_tokenizer(path='./tokenizers/fr_tokenizer.pickle')
 
     """ Getting preprocessed data """
     en_seq, fr_seq = preprocess_data(en_tokenizer, fr_tokenizer, tr_en_text, tr_fr_text, en_timesteps, fr_timesteps)
@@ -425,7 +425,7 @@ if __name__ == '__main__':
     # model, infer_enc_model, infer_dec_model = load_attn_model('./models/attention_models/nmt_models/nmt_100000_10.h5')
 
     # """ Save model """
-    full_model.save_weights("./models/Attention_models/nmt_models/ortho_test.h5")
+    full_model.save_weights("./models/Attention_models/nmt_models/100000_10_ortho.h5")
 
     """ Index2word """
     en_index2word = dict(zip(en_tokenizer.word_index.values(), en_tokenizer.word_index.keys()))

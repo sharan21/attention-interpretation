@@ -40,18 +40,7 @@ class AttentionLayerOrtho(Layer):
 
 
 		# CONVERT ENCODER_INPUTS TO ORTHOGONAL
-
-
-		# UNCOMMENT THE BELOW LINE FOR BATCH_SIZE = 1
-		# if(int(encoder_out_seq.shape[0]) == 1):
-		# 	encoder_out_seq = self.orthogonalize_encoder_inputs(encoder_out_seq)
-		# else:
-		# 	encoder_out_seq = self.orthogonalize_encoder_inputs_with_batch(encoder_out_seq)
-
-		encoder_out_seq = self.orthogonalize_encoder_inputs_general(encoder_out_seq)
-
-
-
+		encoder_out_seq = self.orthogonalize_encoder_inputs(encoder_out_seq)
 
 		def energy_step(inputs, states):
 
@@ -134,81 +123,8 @@ class AttentionLayerOrtho(Layer):
 			tf.TensorShape((input_shape[1][0], input_shape[1][1], input_shape[0][1]))
 		]
 
-	# def orthogonalize_encoder_inputs(self, encoder_out_seq):
-	#
-	# 	# Number of runs = Number of words = Indices = 20
-	# 	runs = encoder_out_seq[0].shape._dims[0]
-	# 	#reshape the encoder tensor to change leading dim.
-	# 	encoder_out_seq_reshaped = tf.reshape(encoder_out_seq, (20, 96))
-	#
-	# 	# encoder_out_seq_reshaped = tf.transpose(encoder_out_seq)
-	#
-	# 	#convert reshaped tensor into variable to use scatter_update()
-	# 	encoder_out_seq_reshaped_v = tf.Variable(encoder_out_seq_reshaped)
-	#
-	#
-	# 	for i in range(runs):
-	# 		for j in range(runs):
-	# 			# indices to update the new orthogonalized variable using scatter_update
-	# 			indices = tf.convert_to_tensor(np.array([i], dtype=np.int32))
-	# 			#Stop once you reach yourself
-	# 			if(i == j):
-	# 				break
-	# 			num = tf.multiply(encoder_out_seq_reshaped_v[i], encoder_out_seq_reshaped_v[j])
-	# 			den = tf.multiply(encoder_out_seq_reshaped_v[i], encoder_out_seq_reshaped_v[i])
-	# 			angle = tf.divide(num, den)
-	# 			cos_factor = tf.multiply(angle, encoder_out_seq_reshaped_v[i])
-	# 			#reshape needed to use scatter_update()
-	#
-	# 			# cos_factor_reshaped = tf.reshape(cos_factor, (1,96))
-	# 			cos_factor_reshaped = tf.expand_dims(cos_factor, 0)
-	#
-	# 			# equivalent: h_tilda = h - proj
-	# 			tf.scatter_update(encoder_out_seq_reshaped_v, indices, encoder_out_seq_reshaped_v[i] - cos_factor_reshaped)
-	#
-	# 	#encoder inputs variable now orthogonalised
-	# 	#extract back tensor from the variable
-	#
-	# 	encoder_out_seq_ortho = encoder_out_seq_reshaped_v._initial_value
-	# 	encoder_out_seq_final = tf.reshape(encoder_out_seq_ortho, (1,20,96))
-	#
-	# 	# encoder_out_seq_final = tf.transpose(encoder_out_seq_reshaped_v)
-	#
-	# 	return encoder_out_seq_final
 
-	# def orthogonalize_encoder_inputs_with_batch(self, encoder_out_seq):
-	#
-	# 	# Number of runs = Number of words = Indices = 20
-	# 	runs = int(encoder_out_seq.shape[1])
-	# 	# To modify the tensor it first must be converted into a variable
-	#
-	# 	# encoder_out_seq_reshaped = tf.reshape(encoder_out_seq, (20, 64, 96))
-	# 	encoder_out_seq_reshaped = tf.transpose(encoder_out_seq, [1, 0, 2])
-	# 	# encoder_out_seq_reshaped = tf.transpose(encoder_out_seq)
-	# 	encoder_out_seq_reshaped_v = tf.Variable(encoder_out_seq_reshaped)
-	#
-	# 	for i in range(runs):
-	# 		for j in range(runs):
-	# 			indices = tf.convert_to_tensor(np.array([i], dtype=np.int32))
-	# 			# Stop once you reach yourself
-	# 			if (i == j):
-	# 				break
-	# 			num = tf.multiply(encoder_out_seq_reshaped_v[i], encoder_out_seq_reshaped_v[j])
-	# 			den = tf.multiply(encoder_out_seq_reshaped_v[i], encoder_out_seq_reshaped_v[i])
-	# 			angle = tf.divide(num, den)
-	# 			cos_factor = tf.multiply(angle, encoder_out_seq_reshaped_v[i])
-	# 			cos_factor_reshaped = tf.expand_dims(cos_factor, 0)
-	#
-	#
-	# 			tf.scatter_update(encoder_out_seq_reshaped_v, indices, encoder_out_seq_reshaped_v[i] - cos_factor_reshaped)
-	#
-	# 	# encoder_out_seq_ortho = tf.reshape(encoder_out_seq_reshaped_v, (64, 20, 96))
-	# 	encoder_out_seq_ortho = tf.transpose(encoder_out_seq_reshaped_v, [1, 0, 2])
-	# 	# encoder_out_seq_ortho = tf.transpose(encoder_out_seq_reshaped_v)
-	#
-	# 	return(encoder_out_seq_ortho)
-
-	def orthogonalize_encoder_inputs_general(self, encoder_out_seq): # can be used for both stochiastic and batch
+	def orthogonalize_encoder_inputs(self, encoder_out_seq): # can be used for both stochiastic and batch
 
 		runs = int(encoder_out_seq.shape[1])
 
@@ -238,36 +154,7 @@ class AttentionLayerOrtho(Layer):
 
 		return (encoder_out_seq_final)
 
-	def orthogonalize_encoder_inputs_cleaned(self, encoder_out_seq):
 
-		runs = encoder_out_seq[0].shape._dims[0]
-		encoder_out_seq_reshaped = tf.reshape(encoder_out_seq, (20, 96))
-
-
-		encoder_out_seq_reshaped_v = tf.Variable(encoder_out_seq_reshaped)
-
-
-		for i in range(runs):
-			for j in range(runs):
-				indices = tf.convert_to_tensor(np.array([i], dtype=np.int32))
-				if(i == j):
-					break
-
-				num = tf.multiply(encoder_out_seq_reshaped_v[i], encoder_out_seq_reshaped_v[j])
-				den = tf.multiply(encoder_out_seq_reshaped_v[i], encoder_out_seq_reshaped_v[i])
-				angle = tf.divide(num, den)
-				cos_factor = tf.multiply(angle, encoder_out_seq_reshaped_v[i])
-
-				cos_factor_reshaped = tf.expand_dims(cos_factor, 0)
-
-				tf.scatter_update(encoder_out_seq_reshaped_v, indices, encoder_out_seq_reshaped_v[i] - cos_factor_reshaped)
-
-
-		encoder_out_seq_ortho = encoder_out_seq_reshaped_v._initial_value
-		encoder_out_seq_final = tf.reshape(encoder_out_seq_ortho, (1,20,96))
-
-
-		return encoder_out_seq_final
 
 
 
