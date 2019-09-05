@@ -243,6 +243,19 @@ def load_orthoattn_model(pathtoh5="./models/Attention_models/nmt_models/test.h5"
 
     return loaded_model, infer_enc_model, infer_dec_model
 
+def extract_encoder_inputs(encoder_model, test_en_seq):
+    #Takes the gru encoder from a trained model and returns encoder states for test case
+
+    test_fr_seq = sents2sequences(fr_tokenizer, ['sos'], fr_vsize)
+    test_en_onehot_seq = to_categorical(test_en_seq, num_classes=en_vsize)
+    test_fr_onehot_seq = np.expand_dims(to_categorical(test_fr_seq, num_classes=fr_vsize), 1)
+
+    enc_outs, enc_last_state = encoder_model.predict(test_en_onehot_seq)
+
+    return enc_outs, enc_last_state
+
+
+
 
 
 def infer_nmt(encoder_model, decoder_model, test_en_seq, en_vsize, fr_vsize, fr_tokenizer, fr_index2word):
@@ -274,6 +287,13 @@ def infer_nmt(encoder_model, decoder_model, test_en_seq, en_vsize, fr_vsize, fr_
         fr_text += fr_index2word[dec_ind] + ' '
 
     return fr_text, attention_weights
+
+def check_gram_states(outs):
+
+
+
+
+
 
 
 if __name__ == '__main__':
@@ -371,7 +391,7 @@ if __name__ == '__main__':
     # plot_attention_weights(test_en_seq, attn_weights, en_index2word, fr_index2word, filename)
 
 
-    ############################################################ MAIN SECTION TO TRAIN DEFAULT NMT MODEL WITHOUT PADDING
+    ############################################################ MAIN SECTION
 
     batch_size = 64
     hidden_size = 96
@@ -431,6 +451,7 @@ if __name__ == '__main__':
     en_index2word = dict(zip(en_tokenizer.word_index.values(), en_tokenizer.word_index.keys()))
     fr_index2word = dict(zip(fr_tokenizer.word_index.values(), fr_tokenizer.word_index.keys()))
 
+
     """ Inferring with trained model """
 
     sample=7
@@ -438,6 +459,8 @@ if __name__ == '__main__':
     test_en = ts_en_text[sample]
     test_fr = ts_fr_text[sample]
     custom_input = 'Hello my name is sharan, and I am from India \n'
+
+
 
     logger.info('Translating: {}'.format(test_en))
 
@@ -450,6 +473,11 @@ if __name__ == '__main__':
         test_en_seq=test_en_seq, en_vsize=en_vsize, fr_vsize=fr_vsize, fr_tokenizer=fr_tokenizer, fr_index2word=fr_index2word)
 
     logger.info('\tFrench: {}'.format(test_fr))
+
+    """Extracting encoder states"""
+
+    enc_outs, enc_final_state = extract_encoder_inputs(encoder_model=infer_enc_model, test_en_seq=test_en_seq)
+    pass
 
     """attention plotting"""
 
