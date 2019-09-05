@@ -1588,3 +1588,111 @@
 2019-09-04 19:52:55,852 | examples.nmt.train | get_data | INFO | Length of text: 137860
 2019-09-04 19:52:56,041 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
 2019-09-04 19:52:56,041 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 10:37:04,199 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 10:37:04,376 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 10:37:04,550 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 10:37:04,550 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 10:37:09,130 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.828958034515381
+2019-09-05 10:37:09,297 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.811138153076172
+2019-09-05 10:37:09,459 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.79322624206543
+2019-09-05 10:37:09,602 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.7750349044799805
+2019-09-05 10:37:09,778 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.756361484527588
+2019-09-05 10:37:09,936 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.736972332000732
+2019-09-05 10:37:10,086 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.716607570648193
+2019-09-05 10:37:10,236 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.694963455200195
+2019-09-05 10:37:10,398 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.671681880950928
+2019-09-05 10:37:10,540 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.6463303565979
+2019-09-05 10:37:10,786 | examples.nmt.train | <module> | INFO | Translating: he likes the little blue car .
+
+2019-09-05 10:37:11,124 | examples.nmt.train | <module> | INFO | 	French: il est 
+2019-09-05 10:37:36,569 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 10:37:36,689 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 10:37:36,863 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 10:37:36,863 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 10:37:53,811 | examples.nmt.train | train | INFO | Loss in epoch 1: 3.9457177754604453
+2019-09-05 10:37:58,736 | examples.nmt.train | train | INFO | Loss in epoch 2: 2.963395600367074
+2019-09-05 10:38:03,460 | examples.nmt.train | train | INFO | Loss in epoch 3: 2.743264614933669
+2019-09-05 10:38:08,147 | examples.nmt.train | train | INFO | Loss in epoch 4: 2.483286149574049
+2019-09-05 10:38:12,773 | examples.nmt.train | train | INFO | Loss in epoch 5: 2.229902886381053
+2019-09-05 10:38:17,386 | examples.nmt.train | train | INFO | Loss in epoch 6: 1.976756210278983
+2019-09-05 10:38:22,014 | examples.nmt.train | train | INFO | Loss in epoch 7: 1.7629567408802533
+2019-09-05 10:38:26,925 | examples.nmt.train | train | INFO | Loss in epoch 8: 1.6169785357484914
+2019-09-05 10:38:31,878 | examples.nmt.train | train | INFO | Loss in epoch 9: 1.4878373308615251
+2019-09-05 10:38:36,558 | examples.nmt.train | train | INFO | Loss in epoch 10: 1.3770178514297562
+2019-09-05 10:38:37,380 | examples.nmt.train | <module> | INFO | Translating: he likes the little blue car .
+
+2019-09-05 10:38:38,417 | examples.nmt.train | <module> | INFO | 	French: la france est parfois au mois de mais mais il est parfois en en eos 
+2019-09-05 10:39:26,425 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 10:39:26,543 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 10:39:26,712 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 10:39:26,712 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 10:49:44,324 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 10:49:44,445 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 10:49:44,599 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 10:49:44,599 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 10:49:59,710 | examples.nmt.train | train | INFO | Loss in epoch 1: 3.936608911764742
+2019-09-05 10:50:10,076 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 10:50:10,167 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 10:50:10,307 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 10:50:10,307 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 10:51:48,727 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 10:51:48,846 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 10:51:49,020 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 10:51:49,020 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 10:53:52,861 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 10:53:52,993 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 10:53:53,175 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 10:53:53,175 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 10:59:23,635 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 10:59:23,753 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 10:59:23,921 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 10:59:23,922 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 11:02:05,391 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 11:02:05,536 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 11:02:05,735 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 11:02:05,736 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 11:07:10,858 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 11:07:10,984 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 11:07:11,163 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 11:07:11,163 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 11:11:09,320 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 11:11:09,441 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 11:11:09,619 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 11:11:09,620 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 11:12:10,331 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 11:12:10,461 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 11:12:10,649 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 11:12:10,649 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 11:23:25,446 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 11:23:25,565 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 11:23:25,750 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 11:23:25,750 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 11:25:04,851 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 11:25:04,972 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 11:25:05,143 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 11:25:05,143 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 11:25:39,444 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 11:25:39,563 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 11:25:39,702 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 11:25:39,702 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 11:26:18,074 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 11:26:18,165 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 11:26:18,317 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 11:26:18,317 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 11:26:32,880 | examples.nmt.train | train | INFO | Loss in epoch 1: 3.917237144528013
+2019-09-05 11:26:36,912 | examples.nmt.train | train | INFO | Loss in epoch 2: 2.918565136013609
+2019-09-05 11:26:41,005 | examples.nmt.train | train | INFO | Loss in epoch 3: 2.6565425287593496
+2019-09-05 11:27:00,340 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 11:27:00,430 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 11:27:00,585 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 11:27:00,585 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 11:27:16,349 | examples.nmt.train | train | INFO | Loss in epoch 1: 3.9315429962042607
+2019-09-05 11:27:20,463 | examples.nmt.train | train | INFO | Loss in epoch 2: 2.9107551285714814
+2019-09-05 11:27:27,685 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 11:27:27,814 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 11:27:28,042 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 11:27:28,042 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-05 11:32:23,562 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 11:32:23,680 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 11:32:23,855 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-05 11:32:23,855 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
