@@ -1,28 +1,16 @@
 from attention_baseline import *
-import pickle
-
-def save_tokenizer(tokenizer, path='./tokenizers/unnames_tokenizer.pickle'):
-
-	print("saving tokenizer...")
-	with open(path, 'wb') as handle:
-		pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
-
-def load_tokenizer(path = './tokenizers/tokenizer_imdb.pickle'):
-
-	print("loading tokenizer...")
-	with open(path, 'rb') as handle:
-		tokenizer = pickle.load(handle)
-
-	return tokenizer
 
 
 if __name__ == "__main__":
 	# TODO Need to train models with full en_vsize and fr_vsize
 
+	batch_size = 64
+	hidden_size = 96
 
-	train_size = 100000
 
-	tr_en_text, tr_fr_text, ts_en_text, ts_fr_text = get_data(train_size=train_size)
+	# train_size = 100000
+
+	tr_en_text, tr_fr_text, ts_en_text, ts_fr_text = get_data(train_size=10000)
 
 	""" Defining tokenizers """
 	en_tokenizer = load_tokenizer(path='./tokenizers/en_tokenizer.pickle')

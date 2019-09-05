@@ -414,18 +414,18 @@ if __name__ == '__main__':
     full_model, infer_enc_model, infer_dec_model = define_nmt(
         hidden_size=hidden_size, batch_size=batch_size,
         en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
-        en_vsize=en_vsize, fr_vsize=fr_vsize, ortho=True)
+        en_vsize=en_vsize, fr_vsize=fr_vsize, ortho=False)
 
     n_epochs = 10 if not debug else 3
 
-    train(full_model, en_seq, fr_seq, batch_size, n_epochs)
+    # train(full_model, en_seq, fr_seq, batch_size, n_epochs)
 
     """ Load Model"""
 
-    # model, infer_enc_model, infer_dec_model = load_attn_model('./models/attention_models/nmt_models/nmt_100000_10.h5')
+    model, infer_enc_model, infer_dec_model = load_attn_model('./models/attention_models/nmt_models/nmt_100000_10.h5')
 
     # """ Save model """
-    full_model.save_weights("./models/Attention_models/nmt_models/100000_10_ortho.h5")
+    # full_model.save_weights("./models/Attention_models/nmt_models/100000_10_ortho.h5")
 
     """ Index2word """
     en_index2word = dict(zip(en_tokenizer.word_index.values(), en_tokenizer.word_index.keys()))
@@ -433,7 +433,7 @@ if __name__ == '__main__':
 
     """ Inferring with trained model """
 
-    sample= 4
+    sample=7
 
     test_en = ts_en_text[sample]
     test_fr = ts_fr_text[sample]
@@ -450,4 +450,9 @@ if __name__ == '__main__':
         test_en_seq=test_en_seq, en_vsize=en_vsize, fr_vsize=fr_vsize, fr_tokenizer=fr_tokenizer, fr_index2word=fr_index2word)
 
     logger.info('\tFrench: {}'.format(test_fr))
+
+    """attention plotting"""
+
+    filename = "100000_10_nonortho_{}.png".format(getNumberOfFiles())
+    plot_attention_weights(test_en_seq, attn_weights, en_index2word, fr_index2word, filename)
 

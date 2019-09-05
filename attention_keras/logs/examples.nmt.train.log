@@ -1784,3 +1784,41 @@
 2019-09-05 11:54:57,470 | examples.nmt.train | <module> | INFO | Translating: he likes the little blue car .
 
 2019-09-05 11:54:57,777 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-05 13:08:45,236 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 13:08:45,363 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 13:08:58,707 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 13:08:58,817 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 13:09:06,733 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 13:09:06,734 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 13:09:15,772 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-05 13:09:16,853 | examples.nmt.train | <module> | INFO | 	French: ne aller les bananes les bananes et les pêches eos 
+2019-09-05 13:26:32,960 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 13:48:06,920 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 13:48:07,171 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 13:48:15,339 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 13:48:15,339 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 13:48:25,176 | examples.nmt.train | <module> | INFO | Translating: your most loved fruit is the lemon , but his most loved is the peach .
+
+2019-09-05 13:48:26,300 | examples.nmt.train | <module> | INFO | 	French: votre fruit le plus aimé est la mangue mais son plus aimé est la pêche eos 
+2019-09-05 13:53:44,980 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 13:53:45,141 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 13:53:53,188 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 13:53:53,188 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 13:54:02,404 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-05 13:54:03,477 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-05 13:56:22,467 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 13:56:22,585 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 13:56:30,650 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 13:56:30,651 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 13:56:32,931 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-05 13:56:33,254 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-05 14:09:06,608 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 14:09:06,766 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 14:09:14,769 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 14:09:14,769 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 14:09:17,487 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-05 14:09:17,908 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
