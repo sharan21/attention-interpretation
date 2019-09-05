@@ -373,7 +373,7 @@ if __name__ == '__main__':
 
     ############################################################ MAIN SECTION TO TRAIN DEFAULT NMT MODEL WITHOUT PADDING
 
-    batch_size = 1
+    batch_size = 64
     hidden_size = 96
 
     en_timesteps, fr_timesteps = 20, 20  # for unmasked inputs
@@ -414,7 +414,7 @@ if __name__ == '__main__':
     full_model, infer_enc_model, infer_dec_model = define_nmt(
         hidden_size=hidden_size, batch_size=batch_size,
         en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
-        en_vsize=en_vsize, fr_vsize=fr_vsize, ortho=False)
+        en_vsize=en_vsize, fr_vsize=fr_vsize, ortho=True)
 
     n_epochs = 10 if not debug else 3
 

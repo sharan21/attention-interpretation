@@ -43,8 +43,10 @@ class AttentionLayerOrtho(Layer):
 
 
 		# UNCOMMENT THE BELOW LINE FOR BATCH_SIZE = 1
-		encoder_out_seq = self.orthogonalize_encoder_inputs(encoder_out_seq)
-		# encoder_out_seq = self.orthogonalize_encoder_inputs_with_batch(encoder_out_seq)
+		if(int(encoder_out_seq.shape[0]) == 1):
+			encoder_out_seq = self.orthogonalize_encoder_inputs(encoder_out_seq)
+		else:
+			encoder_out_seq = self.orthogonalize_encoder_inputs_with_batch(encoder_out_seq)
 
 		def energy_step(inputs, states):
 			""" Step function for computing energy for a single decoder state """
@@ -131,7 +133,11 @@ class AttentionLayerOrtho(Layer):
 		# Number of runs = Number of words = Indices = 20
 		runs = encoder_out_seq[0].shape._dims[0]
 		#reshape the encoder tensor to change leading dim.
-		encoder_out_seq_reshaped = tf.transpose(encoder_out_seq)
+		# TODO remove static '20' and '96' to reflect number of words and hidden layer size
+		encoder_out_seq_reshaped = tf.reshape(encoder_out_seq, (20, 96))
+
+		# encoder_out_seq_reshaped = tf.transpose(encoder_out_seq)
+
 		#convert reshaped tensor into variable to use scatter_update()
 		encoder_out_seq_reshaped_v = tf.Variable(encoder_out_seq_reshaped)
 
@@ -148,7 +154,10 @@ class AttentionLayerOrtho(Layer):
 				angle = tf.divide(num, den)
 				cos_factor = tf.multiply(angle, encoder_out_seq_reshaped_v[i])
 				#reshape needed to use scatter_update()
+
+				# cos_factor_reshaped = tf.reshape(cos_factor, (1,96))
 				cos_factor_reshaped = tf.expand_dims(cos_factor, 0)
+
 				# equivalent: h_tilda = h - proj
 				tf.scatter_update(encoder_out_seq_reshaped_v, indices, encoder_out_seq_reshaped_v[i] - cos_factor_reshaped)
 
@@ -156,7 +165,9 @@ class AttentionLayerOrtho(Layer):
 		#extract back tensor from the variable
 
 		encoder_out_seq_ortho = encoder_out_seq_reshaped_v._initial_value
-		encoder_out_seq_final = tf.transpose(encoder_out_seq_reshaped_v)
+		encoder_out_seq_final = tf.reshape(encoder_out_seq_ortho, (1,20,96))
+
+		# encoder_out_seq_final = tf.transpose(encoder_out_seq_reshaped_v)
 
 		return encoder_out_seq_final
 
@@ -166,9 +177,9 @@ class AttentionLayerOrtho(Layer):
 		runs = int(encoder_out_seq.shape[1])
 		# To modify the tensor it first must be converted into a variable
 
-		# encoder_out_seq_reshaped = tf.reshape(encoder_out_seq, (20, 64, 96))
+		encoder_out_seq_reshaped = tf.reshape(encoder_out_seq, (20, 64, 96))
 		# encoder_out_seq_reshaped = tf.transpose(encoder_out_seq, [1, 0, 2])
-		encoder_out_seq_reshaped = tf.transpose(encoder_out_seq)
+		# encoder_out_seq_reshaped = tf.transpose(encoder_out_seq)
 		encoder_out_seq_reshaped_v = tf.Variable(encoder_out_seq_reshaped)
 
 		for i in range(runs):
@@ -187,9 +198,9 @@ class AttentionLayerOrtho(Layer):
 
 				tf.scatter_update(encoder_out_seq_reshaped_v, indices, encoder_out_seq_reshaped_v[i] - cos_factor_reshaped)
 
-		# encoder_out_seq_ortho = tf.reshape(encoder_out_seq_reshaped_v, (64, 20, 96))
+		encoder_out_seq_ortho = tf.reshape(encoder_out_seq_reshaped_v, (64, 20, 96))
 		# encoder_out_seq_ortho = tf.transpose(encoder_out_seq_reshaped_v, [1, 0, 2])
-		encoder_out_seq_ortho = tf.transpose(encoder_out_seq_reshaped_v)
+		# encoder_out_seq_ortho = tf.transpose(encoder_out_seq_reshaped_v)
 
 		return(encoder_out_seq_ortho)
 
