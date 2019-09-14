@@ -35,7 +35,7 @@ def define_nmt(hidden_size, batch_size, en_timesteps, en_vsize, fr_timesteps, fr
     # Concat attention input and decoder GRU output
     decoder_concat_input = Concatenate(axis=-1, name='concat_layer')([decoder_out, attn_out])
 
-    # Dense layer
+    # Dense layer, Projection from h<t> to Output Likelyhood for next word
     dense = Dense(fr_vsize, activation='softmax', name='softmax_layer')
     dense_time = TimeDistributed(dense, name='time_distributed_layer')
     decoder_pred = dense_time(decoder_concat_input)
@@ -44,7 +44,7 @@ def define_nmt(hidden_size, batch_size, en_timesteps, en_vsize, fr_timesteps, fr
     full_model = Model(inputs=[encoder_inputs, decoder_inputs], outputs=decoder_pred)
     full_model.compile(optimizer='adam', loss='categorical_crossentropy')
 
-    full_model.summary()
+    # full_model.summary()
 
     """ Inference model """
     batch_size = 1

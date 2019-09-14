@@ -276,7 +276,7 @@ def infer_nmt(encoder_model, decoder_model, test_en_seq, en_vsize, fr_vsize, fr_
     for i in range(20):
 
         dec_out, attention, dec_state = decoder_model.predict([enc_outs, dec_state, test_fr_onehot_seq])
-        dec_ind = np.argmax(dec_out, axis=-1)[0, 0] # taking the max likelyhood of the next word
+        dec_ind = np.argmax(dec_out, axis=-1)[0, 0]
 
         if dec_ind == 0:
             break
@@ -287,6 +287,7 @@ def infer_nmt(encoder_model, decoder_model, test_en_seq, en_vsize, fr_vsize, fr_
         fr_text += fr_index2word[dec_ind] + ' '
 
     return fr_text, attention_weights
+
 
 
 
@@ -442,8 +443,8 @@ if __name__ == '__main__':
 
     model, infer_enc_model, infer_dec_model = load_attn_model('./models/attention_models/nmt_models/100000_15_nonortho.h5', ortho=False)
 
-    """ Save model """
-    # full_model.save_weights("./models/Attention_models/nmt_models/test2.h5")
+    # """ Save model """
+    # full_model.save_weights("./models/Attention_models/nmt_models/test.h5")
 
     """ Index2word """
     en_index2word = dict(zip(en_tokenizer.word_index.values(), en_tokenizer.word_index.keys()))
@@ -453,7 +454,6 @@ if __name__ == '__main__':
     """ Inferring with trained model """
 
     sample=5
-
     test_en = ts_en_text[sample]
     test_fr = ts_fr_text[sample]
     custom_input = 'Hello my name is sharan, and I am from India \n'
@@ -472,12 +472,12 @@ if __name__ == '__main__':
 
     logger.info('\tFrench: {}'.format(test_fr))
 
-    # """Extracting encoder states"""
-	#
+    """Extracting encoder states"""
+
     # enc_outs, enc_final_state = extract_encoder_inputs(encoder_model=infer_enc_model, test_en_seq=test_en_seq)
     # pass
 
     """attention plotting"""
 
-    # filename = "test{}.png".format(getNumberOfFiles())
-    # plot_attention_weights(test_en_seq, attn_weights, en_index2word, fr_index2word, filename)
+    filename = "100000_10_nonortho_{}.png".format(getNumberOfFiles())
+    plot_attention_weights(test_en_seq, attn_weights, en_index2word, fr_index2word, filename)

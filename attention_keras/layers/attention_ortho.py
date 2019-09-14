@@ -1,6 +1,7 @@
 import tensorflow as tf
 from tensorflow.python.keras.layers import Layer
 import numpy as np
+import keras
 from tensorflow.python.keras import backend as K
 
 class AttentionLayerOrtho(Layer):
@@ -11,6 +12,8 @@ class AttentionLayerOrtho(Layer):
 	def build(self, input_shape):
 		assert isinstance(input_shape, list)
 		# Create a trainable weight variable for this layer.
+
+		w_init = tf.random_normal_initializer()
 
 		self.W_a = self.add_weight(name='W_a',
 								   shape=tf.TensorShape((input_shape[0][2], input_shape[0][2])),
@@ -25,14 +28,24 @@ class AttentionLayerOrtho(Layer):
 								   initializer='uniform',
 								   trainable=True)
 
+		self.ortho_states = tf.Variable([], validate_shape=False, dtype=tf.float32, trainable=False,name="ortho_states")
+		# self.ortho_states_temp = tf.Variable([], validate_shape=False, dtype=tf.float32, trainable=False, name="ortho_states_temp")
+		self.buffer = tf.Variable([], validate_shape=False, dtype=tf.float32, trainable=False, name="buffer")
+
+
+
 		super(AttentionLayerOrtho, self).build(input_shape)  # Be sure to call this at the end
 
 	def call(self, inputs, verbose=False):
 		"""
 		        inputs: [encoder_output_sequence, decoder_output_sequence]
 		        """
+
+
 		assert type(inputs) == list
 		encoder_out_seq, decoder_out_seq = inputs
+
+
 
 		if verbose:
 			print('encoder_out_seq>', encoder_out_seq.shape)
@@ -40,7 +53,14 @@ class AttentionLayerOrtho(Layer):
 
 
 		# CONVERT ENCODER_INPUTS TO ORTHOGONAL
-		encoder_out_seq = self.orthogonalize_encoder_inputs(encoder_out_seq)
+		# encoder_out_seq = self.orthogonalize_encoder_inputs(encoder_out_seq)
+
+		encoder_out_seq_list = self.orthogonalize_encoder_inputs_new_new_new(encoder_out_seq)
+		encoder_out_seq_t = tf.concat(encoder_out_seq_list, 0)
+		encoder_out_seq = tf.transpose(encoder_out_seq_t, [1, 0, 2])
+
+
+
 
 		def energy_step(inputs, states):
 
@@ -145,7 +165,7 @@ class AttentionLayerOrtho(Layer):
 				cos_factor = tf.multiply(angle, encoder_out_seq_reshaped_v[i])
 				cos_factor_reshaped = tf.expand_dims(cos_factor, 0)
 
-				tf.scatter_update(encoder_out_seq_reshaped_v, indices,
+				encoder_out_seq_reshaped_v = tf.scatter_update(encoder_out_seq_reshaped_v, indices,
 								  encoder_out_seq_reshaped_v[i] - cos_factor_reshaped)
 
 
@@ -154,17 +174,104 @@ class AttentionLayerOrtho(Layer):
 
 		return (encoder_out_seq_final)
 
+	def orthogonalize_encoder_inputs_new(self, encoder_out_seq):  # can be used for both stochastic and batch
 
 
+		runs = int(encoder_out_seq.shape[1])
+
+		encoder_out_seq_reshaped = tf.transpose(encoder_out_seq, [1, 0, 2])
+		self.ortho_states = tf.assign(self.ortho_states, encoder_out_seq_reshaped, validate_shape=False)
+		encoder_out_seq_reshaped_v = self.ortho_states
+
+		for i in range(runs):
+
+			for j in range(runs):
+
+				indices = tf.convert_to_tensor(np.array([i], dtype=np.int32))
+				if (i == j):
+					break
+
+				num = tf.multiply(encoder_out_seq_reshaped_v[i], encoder_out_seq_reshaped_v[j])
+				den = tf.multiply(encoder_out_seq_reshaped_v[i], encoder_out_seq_reshaped_v[i])
+				angle = tf.divide(num, den)
+				cos_factor = tf.multiply(angle, encoder_out_seq_reshaped_v[i])
+				cos_factor_reshaped = tf.expand_dims(cos_factor, 0)
 
 
+				encoder_out_seq_reshaped_v = tf.scatter_update(encoder_out_seq_reshaped_v, indices,
+				                                               encoder_out_seq_reshaped_v[i] - cos_factor_reshaped,
+				                                               use_locking=True)
+				tf.stop_gradient(
+					encoder_out_seq_reshaped_v,
+					name="ScatterUpdate_189"
+				)
 
 
+		return (tf.transpose(encoder_out_seq_reshaped_v, [1, 0, 2]))
 
 
+	def orthogonalize_encoder_inputs_new_new(self, encoder_out_seq):  # can be used for both stochastic and batch
+
+		t_list = []
+
+		runs = int(encoder_out_seq.shape[1])
+
+		encoder_out_seq_reshaped = tf.transpose(encoder_out_seq, [1, 0, 2])
+
+		self.ortho_states_temp = tf.assign(self.ortho_states, encoder_out_seq_reshaped, validate_shape=False)
+
+		for i in range(runs):
+
+			self.buffer = tf.assign(self.buffer, self.ortho_states_temp[i], validate_shape=False)
+			for j in range(runs):
+
+				if (i == j):
+					break
+
+				num = tf.multiply(self.ortho_states_temp[i], self.ortho_states_temp[j])
+				den = tf.multiply(self.ortho_states_temp[i], self.ortho_states_temp[i])
+				angle = tf.divide(num, den)
+				cos_factor = tf.multiply(angle, self.ortho_states_temp[i])
+				# cos_factor_reshaped = tf.expand_dims(cos_factor, 0)
+
+				self.buffer = tf.assign(self.buffer, self.buffer-cos_factor)
+
+			t_list.append(tf.expand_dims(self.buffer, 0))
+			# self.final_states = self.final_states[i].assign(tf.expand_dims(self.buffer, 0))
+
+		return(t_list)
 
 
+	def orthogonalize_encoder_inputs_new_new_new(self, encoder_out_seq):  # can be used for both stochastic and batch
 
+		t_list = []
 
+		runs = int(encoder_out_seq.shape[1])
 
+		encoder_out_seq_reshaped = tf.transpose(encoder_out_seq, [1, 0, 2])
+
+		self.ortho_states = tf.assign(self.ortho_states, encoder_out_seq_reshaped, validate_shape=False)
+
+		for i in range(runs):
+
+			self.buffer = tf.assign(self.buffer, self.ortho_states[i], validate_shape=False)
+			for j in range(runs):
+
+				if (i == j):
+					break
+
+				num = tf.multiply(self.ortho_states[i], self.ortho_states[j])
+				den = tf.multiply(self.ortho_states[i], self.ortho_states[i])
+				angle = tf.divide(num, den)
+				cos_factor = tf.multiply(angle, self.ortho_states[i])
+				# cos_factor_reshaped = tf.expand_dims(cos_factor, 0)
+
+				self.buffer = tf.assign(self.buffer, self.buffer-cos_factor)
+
+			t_list.append(tf.expand_dims(self.buffer, 0))
+			# self.final_states = self.final_states[i].assign(tf.expand_dims(self.buffer, 0))
+
+		return(t_list)
+
+		# return (tf.transpose(self.ortho_states, [1, 0, 2]))
 

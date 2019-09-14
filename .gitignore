@@ -2,9 +2,13 @@
 *.iml
 *.xml
 .idea
+*.txt
 __pycache__
 models
+*.png
 
+#
+# On branch master
 
 
 

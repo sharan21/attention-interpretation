@@ -1822,3 +1822,1715 @@
 2019-09-05 14:09:17,487 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
 
 2019-09-05 14:09:17,908 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-05 15:13:07,778 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 15:13:07,995 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 15:13:28,832 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 15:13:28,836 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 15:13:34,297 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-05 15:13:34,755 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-05 15:14:15,199 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 15:14:15,322 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 15:14:24,532 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 15:14:24,532 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 15:14:27,120 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-05 15:14:27,506 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-05 15:14:38,656 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 15:14:38,787 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 15:15:00,305 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 15:15:00,307 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 15:15:05,305 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-05 15:15:05,684 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-05 15:18:46,131 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 15:18:46,274 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 15:19:04,913 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 15:19:04,913 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 15:19:09,176 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-05 15:19:09,523 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-05 15:23:22,488 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 15:23:22,613 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 15:23:30,899 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 15:23:30,901 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 15:23:33,240 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-05 15:23:33,564 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-05 15:27:28,754 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 15:27:28,869 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 15:27:36,879 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 15:27:36,879 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 15:27:45,799 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-05 15:27:46,870 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-05 15:29:46,496 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 15:29:46,592 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 15:29:55,212 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 15:29:55,212 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 15:29:57,832 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-05 15:29:58,254 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-05 15:30:07,051 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 15:30:07,149 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 15:30:15,316 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 15:30:15,316 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 15:30:24,446 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-05 15:30:25,494 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-05 16:22:15,523 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 16:22:15,714 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 16:22:34,834 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 16:22:34,835 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 16:22:52,827 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-05 16:22:53,900 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-05 16:23:08,724 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 16:23:08,870 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 16:23:28,702 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 16:23:28,703 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 16:23:47,347 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-05 16:23:48,409 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-05 21:26:45,763 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 21:26:45,918 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 21:26:54,097 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 21:26:54,097 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 21:27:03,606 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-05 21:27:04,714 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-05 21:27:17,942 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 21:27:18,069 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 21:27:26,328 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 21:27:26,328 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 21:27:35,245 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-05 21:27:36,279 | examples.nmt.train | <module> | INFO | 	French: new jersey est jamais de neige en décembre et il est parfois sèche en été eos 
+2019-09-05 21:27:46,873 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 21:27:46,970 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 21:27:56,171 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 21:27:56,171 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 21:28:08,539 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-05 21:28:09,585 | examples.nmt.train | <module> | INFO | 	French: new jersey est jamais de neige en mars et il est généralement sec en mai eos 
+2019-09-05 21:28:45,391 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 21:28:45,512 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 21:28:53,609 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 21:28:53,609 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 21:29:02,580 | examples.nmt.train | <module> | INFO | Translating: your most loved fruit is the lemon , but his most loved is the peach .
+
+2019-09-05 21:29:03,623 | examples.nmt.train | <module> | INFO | 	French: votre fruit le plus aimé est la mangue mais son plus aimé est la pêche eos 
+2019-09-05 21:29:05,466 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+2019-09-05 21:29:05,495 | examples.nmt.train | <module> | INFO | 	French: chine gèle habituellement en automne mais il gèle en février eos 
+2019-09-05 21:29:07,267 | examples.nmt.train | <module> | INFO | Translating: california is sometimes dry during summer , but it is sometimes chilly in winter .
+
+2019-09-05 21:29:07,299 | examples.nmt.train | <module> | INFO | 	French: chine est parfois sec pendant l' été mais il est parfois frisquet en hiver eos 
+2019-09-05 21:39:09,434 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 21:39:09,569 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 21:39:17,912 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 21:39:17,912 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 21:39:27,359 | examples.nmt.train | <module> | INFO | Translating: your most loved fruit is the lemon , but his most loved is the peach .
+
+2019-09-05 21:39:28,523 | examples.nmt.train | <module> | INFO | 	French: votre fruit le plus aimé est la mangue mais son plus aimé est la pêche eos 
+2019-09-05 21:39:30,694 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+2019-09-05 21:39:30,724 | examples.nmt.train | <module> | INFO | 	French: chine gèle habituellement en automne mais il gèle en février eos 
+2019-09-05 21:39:32,478 | examples.nmt.train | <module> | INFO | Translating: california is sometimes dry during summer , but it is sometimes chilly in winter .
+
+2019-09-05 21:39:32,513 | examples.nmt.train | <module> | INFO | 	French: chine est parfois sec pendant l' été mais il est parfois frisquet en hiver eos 
+2019-09-05 21:40:16,499 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 21:40:16,621 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 21:40:25,037 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 21:40:25,038 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 21:40:34,260 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes chilly during december , but it is sometimes freezing in june .
+
+2019-09-05 21:40:35,307 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois glaciales en décembre mais il est parfois le gel en juin eos 
+2019-09-05 21:40:37,289 | examples.nmt.train | <module> | INFO | Translating: your most loved fruit is the lemon , but his most loved is the peach .
+
+2019-09-05 21:40:37,335 | examples.nmt.train | <module> | INFO | 	French: votre fruit le plus aimé est la mangue mais son plus aimé est la pêche eos 
+2019-09-05 21:40:39,143 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+2019-09-05 21:40:39,169 | examples.nmt.train | <module> | INFO | 	French: chine gèle habituellement en automne mais il gèle en février eos 
+2019-09-05 21:40:40,928 | examples.nmt.train | <module> | INFO | Translating: california is sometimes dry during summer , but it is sometimes chilly in winter .
+
+2019-09-05 21:40:40,958 | examples.nmt.train | <module> | INFO | 	French: chine est parfois sec pendant l' été mais il est parfois frisquet en hiver eos 
+2019-09-05 21:40:42,764 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-05 21:40:42,797 | examples.nmt.train | <module> | INFO | 	French: new jersey est jamais de neige en mars et il est généralement sec en mai eos 
+2019-09-05 21:42:08,568 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-05 21:42:08,709 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-05 21:42:16,699 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-05 21:42:16,699 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-05 21:42:18,935 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes chilly during december , but it is sometimes freezing in june .
+
+2019-09-05 21:42:19,264 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois froid en décembre mais il est parfois le gel en juin eos 
+2019-09-05 21:42:21,117 | examples.nmt.train | <module> | INFO | Translating: your most loved fruit is the lemon , but his most loved is the peach .
+
+2019-09-05 21:42:21,150 | examples.nmt.train | <module> | INFO | 	French: votre fruit le plus aimé est le citron mais son plus aimé est la pêche eos 
+2019-09-05 21:42:22,980 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+2019-09-05 21:42:23,012 | examples.nmt.train | <module> | INFO | 	French: la chine est le gel en chine mais il gèle habituellement en février eos 
+2019-09-05 21:42:24,794 | examples.nmt.train | <module> | INFO | Translating: california is sometimes dry during summer , but it is sometimes chilly in winter .
+
+2019-09-05 21:42:24,824 | examples.nmt.train | <module> | INFO | 	French: la californie est parfois sèche en été mais il est parfois froid en hiver eos 
+2019-09-05 21:42:26,604 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-05 21:42:26,624 | examples.nmt.train | <module> | INFO | 	French: new jersey en mai dernier eos 
+2019-09-06 12:20:01,721 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 12:43:52,039 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 12:44:02,654 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 12:45:07,639 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 12:45:17,816 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 12:48:18,756 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 12:48:28,875 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 12:48:29,017 | examples.nmt.train | <module> | INFO | Translating: your most loved fruit is the lemon , but his most loved is the peach .
+
+
+2019-09-06 12:48:30,876 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: mon fruit est moins aimé la fraise mais elle est le plus aimé est le mangue eos 
+
+2019-09-06 12:48:30,879 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la banane est mon fruit le plus cher mais le mangue est le plus aimé eos 
+
+2019-09-06 12:49:54,877 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 12:50:05,000 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 12:50:05,148 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-06 12:50:07,002 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-06 12:50:07,002 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-06 12:55:16,104 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 12:55:16,228 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 12:55:24,928 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-06 12:55:24,928 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-06 12:55:28,219 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-06 12:55:28,605 | examples.nmt.train | <module> | INFO | 	French: new jersey en mai dernier eos 
+2019-09-06 12:59:28,551 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 12:59:28,661 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 12:59:37,205 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-06 12:59:37,205 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-06 12:59:45,076 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-06 12:59:45,951 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-06 13:00:47,537 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 13:00:47,646 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 13:00:55,566 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-06 13:00:55,567 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-06 13:00:56,692 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-06 13:00:56,926 | examples.nmt.train | <module> | INFO | 	French: la fraise est son fruit préféré mais la poire est notre préféré eos 
+2019-09-06 13:02:29,906 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 13:02:29,995 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 13:02:37,881 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-06 13:02:37,881 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-06 13:02:38,977 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes chilly during december , but it is sometimes freezing in june .
+
+2019-09-06 13:02:39,208 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois froid en décembre mais il est parfois le gel en juin eos 
+2019-09-06 13:02:41,032 | examples.nmt.train | <module> | INFO | Translating: your most loved fruit is the lemon , but his most loved is the peach .
+
+2019-09-06 13:02:41,064 | examples.nmt.train | <module> | INFO | 	French: votre fruit le plus aimé est le citron mais son plus aimé est la pêche eos 
+2019-09-06 13:02:42,851 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+2019-09-06 13:02:42,880 | examples.nmt.train | <module> | INFO | 	French: la chine est le gel en chine mais il gèle habituellement en février eos 
+2019-09-06 13:02:44,636 | examples.nmt.train | <module> | INFO | Translating: california is sometimes dry during summer , but it is sometimes chilly in winter .
+
+2019-09-06 13:02:44,667 | examples.nmt.train | <module> | INFO | 	French: la californie est parfois sèche en été mais il est parfois froid en hiver eos 
+2019-09-06 13:02:46,433 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-06 13:02:46,454 | examples.nmt.train | <module> | INFO | 	French: new jersey en mai dernier eos 
+2019-09-06 13:02:48,074 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-06 13:02:48,102 | examples.nmt.train | <module> | INFO | 	French: new jersey est généralement doux en décembre mais il est parfois sec en été eos 
+2019-09-06 13:04:15,931 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 13:04:16,044 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 13:04:24,078 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-06 13:04:24,078 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-06 13:04:31,861 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes chilly during december , but it is sometimes freezing in june .
+
+2019-09-06 13:04:32,712 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois glaciales en décembre mais il est parfois le gel en juin eos 
+2019-09-06 13:04:34,550 | examples.nmt.train | <module> | INFO | Translating: your most loved fruit is the lemon , but his most loved is the peach .
+
+2019-09-06 13:04:34,583 | examples.nmt.train | <module> | INFO | 	French: votre fruit le plus aimé est la mangue mais son plus aimé est la pêche eos 
+2019-09-06 13:04:36,370 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+2019-09-06 13:04:36,400 | examples.nmt.train | <module> | INFO | 	French: chine gèle habituellement en automne mais il gèle en février eos 
+2019-09-06 13:04:38,135 | examples.nmt.train | <module> | INFO | Translating: california is sometimes dry during summer , but it is sometimes chilly in winter .
+
+2019-09-06 13:04:38,172 | examples.nmt.train | <module> | INFO | 	French: chine est parfois sec pendant l' été mais il est parfois frisquet en hiver eos 
+2019-09-06 13:04:39,940 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-06 13:04:39,972 | examples.nmt.train | <module> | INFO | 	French: new jersey est jamais de neige en mars et il est généralement sec en mai eos 
+2019-09-06 13:04:41,748 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-06 13:04:41,786 | examples.nmt.train | <module> | INFO | 	French: new jersey est jamais de neige en décembre et il est parfois sèche en été eos 
+2019-09-06 13:11:17,343 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 13:11:17,498 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 13:11:35,922 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-06 13:11:35,922 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-06 13:12:40,866 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 13:12:41,038 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 13:12:59,033 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-06 13:12:59,033 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-06 13:14:44,537 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 13:14:44,652 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 13:15:02,498 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-06 13:15:02,498 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-06 13:15:21,818 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 13:15:21,938 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 13:15:40,375 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-06 13:15:40,375 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-06 13:54:04,519 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 13:54:04,663 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 13:54:22,694 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-06 13:54:22,696 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-06 13:54:37,206 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-06 13:54:38,144 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-06 13:54:53,017 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 13:54:53,153 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 13:55:11,528 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-06 13:55:11,531 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-06 13:55:37,667 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 13:55:37,763 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 13:55:46,650 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-06 13:55:46,650 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-06 13:55:55,227 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-06 13:55:56,079 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-06 13:57:15,037 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 13:57:15,151 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 13:57:20,741 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 13:57:20,858 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 13:57:38,602 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-06 13:57:38,605 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-06 13:57:53,506 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-06 13:57:54,375 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-06 13:58:13,219 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 14:00:12,898 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 14:00:23,817 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 14:01:12,538 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 14:01:23,655 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 14:03:03,437 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 14:05:05,472 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 14:09:58,906 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 14:10:10,505 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 14:13:24,231 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 14:13:35,456 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 17:37:33,811 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 17:37:46,150 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 17:38:49,019 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 17:40:45,504 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 17:47:18,243 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 17:48:41,969 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 17:48:52,716 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 17:54:39,105 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 17:54:50,565 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 17:55:14,037 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 17:55:23,539 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 17:55:36,232 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 17:55:58,861 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 17:56:09,891 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 17:58:35,443 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 17:59:23,866 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:02:46,772 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:02:54,701 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:03:31,325 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:03:38,971 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:03:48,809 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:06:22,175 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:06:34,025 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:06:53,636 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:07:04,587 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:07:43,942 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:07:54,708 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:14:10,953 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:16:48,240 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:17:01,549 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:17:16,453 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:17:55,747 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:18:19,144 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:18:32,786 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:18:49,922 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:19:21,038 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:19:32,607 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:23:28,215 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:23:40,203 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:24:48,700 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:24:59,687 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:31:43,186 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:31:54,149 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:32:36,391 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:32:47,304 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:33:35,703 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:34:10,002 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:34:20,379 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:34:33,135 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:34:43,442 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:37:52,950 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:38:03,305 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:38:27,329 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:38:38,733 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:39:22,467 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:39:33,466 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:43:25,361 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:43:36,686 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:44:47,307 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:44:58,177 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:46:51,151 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:47:01,166 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:47:11,572 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:47:45,192 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:47:56,594 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 18:59:30,119 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 18:59:42,697 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 19:01:53,419 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 19:02:04,716 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 19:02:19,049 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 19:02:30,343 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 19:03:31,118 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 19:03:42,331 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 19:03:42,470 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-06 19:03:44,329 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-06 19:03:44,329 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-06 19:05:38,189 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 19:05:49,648 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 19:05:49,790 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-06 19:05:51,653 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-06 19:05:51,653 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-06 19:07:49,360 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 19:08:00,498 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 19:08:00,644 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-06 19:08:02,486 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-06 19:08:02,487 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-06 19:10:00,103 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 19:10:11,011 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 19:10:11,164 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-06 19:10:13,017 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-06 19:10:13,017 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-06 19:12:44,784 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 19:12:55,813 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 19:12:55,963 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-06 19:12:57,820 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-06 19:12:57,820 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-06 19:15:07,474 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 19:15:18,565 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 19:15:18,710 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-06 19:15:20,581 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-06 19:15:20,581 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-06 19:15:57,258 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 19:16:08,135 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 19:16:08,270 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-06 19:16:10,128 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-06 19:16:10,128 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-06 19:16:43,607 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 19:16:53,905 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 19:16:54,042 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-06 19:16:55,943 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-06 19:16:55,943 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-06 19:17:59,621 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 19:18:10,713 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 19:18:10,855 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-06 19:18:12,705 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-06 19:18:12,705 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-06 19:20:15,273 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-06 19:20:27,532 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-06 19:20:27,676 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-06 19:20:29,873 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-06 19:20:29,873 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-07 12:00:48,379 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-07 12:02:50,095 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-07 12:02:50,278 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-07 12:04:04,516 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-07 12:06:08,160 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-07 12:06:08,328 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-07 12:38:29,253 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-07 12:38:40,338 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-07 12:38:40,482 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-07 12:38:42,360 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-07 12:38:42,362 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-07 12:49:22,507 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-07 13:06:24,069 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-07 13:10:34,345 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-07 13:10:34,521 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-07 13:10:45,692 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-07 13:10:45,695 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-07 13:22:53,891 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-07 13:27:07,360 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-07 13:27:07,528 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-07 13:27:10,011 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-07 13:27:10,012 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-07 13:28:47,318 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-07 13:32:26,135 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-07 13:32:26,316 | examples.nmt.train | <module> | INFO | Translating: china is usually freezing during october , but it is never warm in february .
+
+
+2019-09-07 13:32:28,977 | examples.nmt.train | <module> | INFO | 	 ORTHO says French is: chine est parfois belle pendant l' avril mais il ne est jamais froid en mai eos 
+
+2019-09-07 13:32:28,978 | examples.nmt.train | <module> | INFO | 	 NON-ORTHO says French is: la chine est jamais de neige en avril mais il est parfois le citron en septembre eos 
+
+2019-09-09 10:44:39,425 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 10:44:39,604 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 10:44:57,715 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 10:44:57,717 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 10:49:52,352 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 10:49:52,472 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 10:50:14,597 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 10:50:14,707 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 10:50:22,696 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 10:50:22,696 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 10:50:30,976 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 10:50:31,986 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-09 10:51:52,964 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 10:51:53,081 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 10:52:11,073 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 10:52:11,073 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 10:52:25,296 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 10:52:26,150 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-09 10:55:14,667 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 10:55:14,805 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 10:55:24,612 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 10:55:24,612 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 10:55:33,038 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 10:55:33,957 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-09 10:55:46,379 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 10:55:46,468 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 10:55:54,362 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 10:55:54,362 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 10:56:02,108 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 10:56:02,962 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-09 11:11:36,052 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 11:11:36,216 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 11:11:44,491 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 11:11:44,491 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 11:11:52,961 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 11:11:53,850 | examples.nmt.train | <module> | INFO | 	French: paris est jamais jamais le pas en décembre mais il est jamais le pas en juillet eos 
+2019-09-09 11:14:50,070 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 11:14:50,239 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 11:15:10,828 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 11:15:10,829 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 11:15:44,040 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 11:15:45,766 | examples.nmt.train | <module> | INFO | 	French: paris est jamais jamais le pas en décembre mais il est jamais le pas en juillet eos 
+2019-09-09 11:20:04,481 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 11:20:04,624 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 11:20:22,989 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 11:20:22,989 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 11:20:51,345 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 11:20:52,942 | examples.nmt.train | <module> | INFO | 	French: paris est jamais jamais le pas en décembre mais il est jamais le pas en juillet eos 
+2019-09-09 11:21:18,794 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 11:21:18,915 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 11:21:36,623 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 11:21:36,623 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 11:22:05,424 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 11:22:37,857 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 11:22:37,972 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 11:22:55,716 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 11:22:55,716 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 11:23:23,407 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 12:40:37,793 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 12:40:37,925 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 12:40:46,111 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 12:40:46,111 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 12:40:55,100 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 12:40:56,129 | examples.nmt.train | <module> | INFO | 	French: la fraise est son fruit préféré mais la poire est notre préféré eos 
+2019-09-09 12:41:20,359 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 12:41:20,474 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 12:41:28,487 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 12:41:28,487 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 12:41:37,447 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 12:41:38,467 | examples.nmt.train | <module> | INFO | 	French: la fraise est son fruit préféré mais la poire est notre préféré eos 
+2019-09-09 12:42:31,015 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 12:42:31,133 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 12:42:39,192 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 12:42:39,193 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 12:42:55,018 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 12:42:56,618 | examples.nmt.train | <module> | INFO | 	French: la fraise est son fruit préféré mais la poire est notre préféré eos 
+2019-09-09 12:43:35,004 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 12:43:35,116 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 12:43:43,172 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 12:43:43,175 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 12:43:59,058 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 12:44:00,654 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-09 16:04:05,687 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 16:04:05,878 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 16:04:25,074 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 16:04:25,074 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 16:04:58,458 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 16:05:18,077 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-09 16:05:18,236 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-09 16:05:36,645 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-09 16:05:36,645 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-09 16:06:07,260 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-09 16:06:09,660 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-11 09:54:50,764 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 09:54:50,916 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 09:55:10,103 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 09:55:10,224 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 09:55:29,321 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 09:55:29,321 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 10:01:28,113 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:01:28,229 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:01:46,083 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 10:01:46,083 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 10:05:19,478 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:05:19,599 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:05:35,569 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:05:35,693 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:05:44,123 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 10:05:44,123 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 10:06:00,332 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-11 10:06:01,945 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-11 10:11:33,483 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:11:33,683 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:11:43,034 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 10:11:43,035 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 10:11:59,426 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-11 10:12:01,171 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-11 10:15:36,629 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:15:36,783 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:15:56,102 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 10:15:56,102 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 10:16:35,175 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:16:35,265 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:16:43,830 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 10:16:43,830 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 10:16:59,847 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-11 10:17:01,474 | examples.nmt.train | <module> | INFO | 	French: fraise fraise mais la fraise est le fruit préféré mais la poire est notre préféré eos 
+2019-09-11 10:23:16,581 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:23:16,676 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:23:16,832 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:23:16,832 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 10:23:55,186 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:23:55,276 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:23:55,424 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:23:55,424 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 10:24:05,961 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.83137845993042
+2019-09-11 10:24:06,101 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.814195156097412
+2019-09-11 10:24:06,246 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.7966766357421875
+2019-09-11 10:24:06,403 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.77859354019165
+2019-09-11 10:24:06,557 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.7597246170043945
+2019-09-11 10:24:06,705 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.739828109741211
+2019-09-11 10:24:06,851 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.718629360198975
+2019-09-11 10:24:07,010 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.69578742980957
+2019-09-11 10:24:07,174 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.670888900756836
+2019-09-11 10:24:07,320 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.643422603607178
+2019-09-11 10:24:08,088 | examples.nmt.train | <module> | INFO | Translating: he wanted to go to france last january .
+
+2019-09-11 10:24:48,947 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:24:49,039 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:24:49,184 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:24:49,184 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 10:25:00,143 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.817381381988525
+2019-09-11 10:25:00,310 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.799228191375732
+2019-09-11 10:25:00,460 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.780622959136963
+2019-09-11 10:25:00,632 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.761374473571777
+2019-09-11 10:25:00,782 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.741252899169922
+2019-09-11 10:25:00,945 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.719969272613525
+2019-09-11 10:25:01,114 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.697177410125732
+2019-09-11 10:25:01,255 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.672459602355957
+2019-09-11 10:25:01,413 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.645320892333984
+2019-09-11 10:25:01,606 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.615159511566162
+2019-09-11 10:25:02,793 | examples.nmt.train | <module> | INFO | Translating: he wanted to go to france last january .
+
+2019-09-11 10:25:03,892 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-11 10:32:13,818 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:32:13,924 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:32:14,087 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:32:14,087 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 10:32:21,800 | examples.nmt.train | <module> | INFO | Translating: he wanted to go to france last january .
+
+2019-09-11 10:32:22,646 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-11 10:33:58,467 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:33:58,555 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:33:58,741 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:33:58,742 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 10:34:06,477 | examples.nmt.train | <module> | INFO | Translating: he wanted to go to france last january .
+
+2019-09-11 10:34:07,321 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-11 10:34:44,567 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:34:44,674 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:34:44,836 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:34:44,836 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 10:34:52,445 | examples.nmt.train | <module> | INFO | Translating: he wanted to go to france last january .
+
+2019-09-11 10:34:53,273 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-11 10:35:04,296 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:35:04,415 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:35:04,594 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:35:04,594 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 10:35:23,309 | examples.nmt.train | <module> | INFO | Translating: he wanted to go to france last january .
+
+2019-09-11 10:35:24,203 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-11 10:46:31,710 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:46:31,857 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:46:32,032 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:46:32,033 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 10:57:41,404 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:57:41,492 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:57:41,643 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:57:41,644 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 10:58:06,159 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:58:06,246 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:58:06,411 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:58:06,411 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 10:58:48,487 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:58:48,582 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:58:48,734 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:58:48,734 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 10:59:22,180 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:59:22,272 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:59:22,437 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:59:22,437 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 10:59:37,131 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:59:37,222 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:59:37,379 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:59:37,380 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 10:59:58,029 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 10:59:58,117 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 10:59:58,267 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 10:59:58,267 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:00:17,018 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:00:17,110 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:00:17,254 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 11:00:17,254 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:00:27,591 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.8335418701171875
+2019-09-11 11:00:27,722 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.816191673278809
+2019-09-11 11:00:27,868 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.798671722412109
+2019-09-11 11:00:28,016 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.780791282653809
+2019-09-11 11:00:28,172 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.762336254119873
+2019-09-11 11:00:28,312 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.743058681488037
+2019-09-11 11:00:28,453 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.722667694091797
+2019-09-11 11:00:28,606 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.700824737548828
+2019-09-11 11:00:28,754 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.677147388458252
+2019-09-11 11:00:28,893 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.651193141937256
+2019-09-11 11:00:28,893 | examples.nmt.train | <module> | INFO | Translating: he wanted to go to france last january .
+
+2019-09-11 11:00:29,821 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-11 11:01:51,126 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:01:51,226 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:01:51,370 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 11:01:51,370 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:08:22,681 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:08:22,782 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:08:22,947 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 11:08:22,947 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:08:40,120 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.824396133422852
+2019-09-11 11:08:40,248 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.806957721710205
+2019-09-11 11:08:40,399 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.789183139801025
+2019-09-11 11:08:40,540 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.770877361297607
+2019-09-11 11:08:40,687 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.7517991065979
+2019-09-11 11:08:40,828 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.731656551361084
+2019-09-11 11:08:40,971 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.710104465484619
+2019-09-11 11:08:41,108 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.686741828918457
+2019-09-11 11:08:41,249 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.661089897155762
+2019-09-11 11:08:41,384 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.6325860023498535
+2019-09-11 11:08:58,590 | examples.nmt.train | <module> | INFO | Translating: he wanted to go to france last january .
+
+2019-09-11 11:09:01,733 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-11 11:09:44,619 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:09:44,740 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:09:44,901 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 11:09:44,901 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:09:59,072 | examples.nmt.train | <module> | INFO | Translating: he wanted to go to france last january .
+
+2019-09-11 11:10:00,569 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-11 11:10:11,681 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:10:11,795 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:10:11,970 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 11:10:11,970 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:10:37,967 | examples.nmt.train | <module> | INFO | Translating: he wanted to go to france last january .
+
+2019-09-11 11:10:39,471 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-11 11:18:23,213 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:18:23,314 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:18:23,487 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 11:18:23,488 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:44:33,189 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:44:33,339 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:44:33,490 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 11:44:33,490 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:44:43,914 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.823462009429932
+2019-09-11 11:44:44,044 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.805981159210205
+2019-09-11 11:44:44,188 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.788143634796143
+2019-09-11 11:44:44,349 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.769748210906982
+2019-09-11 11:44:44,511 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.750580787658691
+2019-09-11 11:44:44,665 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.730395793914795
+2019-09-11 11:44:44,823 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.708897590637207
+2019-09-11 11:44:44,964 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.685735702514648
+2019-09-11 11:44:45,124 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.660482406616211
+2019-09-11 11:44:45,273 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.6326141357421875
+2019-09-11 11:45:16,211 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:45:16,318 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:45:16,557 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 11:45:16,558 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:45:33,503 | examples.nmt.train | <module> | INFO | Translating: the grape is our least favorite fruit , but the lemon is my least favorite .
+
+2019-09-11 11:45:49,806 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:45:49,910 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:45:50,064 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 11:45:50,064 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:45:58,465 | examples.nmt.train | <module> | INFO | Translating: the grape is our least favorite fruit , but the lemon is my least favorite .
+
+2019-09-11 11:45:59,594 | examples.nmt.train | <module> | INFO | 	French: jamais humide est jamais comme en plus mais merveilleux est parfois à généralement eos 
+2019-09-11 11:46:56,003 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:46:56,100 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:46:56,248 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 11:46:56,248 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:47:03,945 | examples.nmt.train | <module> | INFO | Translating: the united states is mild during summer , and it is freezing in march .
+
+2019-09-11 11:47:04,798 | examples.nmt.train | <module> | INFO | 	French: humide est la leur en mais il est jamais humide en unis eos 
+2019-09-11 11:47:35,661 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:47:35,785 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:47:35,937 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 11:47:35,937 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:47:43,703 | examples.nmt.train | <module> | INFO | Translating: the united states is mild during summer , and it is freezing in march .
+
+2019-09-11 11:47:44,554 | examples.nmt.train | <module> | INFO | 	French: jamais humide est leur de fruit mais jamais california est la aime en unis eos 
+2019-09-11 11:48:31,364 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:48:31,455 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:48:31,607 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 11:48:31,607 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:48:32,712 | examples.nmt.train | <module> | INFO | Translating: the united states is mild during summer , and it is freezing in march .
+
+2019-09-11 11:48:32,947 | examples.nmt.train | <module> | INFO | 	French: jamais humide est leur de fruit mais jamais california est la aime en unis eos 
+2019-09-11 11:51:31,996 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:51:32,100 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:51:32,247 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 11:51:32,247 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 11:51:33,365 | examples.nmt.train | <module> | INFO | Translating: the united states is mild during summer , and it is freezing in march .
+
+2019-09-11 11:51:33,602 | examples.nmt.train | <module> | INFO | 	French: jamais humide est leur de fruit mais jamais california est la aime en unis eos 
+2019-09-11 11:52:14,568 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:52:14,662 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:52:22,931 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 11:52:22,931 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 11:52:47,286 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:52:47,394 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:52:55,753 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 11:52:55,753 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 11:54:12,559 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:54:12,649 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:54:20,556 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 11:54:20,556 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 11:54:22,901 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-11 11:54:23,234 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-11 11:54:50,275 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:54:50,382 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:54:58,593 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 11:54:58,593 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 11:55:00,857 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-11 11:55:01,176 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-11 11:56:17,372 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:56:17,465 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:56:25,393 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 11:56:25,393 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 11:56:34,140 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-11 11:56:35,101 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-11 11:57:05,850 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:57:05,970 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:57:14,003 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 11:57:14,003 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 11:57:16,186 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-11 11:57:16,512 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-11 11:59:07,708 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 11:59:07,812 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 11:59:15,881 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 11:59:15,881 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 11:59:24,675 | examples.nmt.train | <module> | INFO | Translating: india is sometimes wet during summer , but it is sometimes relaxing in autumn .
+
+2019-09-11 11:59:25,615 | examples.nmt.train | <module> | INFO | 	French: l' inde est parfois humide pendant l' été mais il est relaxant parfois à l' automne eos 
+2019-09-11 12:36:01,083 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 12:36:01,209 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 12:36:09,433 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 12:36:09,433 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 12:36:11,603 | examples.nmt.train | <module> | INFO | Translating: india is sometimes wet during summer , but it is sometimes relaxing in autumn .
+
+2019-09-11 12:36:11,930 | examples.nmt.train | <module> | INFO | 	French: l' inde est parfois humide pendant l' été mais il est relaxant parfois à l' automne eos 
+2019-09-11 12:36:31,156 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 12:36:31,246 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 12:36:39,687 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 12:36:39,687 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 12:36:49,726 | examples.nmt.train | <module> | INFO | Translating: india is sometimes wet during summer , but it is sometimes relaxing in autumn .
+
+2019-09-11 12:36:51,009 | examples.nmt.train | <module> | INFO | 	French: l' inde est parfois humide pendant l' été mais il est relaxant parfois à l' automne eos 
+2019-09-11 12:37:08,632 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 12:37:08,738 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 12:37:16,767 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 12:37:16,767 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 12:37:24,615 | examples.nmt.train | <module> | INFO | Translating: india is sometimes wet during summer , but it is sometimes relaxing in autumn .
+
+2019-09-11 12:37:25,667 | examples.nmt.train | <module> | INFO | 	French: l' inde est parfois humide pendant l' été mais il est relaxant parfois à l' automne eos 
+2019-09-11 12:37:59,204 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 12:37:59,322 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 12:38:17,460 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 12:38:17,460 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 12:39:18,533 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 12:39:18,625 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 12:39:26,613 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 12:39:26,615 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 12:39:34,395 | examples.nmt.train | <module> | INFO | Translating: india is sometimes wet during summer , but it is sometimes relaxing in autumn .
+
+2019-09-11 12:39:35,399 | examples.nmt.train | <module> | INFO | 	French: l' inde est parfois humide pendant l' été mais il est relaxant parfois à l' automne eos 
+2019-09-11 12:39:53,075 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 12:39:53,177 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 12:40:01,132 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 12:40:01,132 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 12:40:02,224 | examples.nmt.train | <module> | INFO | Translating: india is sometimes wet during summer , but it is sometimes relaxing in autumn .
+
+2019-09-11 12:40:02,462 | examples.nmt.train | <module> | INFO | 	French: l' inde est parfois humide pendant l' été mais il est relaxant parfois à l' automne eos 
+2019-09-11 12:40:30,631 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 12:40:30,753 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 12:40:50,323 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 12:40:50,323 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 12:41:50,770 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 12:41:50,874 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 12:41:59,435 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 12:41:59,435 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 12:42:07,167 | examples.nmt.train | <module> | INFO | Translating: india is sometimes wet during summer , but it is sometimes relaxing in autumn .
+
+2019-09-11 12:42:08,045 | examples.nmt.train | <module> | INFO | 	French: l' inde est parfois humide pendant l' été mais il est relaxant parfois à l' automne eos 
+2019-09-11 12:42:17,080 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 12:42:17,219 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 12:42:25,168 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 12:42:25,168 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 12:42:26,272 | examples.nmt.train | <module> | INFO | Translating: india is sometimes wet during summer , but it is sometimes relaxing in autumn .
+
+2019-09-11 12:42:26,523 | examples.nmt.train | <module> | INFO | 	French: l' inde est parfois humide pendant l' été mais il est relaxant parfois à l' automne eos 
+2019-09-11 12:42:48,503 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 12:42:48,603 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 12:42:57,452 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 12:42:57,454 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 12:42:58,604 | examples.nmt.train | <module> | INFO | Translating: india is sometimes wet during summer , but it is sometimes relaxing in autumn .
+
+2019-09-11 12:42:58,859 | examples.nmt.train | <module> | INFO | 	French: l' inde est parfois humide pendant l' été mais il est relaxant parfois à l' automne eos 
+2019-09-11 12:43:36,191 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 12:43:36,280 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 12:43:44,308 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 12:43:44,308 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 12:43:51,942 | examples.nmt.train | <module> | INFO | Translating: india is sometimes wet during summer , but it is sometimes relaxing in autumn .
+
+2019-09-11 12:43:52,804 | examples.nmt.train | <module> | INFO | 	French: l' inde est parfois humide pendant l' été mais il est relaxant parfois à l' automne eos 
+2019-09-11 12:44:02,074 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 12:44:02,164 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 12:44:10,435 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-11 12:44:10,436 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-11 12:44:11,554 | examples.nmt.train | <module> | INFO | Translating: india is sometimes wet during summer , but it is sometimes relaxing in autumn .
+
+2019-09-11 12:44:11,794 | examples.nmt.train | <module> | INFO | 	French: l' inde est parfois humide pendant l' été mais il est relaxant parfois à l' automne eos 
+2019-09-11 16:36:40,067 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 16:36:40,199 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 16:36:40,387 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 16:36:40,387 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 16:40:11,666 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 16:40:11,771 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 16:40:11,966 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 16:40:11,966 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 16:48:45,131 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 16:48:45,242 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 16:48:45,405 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 16:48:45,406 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 16:49:16,140 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 16:49:16,254 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 16:49:16,413 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 16:49:16,413 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 16:50:05,200 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 16:50:05,293 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 16:50:05,487 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 16:50:05,487 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 16:53:03,620 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 16:53:03,710 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 16:53:03,885 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 16:53:03,885 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 16:53:24,279 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 16:53:24,369 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 16:53:24,531 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 16:53:24,531 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 16:54:11,809 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 16:54:11,898 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 16:54:12,059 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 16:54:12,059 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 16:55:43,108 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 16:55:43,199 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 16:55:43,355 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 16:55:43,355 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 16:58:37,031 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 16:58:37,121 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 16:58:37,278 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 16:58:37,278 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 16:59:07,949 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 16:59:08,045 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 16:59:08,197 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 16:59:08,197 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 17:01:00,771 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 17:01:00,879 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 17:01:01,027 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 17:01:01,028 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 17:18:08,116 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 17:18:08,260 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 17:18:08,424 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 17:18:08,424 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-11 17:20:44,109 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-11 17:20:44,218 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-11 17:20:44,367 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-11 17:20:44,367 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:26:17,685 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:26:17,807 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:26:17,970 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:26:17,970 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:27:35,220 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:27:35,338 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:27:35,513 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:27:35,513 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:28:39,450 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:28:39,576 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:28:39,768 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:28:39,768 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:29:01,594 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:29:01,713 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:29:01,889 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:29:01,890 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:29:20,485 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:29:20,596 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:29:20,822 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:29:20,822 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:30:34,276 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:30:34,375 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:30:34,544 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:30:34,544 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:30:50,775 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:30:50,868 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:30:51,016 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:30:51,016 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:32:12,113 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:32:12,207 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:32:12,385 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:32:12,385 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:32:37,029 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:32:37,144 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:32:37,323 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:32:37,323 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:33:33,776 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:33:33,877 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:33:34,024 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:33:34,025 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:34:43,765 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:34:43,854 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:34:44,004 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:34:44,005 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:36:09,534 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:36:09,624 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:36:09,784 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:36:09,784 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:41:34,921 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:41:35,017 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:41:35,210 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:41:35,210 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:44:09,629 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:44:09,750 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:44:09,930 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:44:09,931 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:44:41,800 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:44:41,918 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:44:42,092 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:44:42,092 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:45:03,355 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:45:03,477 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:45:03,652 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:45:03,653 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:46:28,474 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:46:28,603 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:46:28,772 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:46:28,772 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:46:59,381 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:46:59,489 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:46:59,703 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:46:59,703 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 11:58:14,384 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 11:58:14,530 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 11:58:14,771 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 11:58:14,771 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 12:01:53,911 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:01:54,014 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 12:01:54,163 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 12:01:54,164 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 12:04:24,393 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:04:24,504 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 12:04:24,655 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 12:04:24,655 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 12:12:21,261 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:12:21,400 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 12:12:21,557 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 12:12:21,557 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 12:12:37,256 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:12:37,383 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 12:12:37,586 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 12:12:37,586 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 12:12:42,092 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:12:42,208 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 12:12:42,392 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 12:12:42,392 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 12:17:19,834 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:17:22,749 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:17:22,858 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 12:17:23,027 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 12:17:23,027 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 12:29:14,353 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:29:14,453 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 12:29:14,623 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 12:29:14,624 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 12:29:43,275 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:29:43,366 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 12:29:43,516 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 12:29:43,516 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 12:32:15,777 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:32:15,917 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 12:32:16,155 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 12:32:16,155 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 12:33:40,670 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:33:40,789 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 12:33:40,956 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 12:33:40,956 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 12:33:51,198 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:33:51,290 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 12:33:51,451 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 12:33:51,451 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 12:36:23,657 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:36:23,755 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 12:36:23,940 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 12:36:23,940 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 12:42:00,116 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 12:42:00,235 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 12:42:00,393 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 12:42:00,393 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-12 14:50:29,278 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-12 14:50:29,446 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-12 14:50:29,620 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-12 14:50:29,620 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-13 11:30:56,046 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-13 11:30:56,158 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-13 11:30:56,320 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-13 11:30:56,320 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-13 11:31:31,182 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-13 11:31:31,286 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-13 11:31:31,434 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-13 11:31:31,434 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 11:45:32,133 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 11:45:32,308 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 11:45:32,494 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 11:45:32,495 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 11:47:39,541 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 11:47:39,667 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 11:47:39,848 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 11:47:39,848 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 11:47:58,105 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 11:47:58,229 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 11:47:58,407 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 11:47:58,407 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 11:49:39,794 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 11:49:39,933 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 11:49:40,117 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 11:49:40,117 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 11:58:32,223 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 11:58:32,381 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 11:58:32,570 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 11:58:32,570 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:03:19,626 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:03:19,788 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:03:20,025 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:03:20,026 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:07:58,066 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:07:58,204 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:07:58,388 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:07:58,389 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:08:17,928 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:08:18,047 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:08:18,227 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:08:18,227 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:16:42,760 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:16:42,925 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:16:43,106 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:16:43,106 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:17:35,091 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:17:35,222 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:17:35,398 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:17:35,398 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:18:36,612 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:18:36,738 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:18:36,933 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:18:36,933 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:26:47,565 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:26:47,749 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:26:47,957 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:26:47,957 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:31:51,745 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:31:51,866 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:31:52,052 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:31:52,052 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:33:04,202 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:33:04,332 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:33:04,521 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:33:04,521 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:33:27,139 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:33:27,240 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:33:27,399 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:33:27,400 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:37:21,336 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:37:21,458 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:37:21,639 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:37:21,639 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:37:37,150 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:37:37,239 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:37:37,399 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:37:37,400 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:37:57,689 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:37:57,815 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:37:57,992 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:37:57,992 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:38:13,838 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:38:13,940 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:38:14,086 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:38:14,086 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:38:49,918 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:38:50,046 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:38:50,225 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:38:50,225 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:46:30,141 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:46:30,260 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:46:30,440 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:46:30,440 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:47:03,072 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:47:03,163 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:47:03,326 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:47:03,326 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:47:41,636 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:47:41,757 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:47:41,934 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:47:41,934 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:48:50,923 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:48:51,058 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:48:51,271 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:48:51,271 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:49:14,899 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:49:15,027 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:49:15,205 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:49:15,205 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:52:01,698 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:52:01,818 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:52:01,997 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:52:01,997 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:52:24,154 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:52:24,273 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:52:24,449 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:52:24,449 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:56:39,235 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:56:39,383 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:56:39,561 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:56:39,561 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:56:50,859 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:56:50,955 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:56:51,105 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:56:51,105 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:57:38,328 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:57:38,448 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:57:38,628 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:57:38,628 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 12:58:21,875 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 12:58:21,986 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 12:58:22,144 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 12:58:22,144 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 13:01:28,329 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 13:01:28,477 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 13:01:28,655 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 13:01:28,656 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 13:03:07,771 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 13:03:07,895 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 13:03:08,073 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 13:03:08,073 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 13:05:43,801 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 13:05:43,941 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 13:05:44,123 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 13:05:44,123 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 13:07:26,067 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 13:07:26,216 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 13:07:26,408 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 13:07:26,408 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 13:08:07,329 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 13:08:07,463 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 13:08:07,644 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 13:08:07,644 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 13:08:57,760 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 13:08:57,885 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 13:08:58,063 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 13:08:58,063 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 13:09:16,110 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 13:09:16,200 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 13:09:16,363 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 13:09:16,363 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 13:09:41,088 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 13:09:41,195 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 13:09:41,347 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 13:09:41,347 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 13:12:36,387 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 13:12:36,495 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 13:12:36,647 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 13:12:36,648 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 13:19:36,970 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 13:19:37,148 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 13:19:37,321 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 13:19:37,321 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 13:23:51,175 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 13:23:51,273 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 13:23:51,432 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 13:23:51,433 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 13:24:03,244 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.68742561340332
+2019-09-14 13:24:03,367 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.610086441040039
+2019-09-14 13:24:03,496 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.532949447631836
+2019-09-14 13:24:03,630 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.456005096435547
+2019-09-14 13:24:03,757 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.379314422607422
+2019-09-14 13:24:03,875 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.30271577835083
+2019-09-14 13:24:04,001 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.2259416580200195
+2019-09-14 13:24:04,130 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.1486382484436035
+2019-09-14 13:24:04,254 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.07033109664917
+2019-09-14 13:24:04,375 | examples.nmt.train | train | INFO | Loss in epoch 10: 4.990411281585693
+2019-09-14 14:09:14,760 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 14:09:14,904 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 14:09:15,072 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 14:09:15,073 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 14:09:26,395 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.7191290855407715
+2019-09-14 14:09:26,527 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.638576984405518
+2019-09-14 14:09:26,655 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.559881210327148
+2019-09-14 14:09:26,780 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.482853889465332
+2019-09-14 14:09:26,906 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.407196044921875
+2019-09-14 14:09:27,034 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.332485198974609
+2019-09-14 14:09:27,161 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.258309841156006
+2019-09-14 14:09:27,283 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.1842803955078125
+2019-09-14 14:09:27,409 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.110010147094727
+2019-09-14 14:09:27,538 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.035121440887451
+2019-09-14 14:09:58,643 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 14:09:58,794 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 14:09:59,025 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 14:09:59,026 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 14:12:05,570 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 14:12:05,694 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 14:12:05,852 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 14:12:05,852 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 14:12:17,976 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.855602741241455
+2019-09-14 14:12:18,099 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.778104305267334
+2019-09-14 14:12:18,236 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.7036051750183105
+2019-09-14 14:12:18,359 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.63154935836792
+2019-09-14 14:12:18,484 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.561273097991943
+2019-09-14 14:12:18,602 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.492389678955078
+2019-09-14 14:12:18,736 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.424490928649902
+2019-09-14 14:12:18,859 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.357086181640625
+2019-09-14 14:12:18,987 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.289669036865234
+2019-09-14 14:12:19,107 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.221726417541504
+2019-09-14 14:12:31,625 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 14:12:31,752 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 14:12:31,933 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 14:12:31,933 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 14:13:59,794 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 14:13:59,897 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 14:14:00,069 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 14:14:00,069 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 14:14:11,861 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.9929327964782715
+2019-09-14 14:14:11,988 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.9170002937316895
+2019-09-14 14:14:12,137 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.842838287353516
+2019-09-14 14:14:12,313 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.769732475280762
+2019-09-14 14:14:12,527 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.697109699249268
+2019-09-14 14:14:12,659 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.624539375305176
+2019-09-14 14:14:12,785 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.551638126373291
+2019-09-14 14:14:12,908 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.477989673614502
+2019-09-14 14:14:13,097 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.403153896331787
+2019-09-14 14:14:13,285 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.3266754150390625
+2019-09-14 14:15:35,267 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 14:15:35,377 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 14:15:35,538 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 14:15:35,538 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 14:15:47,007 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.842555046081543
+2019-09-14 14:15:47,148 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.7679829597473145
+2019-09-14 14:15:47,287 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.694149494171143
+2019-09-14 14:15:47,414 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.620772838592529
+2019-09-14 14:15:47,552 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.547573566436768
+2019-09-14 14:15:47,675 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.474130153656006
+2019-09-14 14:15:47,804 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.39982271194458
+2019-09-14 14:15:47,924 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.323883533477783
+2019-09-14 14:15:48,053 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.245454788208008
+2019-09-14 14:15:48,175 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.163677215576172
+2019-09-14 14:15:48,822 | examples.nmt.train | <module> | INFO | Translating: they dislike grapes , strawberries , and grapefruit .
+
+2019-09-14 14:19:19,986 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 14:19:20,173 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 14:19:20,370 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 14:19:20,370 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 14:20:04,472 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 14:20:04,572 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 14:20:04,754 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 14:20:04,754 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 14:20:16,987 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.714471340179443
+2019-09-14 14:20:17,135 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.644961833953857
+2019-09-14 14:20:17,302 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.57779598236084
+2019-09-14 14:20:17,444 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.512877464294434
+2019-09-14 14:20:17,599 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.450069427490234
+2019-09-14 14:20:17,737 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.389082431793213
+2019-09-14 14:20:17,886 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.329556941986084
+2019-09-14 14:20:18,028 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.271123886108398
+2019-09-14 14:20:18,184 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.213469505310059
+2019-09-14 14:20:18,321 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.156375885009766
+2019-09-14 14:20:18,971 | examples.nmt.train | <module> | INFO | Translating: they dislike grapes , strawberries , and grapefruit .
+
+2019-09-14 15:13:59,832 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:13:59,944 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:14:00,932 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (10000, 20)
+2019-09-14 15:14:00,933 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (10000, 20)
+2019-09-14 15:14:31,511 | examples.nmt.train | train | INFO | Loss in epoch 1: 2.992885014949701
+2019-09-14 15:14:52,180 | examples.nmt.train | train | INFO | Loss in epoch 2: 1.6935745752774751
+2019-09-14 15:15:12,584 | examples.nmt.train | train | INFO | Loss in epoch 3: 1.1475702982682447
+2019-09-14 15:23:24,471 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:23:24,590 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:23:24,747 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 15:23:24,747 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 15:23:37,150 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.823470115661621
+2019-09-14 15:23:37,287 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.758861541748047
+2019-09-14 15:23:37,428 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.695605278015137
+2019-09-14 15:23:37,567 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.63357400894165
+2019-09-14 15:23:37,710 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.572446346282959
+2019-09-14 15:23:37,843 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.511773586273193
+2019-09-14 15:23:37,982 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.451143741607666
+2019-09-14 15:23:38,122 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.390259742736816
+2019-09-14 15:23:38,260 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.3289289474487305
+2019-09-14 15:23:38,393 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.267021179199219
+2019-09-14 15:23:39,059 | examples.nmt.train | <module> | INFO | Translating: they dislike grapes , strawberries , and grapefruit .
+
+2019-09-14 15:24:16,750 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:24:16,873 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:24:17,052 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 15:24:17,052 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 15:24:57,658 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.785412788391113
+2019-09-14 15:24:57,801 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.702625751495361
+2019-09-14 15:24:57,937 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.622341632843018
+2019-09-14 15:24:58,081 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.544149875640869
+2019-09-14 15:24:58,227 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.4674177169799805
+2019-09-14 15:24:58,359 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.391561985015869
+2019-09-14 15:24:58,499 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.316073894500732
+2019-09-14 15:24:58,639 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.24049186706543
+2019-09-14 15:24:58,783 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.1643242835998535
+2019-09-14 15:24:58,918 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.087076187133789
+2019-09-14 15:24:59,560 | examples.nmt.train | <module> | INFO | Translating: they dislike grapes , strawberries , and grapefruit .
+
+2019-09-14 15:26:38,726 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:26:38,909 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:26:39,115 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 15:26:39,116 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 15:30:30,078 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:30:30,172 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:30:30,331 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 15:30:30,331 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 15:30:42,830 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.7059006690979
+2019-09-14 15:30:42,991 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.616852760314941
+2019-09-14 15:30:43,172 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.529384613037109
+2019-09-14 15:30:43,312 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.443271160125732
+2019-09-14 15:30:43,475 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.358282089233398
+2019-09-14 15:30:43,630 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.274232387542725
+2019-09-14 15:30:43,781 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.190908432006836
+2019-09-14 15:30:43,925 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.108022689819336
+2019-09-14 15:30:44,072 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.025179386138916
+2019-09-14 15:30:44,227 | examples.nmt.train | train | INFO | Loss in epoch 10: 4.941868782043457
+2019-09-14 15:30:44,896 | examples.nmt.train | <module> | INFO | Translating: they dislike grapes , strawberries , and grapefruit .
+
+2019-09-14 15:34:06,742 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:34:06,858 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:34:07,015 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 15:34:07,015 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 15:34:08,223 | examples.nmt.train | <module> | INFO | Translating: they dislike grapes , strawberries , and grapefruit .
+
+2019-09-14 15:34:08,460 | examples.nmt.train | <module> | INFO | 	French: et notre mais et préféré l'automne eos 
+2019-09-14 15:34:19,854 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:34:19,955 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:34:20,114 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 15:34:20,114 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 15:34:21,279 | examples.nmt.train | <module> | INFO | Translating: he wanted to go to france last january .
+
+2019-09-14 15:34:21,511 | examples.nmt.train | <module> | INFO | 	French: le décembre les et printemps votre le décembre eos 
+2019-09-14 15:35:05,771 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:35:05,879 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:35:06,076 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 15:35:06,076 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 15:35:36,741 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:35:36,850 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:35:37,008 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 15:35:37,008 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 15:35:38,225 | examples.nmt.train | <module> | INFO | Translating: he wanted to go to france last january .
+
+2019-09-14 15:35:38,439 | examples.nmt.train | <module> | INFO | 	French: humide le décembre eos 
+2019-09-14 15:36:10,189 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:36:10,284 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:36:18,776 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:36:18,776 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:36:19,916 | examples.nmt.train | <module> | INFO | Translating: the strawberry is his favorite fruit , but the pear is our favorite .
+
+2019-09-14 15:36:20,155 | examples.nmt.train | <module> | INFO | 	French: la fraise est son fruit préféré mais la poire est notre préféré eos 
+2019-09-14 15:36:52,439 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:36:52,572 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:37:00,686 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:37:00,686 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:37:02,210 | examples.nmt.train | <module> | INFO | Translating: paris is pleasant during may , but it is sometimes wet in summer .
+
+2019-09-14 15:37:02,433 | examples.nmt.train | <module> | INFO | 	French: paris en chine l' anglais eos 
+2019-09-14 15:38:50,698 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:38:50,851 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:38:58,990 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:38:58,991 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:39:00,624 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-14 15:39:00,895 | examples.nmt.train | <module> | INFO | 	French: new jersey en mai dernier eos 
+2019-09-14 15:40:31,601 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:40:31,712 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:40:39,883 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:40:39,883 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:41:06,657 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:41:06,748 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:41:14,807 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:41:14,807 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:41:17,049 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-14 15:41:17,373 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-14 15:41:57,779 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:41:57,879 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:42:06,002 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:42:06,002 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:42:22,411 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:42:22,503 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:42:30,502 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:42:30,502 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:42:31,624 | examples.nmt.train | <module> | INFO | Translating: the united states is sometimes snowy during fall , but it is beautiful in august .
+
+2019-09-14 15:42:31,876 | examples.nmt.train | <module> | INFO | 	French: les états unis est parfois neigeux au cours de l' automne mais il est beau en août eos 
+2019-09-14 15:42:51,956 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:42:52,047 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:43:00,866 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:43:00,867 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:43:01,970 | examples.nmt.train | <module> | INFO | Translating: france is sometimes quiet during november , but it is warm in february .
+
+2019-09-14 15:43:02,210 | examples.nmt.train | <module> | INFO | 	French: la france en novembre mais il est chaud en février eos 
+2019-09-14 15:44:26,094 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:44:26,185 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:44:34,196 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:44:34,196 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:44:35,301 | examples.nmt.train | <module> | INFO | Translating: she liked a rusty green automobile .
+
+2019-09-14 15:44:35,535 | examples.nmt.train | <module> | INFO | 	French: elle est un camion vert brillant eos 
+2019-09-14 15:44:51,009 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:44:51,099 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:44:59,358 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:44:59,358 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:45:00,472 | examples.nmt.train | <module> | INFO | Translating: she was driving that old yellow car .
+
+2019-09-14 15:45:00,700 | examples.nmt.train | <module> | INFO | 	French: conduisait la voiture elle eos 
+2019-09-14 15:45:18,657 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:45:18,764 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:45:26,760 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:45:26,760 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:45:27,857 | examples.nmt.train | <module> | INFO | Translating: when did they going to the eiffel tower ?
+
+2019-09-14 15:45:28,089 | examples.nmt.train | <module> | INFO | 	French: quand mais il est neigeux au mois de août eos 
+2019-09-14 15:47:16,751 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:47:16,842 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:47:17,014 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 15:47:17,014 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 15:47:20,737 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.8200554847717285
+2019-09-14 15:47:20,863 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.8026533126831055
+2019-09-14 15:47:21,007 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.7848052978515625
+2019-09-14 15:47:21,136 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.766325950622559
+2019-09-14 15:47:21,274 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.747010707855225
+2019-09-14 15:47:21,398 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.726627349853516
+2019-09-14 15:47:21,537 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.704906463623047
+2019-09-14 15:47:21,665 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.681524753570557
+2019-09-14 15:47:21,800 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.656087398529053
+2019-09-14 15:47:21,927 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.62809944152832
+2019-09-14 15:47:22,141 | examples.nmt.train | <module> | INFO | Translating: they like grapes , peaches , and grapefruit .
+
+2019-09-14 15:47:22,444 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-14 15:47:38,361 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:47:38,455 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:47:38,616 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 15:47:38,616 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 15:47:50,208 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.602324962615967
+2019-09-14 15:47:50,331 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.527646541595459
+2019-09-14 15:47:50,467 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.455058574676514
+2019-09-14 15:47:50,605 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.384520053863525
+2019-09-14 15:47:50,744 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.315794467926025
+2019-09-14 15:47:50,883 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.2485270500183105
+2019-09-14 15:47:51,022 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.182334899902344
+2019-09-14 15:47:51,154 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.116805076599121
+2019-09-14 15:47:51,302 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.051403045654297
+2019-09-14 15:47:51,444 | examples.nmt.train | train | INFO | Loss in epoch 10: 4.98553466796875
+2019-09-14 15:47:52,085 | examples.nmt.train | <module> | INFO | Translating: they like grapes , peaches , and grapefruit .
+
+2019-09-14 15:48:27,517 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:48:27,666 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:48:27,825 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 15:48:27,825 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 15:48:28,967 | examples.nmt.train | <module> | INFO | Translating: they like grapes , peaches , and grapefruit .
+
+2019-09-14 15:48:29,188 | examples.nmt.train | <module> | INFO | 	French: california mais parfois est est été en juillet eos 
+2019-09-14 15:48:47,386 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:48:47,492 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:48:55,600 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:48:55,600 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:48:56,699 | examples.nmt.train | <module> | INFO | Translating: when did they going to the eiffel tower ?
+
+2019-09-14 15:48:56,939 | examples.nmt.train | <module> | INFO | 	French: quand mais il est neigeux au mois de août eos 
+2019-09-14 15:49:10,438 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:49:10,532 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:49:18,748 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:49:18,748 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:49:19,857 | examples.nmt.train | <module> | INFO | Translating: your most loved fruit is the lemon , but his most loved is the peach .
+
+2019-09-14 15:49:20,099 | examples.nmt.train | <module> | INFO | 	French: votre fruit le plus aimé est le citron mais son plus aimé est la pêche eos 
+2019-09-14 15:50:13,053 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:50:13,172 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:50:21,457 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:50:21,457 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:50:22,565 | examples.nmt.train | <module> | INFO | Translating: your most loved fruit is the lemon , but his most loved is the peach .
+
+2019-09-14 15:50:22,800 | examples.nmt.train | <module> | INFO | 	French: votre fruit le plus aimé est le citron mais son plus aimé est la pêche eos 
+2019-09-14 15:50:36,323 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:50:36,431 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:50:44,472 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:50:44,472 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:50:45,586 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-14 15:50:45,818 | examples.nmt.train | <module> | INFO | 	French: new jersey en mai dernier eos 
+2019-09-14 15:50:56,648 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:50:56,741 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:51:04,758 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:51:04,758 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:51:05,856 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-14 15:51:06,085 | examples.nmt.train | <module> | INFO | 	French: new jersey en mai dernier eos 
+2019-09-14 15:51:20,256 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:51:20,352 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:51:28,799 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:51:28,801 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:51:29,909 | examples.nmt.train | <module> | INFO | Translating: new jersey is snowy during march , and it is usually dry in may .
+
+2019-09-14 15:51:30,151 | examples.nmt.train | <module> | INFO | 	French: new jersey en mai dernier eos 
+2019-09-14 15:51:38,926 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:51:39,023 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:51:47,059 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:51:47,059 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:51:48,177 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-14 15:51:48,417 | examples.nmt.train | <module> | INFO | 	French: new jersey est généralement doux en décembre mais il est parfois sec en été eos 
+2019-09-14 15:52:03,162 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:52:03,253 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:52:11,370 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:52:11,370 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:52:12,468 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-14 15:52:12,699 | examples.nmt.train | <module> | INFO | 	French: new jersey est généralement doux en décembre mais il est parfois sec en été eos 
+2019-09-14 15:52:48,366 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 15:52:48,491 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 15:53:06,606 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 15:53:06,606 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 15:53:08,664 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-14 16:38:18,306 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 16:38:18,443 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 16:38:27,095 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 16:38:27,095 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 16:38:28,555 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-14 16:38:28,828 | examples.nmt.train | <module> | INFO | 	French: new jersey est généralement doux en décembre mais il est parfois sec en été eos 
+2019-09-14 16:38:39,006 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 16:38:39,133 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 16:38:58,535 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 16:38:58,537 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 16:39:00,778 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
+2019-09-14 16:39:26,927 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 16:39:27,088 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 16:39:47,776 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100000, 20)
+2019-09-14 16:39:47,777 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
+2019-09-14 16:39:50,236 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
+
