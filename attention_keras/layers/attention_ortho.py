@@ -38,13 +38,12 @@ class AttentionLayerOrtho(Layer):
 
 	def call(self, inputs, verbose=False):
 		"""
-		        inputs: [encoder_output_sequence, decoder_output_sequence]
-		        """
+		inputs: [encoder_output_sequence, decoder_output_sequence]
 
+		"""
 
 		assert type(inputs) == list
 		encoder_out_seq, decoder_out_seq = inputs
-
 
 
 		if verbose:
@@ -52,13 +51,9 @@ class AttentionLayerOrtho(Layer):
 			print('decoder_out_seq>', decoder_out_seq.shape)
 
 
-		# CONVERT ENCODER_INPUTS TO ORTHOGONAL
-		# encoder_out_seq = self.orthogonalize_encoder_inputs(encoder_out_seq)
-
 		encoder_out_seq_list = self.orthogonalize_encoder_inputs_new_new_new(encoder_out_seq)
 		encoder_out_seq_t = tf.concat(encoder_out_seq_list, 0)
 		encoder_out_seq = tf.transpose(encoder_out_seq_t, [1, 0, 2])
-
 
 
 
@@ -264,14 +259,11 @@ class AttentionLayerOrtho(Layer):
 				den = tf.multiply(self.ortho_states[i], self.ortho_states[i])
 				angle = tf.divide(num, den)
 				cos_factor = tf.multiply(angle, self.ortho_states[i])
-				# cos_factor_reshaped = tf.expand_dims(cos_factor, 0)
 
 				self.buffer = tf.assign(self.buffer, self.buffer-cos_factor)
 
 			t_list.append(tf.expand_dims(self.buffer, 0))
-			# self.final_states = self.final_states[i].assign(tf.expand_dims(self.buffer, 0))
 
 		return(t_list)
 
-		# return (tf.transpose(self.ortho_states, [1, 0, 2]))
 

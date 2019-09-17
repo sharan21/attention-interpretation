@@ -3534,3 +3534,101 @@
 2019-09-14 16:39:47,777 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100000, 20)
 2019-09-14 16:39:50,236 | examples.nmt.train | <module> | INFO | Translating: new jersey is usually mild during december , and it is sometimes dry in summer .
 
+2019-09-14 16:48:19,343 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 16:48:19,490 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 16:48:19,681 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 16:48:19,681 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 16:48:32,892 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.799696445465088
+2019-09-14 16:48:33,042 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.712632656097412
+2019-09-14 16:48:33,222 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.626574516296387
+2019-09-14 16:48:33,361 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.5410590171813965
+2019-09-14 16:48:33,519 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.455665111541748
+2019-09-14 16:48:33,671 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.369974136352539
+2019-09-14 16:48:33,824 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.28355073928833
+2019-09-14 16:48:33,964 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.195956707000732
+2019-09-14 16:48:34,126 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.106774806976318
+2019-09-14 16:48:34,284 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.015604019165039
+2019-09-14 16:48:35,181 | examples.nmt.train | <module> | INFO | Translating: california is snowy during july , and it is relaxing in august .
+
+2019-09-14 16:48:50,841 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 16:48:51,052 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 16:48:51,286 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 16:48:51,287 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 16:49:26,054 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.784274578094482
+2019-09-14 16:49:26,284 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.700563430786133
+2019-09-14 16:49:26,452 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.618410587310791
+2019-09-14 16:49:26,686 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.537749290466309
+2019-09-14 16:49:26,875 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.458257675170898
+2019-09-14 16:49:27,026 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.379474639892578
+2019-09-14 16:49:27,200 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.3008713722229
+2019-09-14 16:49:27,402 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.221907615661621
+2019-09-14 16:49:27,703 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.142024993896484
+2019-09-14 16:49:28,005 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.06062650680542
+2019-09-14 16:49:28,763 | examples.nmt.train | <module> | INFO | Translating: california is snowy during july , and it is relaxing in august .
+
+2019-09-14 16:49:45,888 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 16:49:46,048 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 16:49:46,256 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 16:49:46,256 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 16:50:08,604 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.793914794921875
+2019-09-14 16:50:08,767 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.711172580718994
+2019-09-14 16:50:08,935 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.629654884338379
+2019-09-14 16:50:09,083 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.549067497253418
+2019-09-14 16:50:09,252 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.469111442565918
+2019-09-14 16:50:09,395 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.3894267082214355
+2019-09-14 16:50:09,557 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.309587001800537
+2019-09-14 16:50:09,715 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.229173183441162
+2019-09-14 16:50:09,872 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.1478495597839355
+2019-09-14 16:50:10,020 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.065346717834473
+2019-09-14 16:50:10,700 | examples.nmt.train | <module> | INFO | Translating: california is snowy during july , and it is relaxing in august .
+
+2019-09-14 16:57:51,559 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 16:57:51,683 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 16:57:51,845 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 16:57:51,845 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 16:58:04,260 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.8287272453308105
+2019-09-14 16:58:04,413 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.75498104095459
+2019-09-14 16:58:04,566 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.682173252105713
+2019-09-14 16:58:04,705 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.610070705413818
+2019-09-14 16:58:04,860 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.538473606109619
+2019-09-14 16:58:05,013 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.467160701751709
+2019-09-14 16:58:05,164 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.3958635330200195
+2019-09-14 16:58:05,314 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.324270248413086
+2019-09-14 16:58:05,477 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.252048969268799
+2019-09-14 16:58:05,629 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.1788530349731445
+2019-09-14 16:58:06,287 | examples.nmt.train | <module> | INFO | Translating: california is snowy during july , and it is relaxing in august .
+
+2019-09-14 17:06:12,715 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-14 17:06:12,830 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-14 17:06:13,022 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-14 17:06:13,023 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-14 17:06:16,708 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.809142112731934
+2019-09-14 17:06:16,843 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.791065216064453
+2019-09-14 17:06:16,987 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.772327423095703
+2019-09-14 17:06:17,115 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.752725124359131
+2019-09-14 17:06:17,249 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.732006072998047
+2019-09-14 17:06:17,378 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.70986795425415
+2019-09-14 17:06:17,519 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.685932159423828
+2019-09-14 17:06:17,649 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.659726619720459
+2019-09-14 17:06:17,787 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.630673408508301
+2019-09-14 17:06:17,921 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.598044395446777
+2019-09-14 17:06:18,121 | examples.nmt.train | <module> | INFO | Translating: california is snowy during july , and it is relaxing in august .
+
+2019-09-14 17:06:18,437 | examples.nmt.train | <module> | INFO | 	French: 
+2019-09-17 19:42:18,190 | examples.nmt.train | get_logger | INFO | Started log ./attention_keras/logs/examples.nmt.train
+2019-09-17 19:42:18,409 | examples.nmt.train | get_data | INFO | Length of text: 137860
+2019-09-17 19:42:18,665 | examples.nmt.train | preprocess_data | DEBUG | En text shape: (100, 20)
+2019-09-17 19:42:18,666 | examples.nmt.train | preprocess_data | DEBUG | Fr text shape: (100, 20)
+2019-09-17 19:42:23,182 | examples.nmt.train | train | INFO | Loss in epoch 1: 5.812349319458008
+2019-09-17 19:42:23,358 | examples.nmt.train | train | INFO | Loss in epoch 2: 5.794739723205566
+2019-09-17 19:42:23,544 | examples.nmt.train | train | INFO | Loss in epoch 3: 5.776861190795898
+2019-09-17 19:42:23,688 | examples.nmt.train | train | INFO | Loss in epoch 4: 5.758516788482666
+2019-09-17 19:42:23,857 | examples.nmt.train | train | INFO | Loss in epoch 5: 5.73945951461792
+2019-09-17 19:42:24,016 | examples.nmt.train | train | INFO | Loss in epoch 6: 5.719409942626953
+2019-09-17 19:42:24,192 | examples.nmt.train | train | INFO | Loss in epoch 7: 5.698042869567871
+2019-09-17 19:42:24,345 | examples.nmt.train | train | INFO | Loss in epoch 8: 5.6749749183654785
+2019-09-17 19:42:24,511 | examples.nmt.train | train | INFO | Loss in epoch 9: 5.649754524230957
+2019-09-17 19:42:24,654 | examples.nmt.train | train | INFO | Loss in epoch 10: 5.621845245361328
+2019-09-17 19:42:24,893 | examples.nmt.train | <module> | INFO | Translating: california is snowy during july , and it is relaxing in august .
+
+2019-09-17 19:42:25,259 | examples.nmt.train | <module> | INFO | 	French: 

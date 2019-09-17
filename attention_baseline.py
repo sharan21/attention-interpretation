@@ -400,7 +400,7 @@ if __name__ == '__main__':
     debug = False
     """ Hyperparameters """
 
-    train_size = 100000 if not debug else 10000
+    train_size = 100 if not debug else 10000
     filename = ''
 
     tr_en_text, tr_fr_text, ts_en_text, ts_fr_text = get_data(train_size=train_size)
@@ -429,21 +429,21 @@ if __name__ == '__main__':
 
     """ Defining the full model """
     #Put ortho=True if you want to create ortho model
-    # full_model, infer_enc_model, infer_dec_model = define_nmt(
-    #     hidden_size=hidden_size, batch_size=batch_size,
-    #     en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
-    #     en_vsize=en_vsize, fr_vsize=fr_vsize, ortho=True)
+    full_model, infer_enc_model, infer_dec_model = define_nmt(
+        hidden_size=hidden_size, batch_size=batch_size,
+        en_timesteps=en_timesteps, fr_timesteps=fr_timesteps,
+        en_vsize=en_vsize, fr_vsize=fr_vsize, ortho=False)
 
     n_epochs = 10 if not debug else 3
 
-    # train(full_model, en_seq, fr_seq, batch_size, n_epochs)
+    train(full_model, en_seq, fr_seq, batch_size, n_epochs)
 
     """ Load Model"""
 
-    model, infer_enc_model, infer_dec_model = load_attn_model('./models/attention_models/nmt_models/100000_15_nonortho.h5', ortho=False)
+    # model, infer_enc_model, infer_dec_model = load_attn_model('./models/attention_models/nmt_models/100000_15_nonortho.h5', ortho=False)
 
     """ Save model """
-    # full_model.save_weights("./models/Attention_models/nmt_models/test2.h5")
+    full_model.save_weights("./models/Attention_models/nmt_models/test2.h5")
 
     """ Index2word """
     en_index2word = dict(zip(en_tokenizer.word_index.values(), en_tokenizer.word_index.keys()))
